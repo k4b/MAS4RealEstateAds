@@ -1,13 +1,11 @@
-package ads;
+package common.ads;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
  */
 
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.HashMap;
 
 /**
  * Instance of ad. All fields are optional.

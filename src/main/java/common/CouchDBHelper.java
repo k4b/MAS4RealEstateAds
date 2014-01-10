@@ -7,7 +7,7 @@ package common;
 
 import org.lightcouch.*;
 
-import ads.Ad;
+import common.ads.Ad;
 
 /**
  * Couch DB helper using LightCouch library. 

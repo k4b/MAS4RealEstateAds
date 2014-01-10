@@ -5,14 +5,11 @@ package common;
  */
 
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
 import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
-import ads.Ad;
+
+import common.ads.Ad;
 
 /**
  * Custom utility functions required in this project

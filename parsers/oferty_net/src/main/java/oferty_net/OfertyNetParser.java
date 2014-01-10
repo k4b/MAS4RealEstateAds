@@ -1,4 +1,4 @@
-package parser.oferty_net;
+package oferty_net;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -6,6 +6,8 @@ package parser.oferty_net;
 
 
 import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.NumberFormat;
 import java.text.ParseException;
@@ -23,39 +25,34 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import ads.Ad;
-import ads.AdsConstants;
+import parser.AbstractParser;
+import common.ads.Ad;
+import common.ads.AdsConstants;
 
 /**
  * Extracts ad data from downloaded webpage. Uses Jsoup library.
  * @author Karol Abramczyk
  */
-public class Parser {
+public class OfertyNetParser extends AbstractParser {
     
-    private ArrayList<Ad> ads;
-    private int counter = 0;
-    private boolean isRunning = true;
-    
-    public ArrayList<Ad> getAds() {
-        return ads;
+    public OfertyNetParser(int maxPages) {
+      super(maxPages);
     }
-    
-    public Parser() {
-        ads = new ArrayList<>();
-    }
+
+    private static final String TAG = "tbody";
     
     /**
      * Parses ad search results. Starts with first page of advertising website results and then continues to <i>counterMax</i>-th page of results. 
      * @param url URL to first page of search results
-     * @param tag Table element containing search results
+     * @param TAG Table element containing search results
      * @param counterMax Maximum number of analyzed pages 
      */
-    public void startParsing(String url, String tag, int counterMax) {
+    public void startParsing(URL url, int counterMax) {
         while(isRunning) {
-            parse(url,tag);
-            url = getNextUrl(url);
+            parseSearchResults(url);
+            URL nextUrl = getNextUrl(url);
             isRunning(counterMax);
-            if(url.isEmpty())
+            if((nextUrl.getPath()).isEmpty())
                 isRunning = false;
         }
     }
@@ -63,52 +60,22 @@ public class Parser {
     /**
      * Parses one page of ad serching results
      * @param url URL of results webpage
-     * @param tag Tag conteaining multiple ads
+     * @param TAG Tag containing multiple ads
      */
-    private void parse(String url, String tag) {
-        counter++;
-        Document doc = getPage(url);
+    public void parseSearchResults(URL url) {
+        pagesCounter++;
+        Document doc = downloadWebpage(url);
         if(doc == null) {
-            System.out.println(counter + " no site");
+            System.out.println(pagesCounter + " no site");
             return;
         }
-        Element e = getElementByTag(doc, tag);
+        Element e = getElementByTag(doc, TAG);
         if(e == null) {
-            System.out.println(counter + " no <" + tag + "> tags in source of URL " + url);
+            System.out.println(pagesCounter + " no <" + TAG + "> tags in source of URL " + url);
             return;
         }
         createObjects(e, ads);
-        System.out.println(counter + " " + ads.size());
-    }
-    
-    /**
-     * Downloads webpage and returns it as Jsoup Document
-     * @param url URL to webpage
-     * @return Jsoup webpage Document object
-     */
-    public Document getPage(String url) {
-        if(url.equals(""))
-            return null;
-        
-        Document d = null;
-        try {
-            Connection conn = Jsoup.connect(url);
-            d = conn.get();
-        } catch (Exception ex) {
-            Logger.getLogger(Parser.class.getName()).log(Level.SEVERE, null, ex);
-            try {
-                System.out.println("waiting 3s...");
-                Thread.sleep(3000);
-            } catch (InterruptedException ex1) {
-                try {
-                    d = Jsoup.connect(url).get();
-                } catch (IOException ex2) {
-                    Logger.getLogger(Parser.class.getName()).log(Level.SEVERE, null, ex2);
-                }
-            }
-            
-        }
-        return d;
+        System.out.println(pagesCounter + " " + ads.size());
     }
     
     /**
@@ -117,7 +84,7 @@ public class Parser {
      * @param tag Searched tag
      * @return First element of specified tag
      */
-    public Element getElementByTag(Document doc, String tag) {
+    private Element getElementByTag(Document doc, String tag) {
         Elements all = doc.select(tag);
 //        Elements all = doc.getElementsByTag(tag);
         if(all.size() == 0)
@@ -126,12 +93,12 @@ public class Parser {
             return all.first();
     }
     
-    public Element getElementByClass(Document doc, String classname) {
+    private Element getElementByClass(Document doc, String classname) {
         Elements all = doc.getElementsByClass(classname);
         return all.first();
     }
     
-    public void createObjects( Element element, ArrayList ads) {
+    private void createObjects( Element element, ArrayList ads) {
         StringTokenizer st;
         
         if(element == null)
@@ -175,7 +142,7 @@ public class Parser {
                     try {
                         date = formatter.parse(dateString);
                     } catch (ParseException ex) {
-                        Logger.getLogger(Parser.class.getName()).log(Level.SEVERE, null, ex);
+                        Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
                     }
                 }
                 a.setLastUpdate(date);
@@ -201,7 +168,7 @@ public class Parser {
                 try {
                     number = format.parse(area);
                 } catch (ParseException ex) {
-                    Logger.getLogger(Parser.class.getName()).log(Level.SEVERE, null, ex);
+                    Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
                 }
                 ar = number.doubleValue();
                 a.setArea(ar);
@@ -245,7 +212,14 @@ public class Parser {
                 if(link != null) {
                     link.trim();
                     a.setLink(link);
-                    parseDetails(link, a);
+                    URL url = null;
+                    try {
+                      url = new URL(link);
+                    } catch (MalformedURLException e) {
+                      // TODO Auto-generated catch block
+                      e.printStackTrace();
+                    }
+                    parseDetails(url, a);
                 }
                 
                 ads.add(a);
@@ -253,8 +227,12 @@ public class Parser {
         }
     }
     
-    public void parseDetails(String url, Ad a) {
-        Document doc = getPage(url);
+    public void parseDetails(URL url, Ad a) {
+        if(url == null) {
+          System.out.println("Empty url");
+          return;
+        }
+        Document doc = downloadWebpage(url);
         if(doc == null) {
             System.out.println("no details");
             return;
@@ -266,12 +244,13 @@ public class Parser {
         }
     }
    
-    public String getNextUrl(String url) {
+    public URL getNextUrl(URL url) {
         String output = "";
+        URL nextURL = null;
         
-        Document doc = getPage(url);
+        Document doc = downloadWebpage(url);
         if(doc == null) {
-            return "";
+            return null;
         }
         
         Element element = doc.select(".navigateNext").select("a").first();
@@ -279,37 +258,22 @@ public class Parser {
             output += "http://www.oferty.net";
             output += element.attr("href");
         }
-        return output;
-    }
-    
-    public String arrayListToString(ArrayList ar) {
-        String s = "";
-        for(Object o : ar) {
-            s += o.toString();
-            s +=AdsConstants.LINE + AdsConstants.NEWLINE;
+        try {
+          nextURL = new URL(output);
+        } catch (MalformedURLException e) {
+          // TODO Auto-generated catch block
+          e.printStackTrace();
         }
-        return s;
-    }
-    
-    public String adsTitlesToString(ArrayList<Ad> ar) {
-        String s = "";
-        for(Ad a : ar) {
-            s += a.getID() + "| " + a.getTitle() + AdsConstants.NEWLINE;
-            s += AdsConstants.LINE + AdsConstants.NEWLINE;
-        }
-        return s;
+        return nextURL;
     }
     
     public static boolean isNumeric(String str)
     {
       return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
-    
-    public void isRunning(int counterMax) {
-        if(counter < counterMax) {
-            isRunning = true;
-        } else {
-            isRunning = false;
-        }
+
+    @Override
+    public URL constructRequestUrl() {
+      throw new UnsupportedOperationException();
     }
 }
