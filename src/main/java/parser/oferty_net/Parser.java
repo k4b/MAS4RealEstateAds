@@ -1,4 +1,4 @@
-package parser;
+package parser.oferty_net;
 /*
  * To change this template, choose Tools | Templates
  * and open the template in the editor.
@@ -295,8 +295,6 @@ public class Parser {
         String s = "";
         for(Ad a : ar) {
             s += a.getID() + "| " + a.getTitle() + AdsConstants.NEWLINE;
-            s += a.keywordsToString() + AdsConstants.NEWLINE;
-            s += a.similarityVectorToString() + AdsConstants.NEWLINE;
             s += AdsConstants.LINE + AdsConstants.NEWLINE;
         }
         return s;

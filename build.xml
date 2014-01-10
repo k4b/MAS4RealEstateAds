@@ -14,7 +14,7 @@
   <property name="jar.name" value="MAS4RealEstateAds-${version}.jar" />
   
   <!-- ivy -->
-  <property name="ivy.dir" value="${build.dir}/ivy" />
+  <property name="ivy.dir" value="${basedir}/ivy" />
   <property name="ivy.version" value="2.3.0" />
   
   <condition property="agents.args" value="-agents ${agents}" else="">
@@ -52,10 +52,11 @@
   </target>
   
   <target name="ivy-download" depends="init-lib" unless="ivy.jar.exists">
-    <mkdir dir="${basedir}/ivy/lib"/>
-    <get src="http://repo2.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar"
+    <mkdir dir="${ivy.dir}/lib"/>
+    <get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar"
          dest="${ivy.dir}/lib/ivy-${ivy.version}.jar" 
          usetimestamp="true"/>
+    <property name="ivy.jar.exists" value="true" />
   </target>
 
   <target name="ivy-init" depends="ivy-download" unless="skip.ivy">
@@ -98,9 +99,10 @@
         pattern="${ant.dir}/[artifact]-[revision].[ext]"
         inline="true"
         conf="default"/>
+    <property name="ant-optional.exists" value="true" />
   </target>
   
-  <target name="resolve" depends="ivy-init, ant-download" description="Retreive dependencies with ivy" unless="isresolved">
+  <target name="resolve" depends="ivy-init" description="Retreive dependencies with ivy" unless="isresolved">
     <ivy:resolve conf="default" file="${basedir}/ivy.xml" />
     <ivy:retrieve conf="default" pattern="${lib.dir}/[artifact]-[revision].[ext]" log="default"/>
     <property name="isresolved" value="true" />

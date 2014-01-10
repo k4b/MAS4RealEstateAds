@@ -6,7 +6,7 @@
               override="false"/>
 
   <resolvers>
-    <ibiblio name="public" m2compatible="true"/>
+    <ibiblio name="default" m2compatible="true"/>
   </resolvers>
 
 </ivysettings>

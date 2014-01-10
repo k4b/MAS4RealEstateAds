@@ -37,14 +37,11 @@ public class Utils {
         return list;
     }
     
-    public static void saveToDB(String dbName, ArrayList<Ad> ads, WordBank wordbank) {
+    public static void saveToDB(String dbName, ArrayList<Ad> ads) {
         System.out.println("Writing to DB: " + dbName);
         CouchDBHelper dbHelper = new CouchDBHelper(dbName);
         for(Ad a : ads) {
             dbHelper.save(a);
         }
-        String wordbankDBName = dbName + "_wordbank";
-        CouchDBHelper dbhelperWB = new CouchDBHelper(wordbankDBName);
-        dbhelperWB.save(wordbank);
     }
 }
