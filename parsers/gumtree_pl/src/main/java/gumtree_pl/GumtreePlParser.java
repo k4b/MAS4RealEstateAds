@@ -2,11 +2,10 @@ package gumtree_pl;
 import java.net.URL;
 
 import common.ads.Ad;
+import common.parsers.ParserAgent;
 
-import parser.AbstractParser;
 
-
-public class GumtreePlParser extends AbstractParser {
+public class GumtreePlParser extends ParserAgent {
 
   public GumtreePlParser(int maxPages) {
     super(maxPages);

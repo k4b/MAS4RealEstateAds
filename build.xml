@@ -1,21 +1,8 @@
 <project name="MAS4RealEstateAds"
-         default="compile"
+         default="common.compile"
          xmlns:ivy="antlib:org.apache.ivy.ant">
   
-  <property file="${basedir}/build.properties"/>
-  
-  <property name="build.dir" value="build" />
-  <property name="lib.dir" value="lib" />
-  <property name="src.dir" value="src" />
-  <property name="classes.dir" value="${build.dir}/classes" />
-  <property name="ant.dir" value="${build.dir}/ivy" />
-  
-  <!-- jar -->
-  <property name="jar.name" value="MAS4RealEstateAds-${version}.jar" />
-  
-  <!-- ivy -->
-  <property name="ivy.dir" value="${basedir}/ivy" />
-  <property name="ivy.version" value="2.3.0" />
+  <import file="common-build.xml" as="common"/>
   
   <condition property="agents.args" value="-agents ${agents}" else="">
     <isset property="agents"/>
@@ -36,35 +23,12 @@
   </path>
   
   <target name="clean" description="Cleans up build files">
-    <delete dir="${build.dir}" />
+    <delete dir="${build.dir.name}" />
+    <ant dir="parsers" inheritAll="false" target="clean" />
   </target>
   
   <target name="clean-lib" description="Cleans up libraries">
     <delete dir="${basedir}/lib"/>
-  </target>
-  
-  <target name="init">
-    <mkdir dir="${build.dir}" />
-  </target>
-  
-  <target name="init-lib">
-    <mkdir dir="${lib.dir}"/>
-  </target>
-  
-  <target name="ivy-download" depends="init-lib" unless="ivy.jar.exists">
-    <mkdir dir="${ivy.dir}/lib"/>
-    <get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar"
-         dest="${ivy.dir}/lib/ivy-${ivy.version}.jar" 
-         usetimestamp="true"/>
-    <property name="ivy.jar.exists" value="true" />
-  </target>
-
-  <target name="ivy-init" depends="ivy-download" unless="skip.ivy">
-    <path id="ivy.lib.path">
-      <fileset dir="${ivy.dir}/lib" includes="ivy-${ivy.version}.jar"/>
-    </path>
-    <taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
-    <ivy:settings file="${ivy.dir}/ivysettings.xml"/>
   </target>
   
   <target name="ivy-report" depends="resolve" description="Generate Ivy reports">                                                        
@@ -100,38 +64,6 @@
         inline="true"
         conf="default"/>
     <property name="ant-optional.exists" value="true" />
-  </target>
-  
-  <target name="resolve" depends="ivy-init" description="Retreive dependencies with ivy" unless="isresolved">
-    <ivy:resolve conf="default" file="${basedir}/ivy.xml" />
-    <ivy:retrieve conf="default" pattern="${lib.dir}/[artifact]-[revision].[ext]" log="default"/>
-    <property name="isresolved" value="true" />
-  </target>
-  
-  <target name="compile" depends="init" description="Compile sources">
-      <mkdir dir="${classes.dir}"/>
-      <javac srcdir="${src.dir}"
-             source="1.7"
-             target="1.7"
-             encoding="UTF-8"
-             destdir="${classes.dir}">
-        <classpath refid="lib-classpath" />
-      </javac>
-    </target>
-  
-  <target name="run" depends="compile" description="Run Agent">
-    <echo>${agents}</echo>
-    <java classname="jade.Boot" fork="true">
-      <arg line="${agents.args}"/>
-      <arg line="${gui.arg}"/>
-      <classpath refid="lib-classpath" />
-    </java>
-  </target>
-  
-  <target name="jar" depends="compile">
-    <jar destfile="${connectors-api.jar}">
-      <fileset dir="${classes.dir}" />
-    </jar>
   </target>
   
 </project>

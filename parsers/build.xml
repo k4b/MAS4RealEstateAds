@@ -1,0 +1,50 @@
+<?xml version="1.0"?>
+<project name="MAS4RealEstateAds-parsers" default="compile">
+
+  <!-- 
+       by default, fail immediately on any error when recursively running tasks
+       override on the command line as needed.
+       
+       :TODO: Ideally this would default to waiting and fail at the end if 
+       any one had failed - need to review if/how this is done in lucene 
+       modules-crawl
+  -->
+  <property name="fail.subant.on.error" value="true" />
+
+  <macrodef name="crawl">
+    <attribute name="target" default=""/>
+    <attribute name="failonerror" default="${fail.subant.on.error}"/>
+    <sequential>
+      <subant target="@{target}" failonerror="@{failonerror}" inheritAll="false">
+        <dirset dir="." includes="*" />
+        <property name="isresolved" value="${isresolved}"/>
+      </subant>
+    </sequential>
+  </macrodef>
+
+  <target name="compile" description="Compiles all parsers">
+    <crawl target="compile"/>
+  </target>
+
+  <target name="compile-tests" description="Compiles all parser tests">
+    <echo message="NOTE: some parser tests are in the main build"/>
+    <crawl target="compile-tests"/>
+  </target>
+
+  <target name="test" description="Tests all parsers">
+    <echo message="NOTE: some parser tests are in the main build"/>
+    <crawl target="test"/>
+  </target>
+
+  <target name="clean" description="Cleans all parsers">
+    <delete dir="../build/parsers" />
+    <crawl target="clean"/>
+  </target>
+
+  <target name="assemble" 
+          description="Copies all parser jars intended for the final artifacts into build/parsers">
+    <mkdir dir="../build/parsers" />
+    <crawl target="assemble"/>
+  </target>
+
+</project>

@@ -1,0 +1,17 @@
+<project name="oferty.net-parser" default="compile">
+
+  <import file="../../common-build.xml" as="common"/>
+  
+  <path id="individual-libs">
+  </path>
+
+  <target name="assemble" depends="compile">
+    <assemble-parser-jar>
+      <manifest-elements>
+        <attribute name="Parser-Alias" value="oferty.net"/>
+        <attribute name="Parser-Class" value="oferty_net.OfertyNetParser"/>
+        <attribute name="Parser-Exclude" value="javax.xml.namespace"/>
+      </manifest-elements>
+    </assemble-parser-jar>
+  </target>
+</project>

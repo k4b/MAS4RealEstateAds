@@ -1,4 +1,6 @@
-package parser;
+package common.parsers;
+
+import jade.core.Agent;
 
 import java.io.IOException;
 import java.net.URL;
@@ -13,7 +15,7 @@ import org.jsoup.nodes.Document;
 import common.ads.Ad;
 import common.ads.AdsConstants;
 
-abstract public class AbstractParser {
+abstract public class ParserAgent extends Agent {
 
   /**
    * Maximum number of parsed pages
@@ -23,7 +25,7 @@ abstract public class AbstractParser {
   protected ArrayList<Ad> ads;
   protected boolean isRunning = true;
   
-  public AbstractParser(int maxPages) {
+  public ParserAgent(int maxPages) {
     this.maxPages = maxPages;
     ads = new ArrayList<Ad>();
   }

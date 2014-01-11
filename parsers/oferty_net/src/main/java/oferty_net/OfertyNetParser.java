@@ -25,15 +25,15 @@ import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-import parser.AbstractParser;
 import common.ads.Ad;
 import common.ads.AdsConstants;
+import common.parsers.ParserAgent;
 
 /**
  * Extracts ad data from downloaded webpage. Uses Jsoup library.
  * @author Karol Abramczyk
  */
-public class OfertyNetParser extends AbstractParser {
+public class OfertyNetParser extends ParserAgent {
     
     public OfertyNetParser(int maxPages) {
       super(maxPages);

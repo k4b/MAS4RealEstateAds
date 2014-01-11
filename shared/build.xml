@@ -1,0 +1,37 @@
+<project name="MAS4RealEstateAds-shared" default="compile">
+
+  <description>
+    This is the shared common code used by both the MAS4RealEstateAds SearchAgent and ParserAgents.
+  </description>
+  
+  <import file="../common-build.xml" as="common"/>
+  
+  <target name="compile" description="Compiles shared classes">
+    <mkdir dir="${shared.classes.dir}" />
+    <javac srcdir="${sources}" destdir="${shared.classes.dir}" encoding="UTF-8">
+      <classpath>
+        <path refid="common-libs" />
+      </classpath>
+    </javac>
+  </target>
+  
+  <target name="jar" depends="compile">
+    <jar destfile="${shared.jar}">
+      <fileset dir="${shared.classes.dir}" />
+    </jar>
+  </target>
+
+  <target name="assemble">
+    <mkdir dir="${build.dir}/shared-lib"/>
+    <copy flatten="true" todir="${build.dir}/shared-lib">
+      <path refid="common-libs"/>
+      <path refid="shared-classes"/>
+    </copy>
+  </target>
+
+  <target name="clean">
+    <delete dir="${shared.classes.dir}" />
+    <delete dir="${build.dir}"/>
+  </target>
+  
+</project>

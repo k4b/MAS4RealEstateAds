@@ -1,0 +1,17 @@
+<project name="szybko.pl-parser" default="compile">
+
+  <import file="../../common-build.xml" as="common"/>
+  
+  <path id="individual-libs">
+  </path>
+
+  <target name="assemble" depends="compile">
+    <assemble-parser-jar>
+      <manifest-elements>
+        <attribute name="Parser-Alias" value="szybko.pl"/>
+        <attribute name="Parser-Class" value="szybko_pl.SzybkoPlParser"/>
+        <attribute name="Parser-Exclude" value="javax.xml.namespace"/>
+      </manifest-elements>
+    </assemble-parser-jar>
+  </target>
+</project>

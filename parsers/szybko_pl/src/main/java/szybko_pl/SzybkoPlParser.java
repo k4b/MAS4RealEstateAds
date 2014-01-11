@@ -3,10 +3,9 @@ package szybko_pl;
 import java.net.URL;
 
 import common.ads.Ad;
+import common.parsers.ParserAgent;
 
-import parser.AbstractParser;
-
-public class SzybkoPlParser extends AbstractParser {
+public class SzybkoPlParser extends ParserAgent {
 
   public SzybkoPlParser(int maxPages) {
     super(maxPages);

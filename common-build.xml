@@ -1,0 +1,160 @@
+<project name="common-build"
+         xmlns:ivy="antlib:org.apache.ivy.ant">
+  <description>
+    A file of common reused targets to be imported by individual agents
+  </description>
+  
+  <dirname property="common.basedir" file="${ant.file.common-build}" />
+  
+  <property file="${basedir}/build.properties"/>
+  
+  <property name="build.dir" value="${common.basedir}/build" />
+  <property name="build.dir.name" value="build" />
+  <property name="lib.dir" value="${common.basedir}/lib" />
+  <property name="src.dir" value="${common.basedir}/src" />
+  <property name="classes.dir" value="${build.dir}/classes" />
+  <property name="ant.dir" value="${build.dir}/lib/ant" />
+  <!-- shared properties -->
+  <property name="sources" value="src/main/java" />
+  <property name="shared.classes.dir" value="${build.dir}/shared-classes" />
+  <property name="search.jar" location="${build.dir}/${project.name}-shared-${version}.jar" />
+  <!-- AearchAgent properties -->
+  <property name="search.jar" location="${build.dir}/${project.name}-${version}.jar" />
+  <!-- parsers properties -->
+  <property name="parsers.dir" value="${common.basedir}/parsers" />
+  <property name="parser.src.dir" value="src/main/java" />
+  <property name="parser.classes.dir" value="${build.dir.name}/classes" />
+  <property name="assembled.parsers.dir" value="${build.dir}/parsers" />
+  
+  <!-- jar -->
+  <property name="jar.name" value="MAS4RealEstateAds-${version}.jar" />
+  
+  <!-- ivy -->
+  <property name="ivy.dir" value="${common.basedir}/ivy" />
+  <property name="ivy.version" value="2.3.0" />
+  
+  <!-- paths -->
+  
+  <path id="common-libs">
+    <fileset dir="${lib.dir}">
+      <include name="**/*.jar"/>
+    </fileset>
+  </path>
+  
+  <path id="shared-classes">
+    <pathelement path="${shared.classes.dir}" />
+  </path>
+  
+  <path id="SearchAgent-classes">
+    <pathelement path="${classes.dir}" />
+  </path>
+  
+  <!-- targets -->
+  
+  <target name="clean">
+    <delete dir="${build.dir.name}"/>
+  </target>
+  
+  <target name="init">
+    <mkdir dir="${build.dir}" />
+  </target>
+  
+  <target name="init-lib">
+    <mkdir dir="${lib.dir}"/>
+  </target>
+  
+  <target name="ivy-download" depends="init-lib" unless="ivy.jar.exists">
+    <mkdir dir="${ivy.dir}/lib"/>
+    <get src="http://repo1.maven.org/maven2/org/apache/ivy/ivy/${ivy.version}/ivy-${ivy.version}.jar"
+         dest="${ivy.dir}/lib/ivy-${ivy.version}.jar" 
+         usetimestamp="true"/>
+    <property name="ivy.jar.exists" value="true" />
+  </target>
+
+  <target name="ivy-init" depends="ivy-download" unless="skip.ivy">
+    <path id="ivy.lib.path">
+      <fileset dir="${ivy.dir}/lib" includes="ivy-${ivy.version}.jar"/>
+    </path>
+    <taskdef resource="org/apache/ivy/ant/antlib.xml" uri="antlib:org.apache.ivy.ant" classpathref="ivy.lib.path"/>
+    <ivy:settings file="${ivy.dir}/ivysettings.xml"/>
+  </target>
+  
+  <target name="resolve" depends="ivy-init" description="Retreive dependencies with ivy" unless="isresolved">
+    <ivy:resolve conf="default" file="${basedir}/ivy.xml" />
+    <ivy:retrieve conf="default" pattern="${lib.dir}/[artifact]-[revision].[ext]" log="default"/>
+    <property name="isresolved" value="true" />
+  </target>
+  
+  <target name="compile" depends="init, compile-shared" description="Compile sources">
+    <mkdir dir="${parser.classes.dir}"/>
+    <javac srcdir="${parser.src.dir}"
+           source="1.7"
+           target="1.7"
+           encoding="UTF-8"
+           destdir="${parser.classes.dir}">
+      <classpath refid="common-libs" />
+      <classpath refid="shared-classes" />
+    </javac>
+  </target>
+  
+  <target name="compile-shared" >
+    <!-- we build the whole jar now to keep the dependencies simple -->
+    <ant dir="${common.basedir}/shared" target="jar" useNativeBasedir="true" inheritAll="true" inheritRefs="false" />
+  </target>
+  
+  <target name="compile-parsers" depends="compile-shared" description="Compile parsers sources">
+    <!-- we build the whole jar now to keep the dependencies simple -->
+    <ant dir="${common.basedir}/parsers" inheritAll="false" target="compile" />
+  </target>
+    
+  <target name="compile-all"
+          description="Compiles Shared, SearchAgent &amp; Parser Sources"
+          depends="resolve, compile">
+    <ant dir="${common.basedir}/parsers" inheritAll="false" target="compile" />
+  </target>
+  
+  <target name="run" depends="compile" description="Run SearchAgent">
+    <echo>${agents}</echo>
+    <java classname="jade.Boot" fork="true">
+      <arg line="${agents.args}"/>
+      <arg line="${gui.arg}"/>
+      <classpath refid="common-libs" />
+      <classpath refid="SearchAgent-classes" />
+    </java>
+  </target>
+  
+  <target name="jar" depends="compile">
+    <jar destfile="${search.jar}">
+      <fileset dir="${classes.dir}" />
+    </jar>
+  </target>
+  
+  <target name="assemble-all" depends="jar" description="Assembles all parsers">
+    <ant dir="${common.basedir}/parsers" inheritAll="false" target="assemble" />
+    <mkdir dir="${build.dir}/parsers-libs"/>
+    <copy todir="${build.dir}/parsers-libs" flatten="true">
+      <path location="${shared.jar}" />
+      <path refid="parsers-libs"/>
+      <path location="${parsers-api.jar}" />
+    </copy>
+    <delete quiet="true">
+      <fileset dir="${build.dir}/parsers-libs" />
+    </delete>
+  </target>
+  
+  <macrodef name="assemble-parser-jar">
+    <element name="manifest-elements" optional="true" />
+    <sequential>
+      <jar basedir="${parser.classes.dir}"
+           jarfile="${jarfile}"
+           includes="**">
+        <path refid="common-libs"/>
+        <manifest>
+          <manifest-elements />
+        </manifest>
+      </jar>
+      <copy file="${jarfile}" todir="${assembled.parsers.dir}"/>
+    </sequential>
+  </macrodef>
+  
+</project>
