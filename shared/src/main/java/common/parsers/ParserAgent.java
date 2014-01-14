@@ -53,7 +53,7 @@ abstract public class ParserAgent extends Agent {
       
       Document d = null;
       try {
-          Connection conn = Jsoup.connect(url.getPath());
+          Connection conn = Jsoup.connect(url.toString());
           d = conn.get();
       } catch (Exception ex) {
           Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, null, ex);
