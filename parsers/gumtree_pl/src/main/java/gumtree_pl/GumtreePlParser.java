@@ -1,5 +1,8 @@
 package gumtree_pl;
 
+import jade.core.NotFoundException;
+
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -16,8 +19,6 @@ import common.parsers.ParserAgent;
 
 public class GumtreePlParser extends ParserAgent {
 
-	private static final String TITLE_ID = "preview-local-title";
-	private static final String DESCRIPTION_ID = "preview-local-desc";
 	private static final String ADDRESS_KEY = "Adres";
 	private static final String PRICE_KEY = "Cena";
 	private static final String NUM_BEDROOMS_KEY = "Liczba pokoi";
@@ -28,7 +29,6 @@ public class GumtreePlParser extends ParserAgent {
 	
 	public GumtreePlParser(int maxPages) {
 		super(maxPages);
-		// TODO Auto-generated constructor stub
 	}
 
 	@Override
@@ -39,7 +39,22 @@ public class GumtreePlParser extends ParserAgent {
 
 	@Override
 	public void startParsing(URL url, int maxPages) {
-		// TODO Auto-generated method stub
+		int i = 1;
+		boolean hasNext = true;
+		while(hasNext) {			
+			Document doc  = downloadWebpage(url);
+			Elements elements = doc.getElementsByClass("adLinkSB");
+			for(Element element : elements) {
+				System.out.println(i + " " + element.attr("href"));
+				i++;
+			}
+			try {
+				url = getNextURL(doc);
+			} catch(Exception e) {
+				e.printStackTrace();
+				hasNext = false;
+			}
+		}
 	}
 
 	@Override
@@ -47,10 +62,10 @@ public class GumtreePlParser extends ParserAgent {
 		Document doc = downloadWebpage(url);
 		Ad ad = new Ad();
 		
-		String title = doc.getElementById(TITLE_ID).text().trim();
+		String title = doc.getElementById("preview-local-title").text().trim();
 		ad.setTitle(title);
 		
-		String description = doc.getElementById(DESCRIPTION_ID).text().trim();
+		String description = doc.getElementById("preview-local-desc").text().trim();
 		ad.setDescription(description);
 
 		Element table = doc.getElementById("attributeTable");
@@ -115,8 +130,7 @@ public class GumtreePlParser extends ParserAgent {
 
 	@Override
 	public void parseDetails(URL url, Ad a) {
-		// TODO Auto-generated method stub
-
+		throw new UnsupportedOperationException();
 	}
 
 	private Map<String, String> getAddress(String value) {
@@ -182,5 +196,14 @@ public class GumtreePlParser extends ParserAgent {
 	private int calculatePricePerMeter(int price, double area) {
 		int pricePerMeter = (int) (price / area);
 		return pricePerMeter;
+	}
+	
+	private URL getNextURL(Document doc) throws MalformedURLException, NotFoundException {
+		Element element = doc.getElementsByClass("prevNextLink").last();
+		if(element.text().startsWith("Nastêpne")) {
+			String link = element.attr("href");
+			return new URL(link);	
+		}
+		throw new NotFoundException();
 	}
 }
