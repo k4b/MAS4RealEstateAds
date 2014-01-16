@@ -20,7 +20,7 @@ public class SzybkoPlParser extends ParserAgent {
   private final static String AREA_KEY = "powierzchnia";
   private final static String FLOOR_KEY = "piętro";
   private final static String NUMBER_OF_BUILDING_FLOORS_KEY = "liczba pięter w budynku";
-  private final static String NUMBER_OF_BEDROOMS_KEY = "liczba pokoi";
+  private final static String NUMBER_OF_BEDROOMS_KEY = "liczba sypialni";
   private final static String NUMBER_OF_BATHROOMS_KEY = "liczba łazienek";
   private final static String CONSTRUCTION_YEAR_KEY = "rok budowy";
   private final static String LAST_UPDATE_KEY = "data ostatniej aktualizacji";
