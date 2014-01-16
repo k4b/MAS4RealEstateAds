@@ -15,7 +15,9 @@ import java.awt.GridBagConstraints;
 import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Enumeration;
 
+import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
@@ -25,7 +27,6 @@ import javax.swing.JButton;
 import javax.swing.JTable;
 
 import common.ads.Filter;
-import common.ads.FilterConstants;
 
 public class SearchWindow extends JFrame {
   
@@ -40,7 +41,9 @@ public class SearchWindow extends JFrame {
   private JTextField txtAreaMin;
   private JTextField txtAreaMax;
   private JTable table;
-  private ButtonGroup transactionGroup;
+  private ButtonGroup transactionGroup, typeGroup, adGroup, advertiserGroup;
+  private JTextField txtRoomsNumMin;
+  private JTextField txtRoomsNumMax;
   
   /**
    * Create the frame.
@@ -53,15 +56,15 @@ public class SearchWindow extends JFrame {
     contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
     setContentPane(contentPane);
     GridBagLayout gbl_contentPane = new GridBagLayout();
-    gbl_contentPane.columnWidths = new int[]{0, 0, 38, 0, 20, 0, 0, 0, 0, 0};
+    gbl_contentPane.columnWidths = new int[]{0, 0, 38, 0, 0, 0, 0, 0, 0};
     gbl_contentPane.rowHeights = new int[]{0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
-    gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 1.0};
+    gbl_contentPane.columnWeights = new double[]{0.0, 0.0, 1.0, 0.0, 0.0, 1.0, 0.0, 0.0, 1.0};
     gbl_contentPane.rowWeights = new double[]{0.0, 1.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, Double.MIN_VALUE};
     contentPane.setLayout(gbl_contentPane);
     
     JLabel lblParametryWyszukiwania = new JLabel("Parametry wyszukiwania");
     GridBagConstraints gbc_lblParametryWyszukiwania = new GridBagConstraints();
-    gbc_lblParametryWyszukiwania.gridwidth = 9;
+    gbc_lblParametryWyszukiwania.gridwidth = 8;
     gbc_lblParametryWyszukiwania.insets = new Insets(0, 0, 5, 5);
     gbc_lblParametryWyszukiwania.gridx = 0;
     gbc_lblParametryWyszukiwania.gridy = 0;
@@ -69,7 +72,7 @@ public class SearchWindow extends JFrame {
     
     JLabel lblKategoria = new JLabel("Transakcja");
     GridBagConstraints gbc_lblKategoria = new GridBagConstraints();
-    gbc_lblKategoria.gridwidth = 7;
+    gbc_lblKategoria.gridwidth = 6;
     gbc_lblKategoria.anchor = GridBagConstraints.WEST;
     gbc_lblKategoria.insets = new Insets(0, 0, 5, 5);
     gbc_lblKategoria.gridx = 1;
@@ -82,25 +85,23 @@ public class SearchWindow extends JFrame {
     gbc_table.gridheight = 23;
     gbc_table.insets = new Insets(0, 0, 5, 0);
     gbc_table.fill = GridBagConstraints.BOTH;
-    gbc_table.gridx = 9;
+    gbc_table.gridx = 8;
     gbc_table.gridy = 0;
     contentPane.add(table, gbc_table);
     
-    JRadioButton radioSell = new JRadioButton("Sprzedaż");
-    radioSell.setActionCommand(FilterConstants.AC_SELL);
+    JRadioButton radioSell = new JRadioButton("Kupno/Sprzedaż");
     GridBagConstraints gbc_radioSell = new GridBagConstraints();
-    gbc_radioSell.gridwidth = 4;
+    gbc_radioSell.gridwidth = 3;
     gbc_radioSell.insets = new Insets(0, 0, 5, 5);
     gbc_radioSell.gridx = 1;
     gbc_radioSell.gridy = 2;
     contentPane.add(radioSell, gbc_radioSell);
     
     JRadioButton radioRent = new JRadioButton("Wynajem");
-    radioRent.setActionCommand(FilterConstants.AC_RENT);
     GridBagConstraints gbc_radioRent = new GridBagConstraints();
     gbc_radioRent.gridwidth = 3;
     gbc_radioRent.insets = new Insets(0, 0, 5, 5);
-    gbc_radioRent.gridx = 5;
+    gbc_radioRent.gridx = 4;
     gbc_radioRent.gridy = 2;
     contentPane.add(radioRent, gbc_radioRent);
     
@@ -110,16 +111,45 @@ public class SearchWindow extends JFrame {
     
     JLabel lblRodzaj = new JLabel("Rodzaj");
     GridBagConstraints gbc_lblRodzaj = new GridBagConstraints();
-    gbc_lblRodzaj.gridwidth = 7;
+    gbc_lblRodzaj.gridwidth = 6;
     gbc_lblRodzaj.anchor = GridBagConstraints.WEST;
     gbc_lblRodzaj.insets = new Insets(0, 0, 5, 5);
     gbc_lblRodzaj.gridx = 1;
     gbc_lblRodzaj.gridy = 3;
     contentPane.add(lblRodzaj, gbc_lblRodzaj);
     
+    JRadioButton radioTypeFlat = new JRadioButton("Mieszkanie");
+    GridBagConstraints gbc_radioTypeFlat = new GridBagConstraints();
+    gbc_radioTypeFlat.gridwidth = 2;
+    gbc_radioTypeFlat.insets = new Insets(0, 0, 5, 5);
+    gbc_radioTypeFlat.gridx = 1;
+    gbc_radioTypeFlat.gridy = 4;
+    contentPane.add(radioTypeFlat, gbc_radioTypeFlat);
+    
+    JRadioButton radioTypeHouse = new JRadioButton("Dom");
+    GridBagConstraints gbc_radioTypeHouse = new GridBagConstraints();
+    gbc_radioTypeHouse.gridwidth = 2;
+    gbc_radioTypeHouse.insets = new Insets(0, 0, 5, 5);
+    gbc_radioTypeHouse.gridx = 3;
+    gbc_radioTypeHouse.gridy = 4;
+    contentPane.add(radioTypeHouse, gbc_radioTypeHouse);
+    
+    JRadioButton radioTypeOther = new JRadioButton("Inne");
+    GridBagConstraints gbc_radioTypeOther = new GridBagConstraints();
+    gbc_radioTypeOther.gridwidth = 2;
+    gbc_radioTypeOther.insets = new Insets(0, 0, 5, 5);
+    gbc_radioTypeOther.gridx = 5;
+    gbc_radioTypeOther.gridy = 4;
+    contentPane.add(radioTypeOther, gbc_radioTypeOther);
+    
+    typeGroup = new ButtonGroup();
+    typeGroup.add(radioTypeFlat);
+    typeGroup.add(radioTypeHouse);
+    typeGroup.add(radioTypeOther);
+    
     JLabel lblMiejscowo = new JLabel("Miejscowość");
     GridBagConstraints gbc_lblMiejscowo = new GridBagConstraints();
-    gbc_lblMiejscowo.gridwidth = 7;
+    gbc_lblMiejscowo.gridwidth = 6;
     gbc_lblMiejscowo.insets = new Insets(0, 0, 5, 5);
     gbc_lblMiejscowo.anchor = GridBagConstraints.WEST;
     gbc_lblMiejscowo.gridx = 1;
@@ -129,7 +159,7 @@ public class SearchWindow extends JFrame {
     txtCity = new JTextField();
     txtCity.setText("Warszawa");
     GridBagConstraints gbc_txtCity = new GridBagConstraints();
-    gbc_txtCity.gridwidth = 7;
+    gbc_txtCity.gridwidth = 6;
     gbc_txtCity.insets = new Insets(0, 0, 5, 5);
     gbc_txtCity.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtCity.gridx = 1;
@@ -139,7 +169,7 @@ public class SearchWindow extends JFrame {
     
     JLabel lblDzielnica = new JLabel("Dzielnica");
     GridBagConstraints gbc_lblDzielnica = new GridBagConstraints();
-    gbc_lblDzielnica.gridwidth = 7;
+    gbc_lblDzielnica.gridwidth = 6;
     gbc_lblDzielnica.anchor = GridBagConstraints.WEST;
     gbc_lblDzielnica.insets = new Insets(0, 0, 5, 5);
     gbc_lblDzielnica.gridx = 1;
@@ -149,7 +179,7 @@ public class SearchWindow extends JFrame {
     txtDistrict = new JTextField();
     txtDistrict.setText("Bielany");
     GridBagConstraints gbc_txtDistrict = new GridBagConstraints();
-    gbc_txtDistrict.gridwidth = 7;
+    gbc_txtDistrict.gridwidth = 6;
     gbc_txtDistrict.insets = new Insets(0, 0, 5, 5);
     gbc_txtDistrict.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtDistrict.gridx = 1;
@@ -159,7 +189,7 @@ public class SearchWindow extends JFrame {
     
     JLabel lblUlica = new JLabel("Ulica");
     GridBagConstraints gbc_lblUlica = new GridBagConstraints();
-    gbc_lblUlica.gridwidth = 7;
+    gbc_lblUlica.gridwidth = 6;
     gbc_lblUlica.anchor = GridBagConstraints.WEST;
     gbc_lblUlica.insets = new Insets(0, 0, 5, 5);
     gbc_lblUlica.gridx = 1;
@@ -169,7 +199,7 @@ public class SearchWindow extends JFrame {
     txtStreet = new JTextField();
     txtStreet.setText("Szegedyńska");
     GridBagConstraints gbc_txtStreet = new GridBagConstraints();
-    gbc_txtStreet.gridwidth = 7;
+    gbc_txtStreet.gridwidth = 6;
     gbc_txtStreet.insets = new Insets(0, 0, 5, 5);
     gbc_txtStreet.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtStreet.gridx = 1;
@@ -180,7 +210,7 @@ public class SearchWindow extends JFrame {
     JLabel lblCena = new JLabel("Cena");
     GridBagConstraints gbc_lblCena = new GridBagConstraints();
     gbc_lblCena.anchor = GridBagConstraints.WEST;
-    gbc_lblCena.gridwidth = 7;
+    gbc_lblCena.gridwidth = 6;
     gbc_lblCena.insets = new Insets(0, 0, 5, 5);
     gbc_lblCena.gridx = 1;
     gbc_lblCena.gridy = 11;
@@ -198,7 +228,7 @@ public class SearchWindow extends JFrame {
     txtPriceMin.setHorizontalAlignment(SwingConstants.RIGHT);
     txtPriceMin.setText("100000");
     GridBagConstraints gbc_txtPriceMin = new GridBagConstraints();
-    gbc_txtPriceMin.gridwidth = 3;
+    gbc_txtPriceMin.gridwidth = 2;
     gbc_txtPriceMin.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtPriceMin.insets = new Insets(0, 0, 5, 5);
     gbc_txtPriceMin.gridx = 2;
@@ -210,7 +240,7 @@ public class SearchWindow extends JFrame {
     GridBagConstraints gbc_lblDo = new GridBagConstraints();
     gbc_lblDo.anchor = GridBagConstraints.EAST;
     gbc_lblDo.insets = new Insets(0, 0, 5, 5);
-    gbc_lblDo.gridx = 5;
+    gbc_lblDo.gridx = 4;
     gbc_lblDo.gridy = 12;
     contentPane.add(lblDo, gbc_lblDo);
     
@@ -221,14 +251,14 @@ public class SearchWindow extends JFrame {
     gbc_txtPriceMax.gridwidth = 2;
     gbc_txtPriceMax.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtPriceMax.insets = new Insets(0, 0, 5, 5);
-    gbc_txtPriceMax.gridx = 6;
+    gbc_txtPriceMax.gridx = 5;
     gbc_txtPriceMax.gridy = 12;
     contentPane.add(txtPriceMax, gbc_txtPriceMax);
     txtPriceMax.setColumns(10);
     
     JLabel lblCenaZaM = new JLabel("Cena za m2");
     GridBagConstraints gbc_lblCenaZaM = new GridBagConstraints();
-    gbc_lblCenaZaM.gridwidth = 7;
+    gbc_lblCenaZaM.gridwidth = 6;
     gbc_lblCenaZaM.anchor = GridBagConstraints.WEST;
     gbc_lblCenaZaM.insets = new Insets(0, 0, 5, 5);
     gbc_lblCenaZaM.gridx = 1;
@@ -247,7 +277,7 @@ public class SearchWindow extends JFrame {
     txtPricePerMeterMin.setHorizontalAlignment(SwingConstants.RIGHT);
     txtPricePerMeterMin.setText("2000");
     GridBagConstraints gbc_txtPricePerMeterMin = new GridBagConstraints();
-    gbc_txtPricePerMeterMin.gridwidth = 3;
+    gbc_txtPricePerMeterMin.gridwidth = 2;
     gbc_txtPricePerMeterMin.insets = new Insets(0, 0, 5, 5);
     gbc_txtPricePerMeterMin.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtPricePerMeterMin.gridx = 2;
@@ -259,7 +289,7 @@ public class SearchWindow extends JFrame {
     GridBagConstraints gbc_lblDo_1 = new GridBagConstraints();
     gbc_lblDo_1.anchor = GridBagConstraints.EAST;
     gbc_lblDo_1.insets = new Insets(0, 0, 5, 5);
-    gbc_lblDo_1.gridx = 5;
+    gbc_lblDo_1.gridx = 4;
     gbc_lblDo_1.gridy = 14;
     contentPane.add(lblDo_1, gbc_lblDo_1);
     
@@ -270,63 +300,63 @@ public class SearchWindow extends JFrame {
     gbc_txtPricePerMeterMax.gridwidth = 2;
     gbc_txtPricePerMeterMax.insets = new Insets(0, 0, 5, 5);
     gbc_txtPricePerMeterMax.fill = GridBagConstraints.HORIZONTAL;
-    gbc_txtPricePerMeterMax.gridx = 6;
+    gbc_txtPricePerMeterMax.gridx = 5;
     gbc_txtPricePerMeterMax.gridy = 14;
     contentPane.add(txtPricePerMeterMax, gbc_txtPricePerMeterMax);
     txtPricePerMeterMax.setColumns(10);
     
-    JLabel lblPokoje = new JLabel("Pokoje");
+    JLabel lblPokoje = new JLabel("Liczba pokoi");
     GridBagConstraints gbc_lblPokoje = new GridBagConstraints();
-    gbc_lblPokoje.gridwidth = 7;
+    gbc_lblPokoje.gridwidth = 6;
     gbc_lblPokoje.anchor = GridBagConstraints.WEST;
     gbc_lblPokoje.insets = new Insets(0, 0, 5, 5);
     gbc_lblPokoje.gridx = 1;
     gbc_lblPokoje.gridy = 15;
     contentPane.add(lblPokoje, gbc_lblPokoje);
     
-    JCheckBox checkRoom1 = new JCheckBox("1");
-    GridBagConstraints gbc_checkRoom1 = new GridBagConstraints();
-    gbc_checkRoom1.anchor = GridBagConstraints.WEST;
-    gbc_checkRoom1.insets = new Insets(0, 0, 5, 5);
-    gbc_checkRoom1.gridx = 1;
-    gbc_checkRoom1.gridy = 16;
-    contentPane.add(checkRoom1, gbc_checkRoom1);
+    JLabel lblRoomsNumMin = new JLabel("Od");
+    GridBagConstraints gbc_lblRoomsNumMin = new GridBagConstraints();
+    gbc_lblRoomsNumMin.anchor = GridBagConstraints.EAST;
+    gbc_lblRoomsNumMin.insets = new Insets(0, 0, 5, 5);
+    gbc_lblRoomsNumMin.gridx = 1;
+    gbc_lblRoomsNumMin.gridy = 16;
+    contentPane.add(lblRoomsNumMin, gbc_lblRoomsNumMin);
     
-    JCheckBox checkRoom2 = new JCheckBox("2");
-    GridBagConstraints gbc_checkRoom2 = new GridBagConstraints();
-    gbc_checkRoom2.anchor = GridBagConstraints.WEST;
-    gbc_checkRoom2.insets = new Insets(0, 0, 5, 5);
-    gbc_checkRoom2.gridx = 2;
-    gbc_checkRoom2.gridy = 16;
-    contentPane.add(checkRoom2, gbc_checkRoom2);
+    txtRoomsNumMin = new JTextField();
+    txtRoomsNumMin.setHorizontalAlignment(SwingConstants.RIGHT);
+    txtRoomsNumMin.setText("1");
+    GridBagConstraints gbc_txtRoomsNumMin = new GridBagConstraints();
+    gbc_txtRoomsNumMin.gridwidth = 2;
+    gbc_txtRoomsNumMin.insets = new Insets(0, 0, 5, 5);
+    gbc_txtRoomsNumMin.fill = GridBagConstraints.HORIZONTAL;
+    gbc_txtRoomsNumMin.gridx = 2;
+    gbc_txtRoomsNumMin.gridy = 16;
+    contentPane.add(txtRoomsNumMin, gbc_txtRoomsNumMin);
+    txtRoomsNumMin.setColumns(10);
     
-    JCheckBox checkRoom3 = new JCheckBox("3");
-    GridBagConstraints gbc_checkRoom3 = new GridBagConstraints();
-    gbc_checkRoom3.anchor = GridBagConstraints.WEST;
-    gbc_checkRoom3.insets = new Insets(0, 0, 5, 5);
-    gbc_checkRoom3.gridx = 3;
-    gbc_checkRoom3.gridy = 16;
-    contentPane.add(checkRoom3, gbc_checkRoom3);
+    JLabel lblRoomsNumMax = new JLabel("Do");
+    GridBagConstraints gbc_lblRoomsNumMax = new GridBagConstraints();
+    gbc_lblRoomsNumMax.anchor = GridBagConstraints.EAST;
+    gbc_lblRoomsNumMax.insets = new Insets(0, 0, 5, 5);
+    gbc_lblRoomsNumMax.gridx = 4;
+    gbc_lblRoomsNumMax.gridy = 16;
+    contentPane.add(lblRoomsNumMax, gbc_lblRoomsNumMax);
     
-    JCheckBox checkRoom4 = new JCheckBox("4");
-    GridBagConstraints gbc_checkRoom4 = new GridBagConstraints();
-    gbc_checkRoom4.anchor = GridBagConstraints.WEST;
-    gbc_checkRoom4.insets = new Insets(0, 0, 5, 5);
-    gbc_checkRoom4.gridx = 4;
-    gbc_checkRoom4.gridy = 16;
-    contentPane.add(checkRoom4, gbc_checkRoom4);
-    
-    JCheckBox checkRoom5 = new JCheckBox("5+");
-    GridBagConstraints gbc_checkRoom5 = new GridBagConstraints();
-    gbc_checkRoom5.anchor = GridBagConstraints.WEST;
-    gbc_checkRoom5.insets = new Insets(0, 0, 5, 5);
-    gbc_checkRoom5.gridx = 5;
-    gbc_checkRoom5.gridy = 16;
-    contentPane.add(checkRoom5, gbc_checkRoom5);
+    txtRoomsNumMax = new JTextField();
+    txtRoomsNumMax.setHorizontalAlignment(SwingConstants.RIGHT);
+    txtRoomsNumMax.setText("3");
+    GridBagConstraints gbc_txtRoomsNumMax = new GridBagConstraints();
+    gbc_txtRoomsNumMax.gridwidth = 2;
+    gbc_txtRoomsNumMax.insets = new Insets(0, 0, 5, 5);
+    gbc_txtRoomsNumMax.fill = GridBagConstraints.HORIZONTAL;
+    gbc_txtRoomsNumMax.gridx = 5;
+    gbc_txtRoomsNumMax.gridy = 16;
+    contentPane.add(txtRoomsNumMax, gbc_txtRoomsNumMax);
+    txtRoomsNumMax.setColumns(10);
     
     JLabel lblPowierzchnia = new JLabel("Metraż");
     GridBagConstraints gbc_lblPowierzchnia = new GridBagConstraints();
-    gbc_lblPowierzchnia.gridwidth = 7;
+    gbc_lblPowierzchnia.gridwidth = 6;
     gbc_lblPowierzchnia.anchor = GridBagConstraints.WEST;
     gbc_lblPowierzchnia.insets = new Insets(0, 0, 5, 5);
     gbc_lblPowierzchnia.gridx = 1;
@@ -346,7 +376,7 @@ public class SearchWindow extends JFrame {
     txtAreaMin.setText("30");
     GridBagConstraints gbc_txtAreaMin = new GridBagConstraints();
     gbc_txtAreaMin.fill = GridBagConstraints.HORIZONTAL;
-    gbc_txtAreaMin.gridwidth = 3;
+    gbc_txtAreaMin.gridwidth = 2;
     gbc_txtAreaMin.insets = new Insets(0, 0, 5, 5);
     gbc_txtAreaMin.gridx = 2;
     gbc_txtAreaMin.gridy = 18;
@@ -357,7 +387,7 @@ public class SearchWindow extends JFrame {
     GridBagConstraints gbc_lblDo_2 = new GridBagConstraints();
     gbc_lblDo_2.anchor = GridBagConstraints.EAST;
     gbc_lblDo_2.insets = new Insets(0, 0, 5, 5);
-    gbc_lblDo_2.gridx = 5;
+    gbc_lblDo_2.gridx = 4;
     gbc_lblDo_2.gridy = 18;
     contentPane.add(lblDo_2, gbc_lblDo_2);
     
@@ -368,98 +398,74 @@ public class SearchWindow extends JFrame {
     gbc_txtAreaMax.fill = GridBagConstraints.HORIZONTAL;
     gbc_txtAreaMax.gridwidth = 2;
     gbc_txtAreaMax.insets = new Insets(0, 0, 5, 5);
-    gbc_txtAreaMax.gridx = 6;
+    gbc_txtAreaMax.gridx = 5;
     gbc_txtAreaMax.gridy = 18;
     contentPane.add(txtAreaMax, gbc_txtAreaMax);
     txtAreaMax.setColumns(10);
     
     JLabel lblOgoszenie = new JLabel("Ogłoszenie");
     GridBagConstraints gbc_lblOgoszenie = new GridBagConstraints();
-    gbc_lblOgoszenie.gridwidth = 7;
+    gbc_lblOgoszenie.gridwidth = 6;
     gbc_lblOgoszenie.anchor = GridBagConstraints.WEST;
     gbc_lblOgoszenie.insets = new Insets(0, 0, 5, 5);
     gbc_lblOgoszenie.gridx = 1;
     gbc_lblOgoszenie.gridy = 19;
     contentPane.add(lblOgoszenie, gbc_lblOgoszenie);
     
-    JCheckBox checkOffered = new JCheckBox("Oferowane");
-    checkOffered.setHorizontalAlignment(SwingConstants.LEFT);
-    GridBagConstraints gbc_checkOffered = new GridBagConstraints();
-    gbc_checkOffered.anchor = GridBagConstraints.WEST;
-    gbc_checkOffered.gridwidth = 4;
-    gbc_checkOffered.insets = new Insets(0, 0, 5, 5);
-    gbc_checkOffered.gridx = 1;
-    gbc_checkOffered.gridy = 20;
-    contentPane.add(checkOffered, gbc_checkOffered);
+    JRadioButton radioAdOffered = new JRadioButton("Oferowane");
+    GridBagConstraints gbc_radioAdSell = new GridBagConstraints();
+    gbc_radioAdSell.gridwidth = 3;
+    gbc_radioAdSell.insets = new Insets(0, 0, 5, 5);
+    gbc_radioAdSell.gridx = 1;
+    gbc_radioAdSell.gridy = 20;
+    contentPane.add(radioAdOffered, gbc_radioAdSell);
     
-    JCheckBox checkSearched = new JCheckBox("Poszukiwane");
-    GridBagConstraints gbc_checkSearched = new GridBagConstraints();
-    gbc_checkSearched.anchor = GridBagConstraints.WEST;
-    gbc_checkSearched.gridwidth = 3;
-    gbc_checkSearched.insets = new Insets(0, 0, 5, 5);
-    gbc_checkSearched.gridx = 5;
-    gbc_checkSearched.gridy = 20;
-    contentPane.add(checkSearched, gbc_checkSearched);
+    JRadioButton radioAdSearched = new JRadioButton("Poszukiwane");
+    GridBagConstraints gbc_radioAdBuy = new GridBagConstraints();
+    gbc_radioAdBuy.gridwidth = 3;
+    gbc_radioAdBuy.insets = new Insets(0, 0, 5, 5);
+    gbc_radioAdBuy.gridx = 4;
+    gbc_radioAdBuy.gridy = 20;
+    contentPane.add(radioAdSearched, gbc_radioAdBuy);
+    
+    adGroup = new ButtonGroup();
+    adGroup.add(radioAdOffered);
+    adGroup.add(radioAdSearched);
     
     JLabel lblOgoszeniodawca = new JLabel("Ogłoszeniodawca");
     GridBagConstraints gbc_lblOgoszeniodawca = new GridBagConstraints();
     gbc_lblOgoszeniodawca.anchor = GridBagConstraints.WEST;
-    gbc_lblOgoszeniodawca.gridwidth = 7;
+    gbc_lblOgoszeniodawca.gridwidth = 6;
     gbc_lblOgoszeniodawca.insets = new Insets(0, 0, 5, 5);
     gbc_lblOgoszeniodawca.gridx = 1;
     gbc_lblOgoszeniodawca.gridy = 21;
     contentPane.add(lblOgoszeniodawca, gbc_lblOgoszeniodawca);
     
-    JCheckBox checkOwner = new JCheckBox("Właściciel");
-    GridBagConstraints gbc_checkOwner = new GridBagConstraints();
-    gbc_checkOwner.anchor = GridBagConstraints.WEST;
-    gbc_checkOwner.gridwidth = 4;
-    gbc_checkOwner.insets = new Insets(0, 0, 5, 5);
-    gbc_checkOwner.gridx = 1;
-    gbc_checkOwner.gridy = 22;
-    contentPane.add(checkOwner, gbc_checkOwner);
+    JRadioButton radioAdvertiserOwner = new JRadioButton("Właściciel");
+    GridBagConstraints gbc_radioAdvertiserOwner = new GridBagConstraints();
+    gbc_radioAdvertiserOwner.gridwidth = 3;
+    gbc_radioAdvertiserOwner.insets = new Insets(0, 0, 5, 5);
+    gbc_radioAdvertiserOwner.gridx = 1;
+    gbc_radioAdvertiserOwner.gridy = 22;
+    contentPane.add(radioAdvertiserOwner, gbc_radioAdvertiserOwner);
     
-    JCheckBox checkAgency = new JCheckBox("Agencja");
-    GridBagConstraints gbc_checkAgency = new GridBagConstraints();
-    gbc_checkAgency.anchor = GridBagConstraints.WEST;
-    gbc_checkAgency.gridwidth = 3;
-    gbc_checkAgency.insets = new Insets(0, 0, 5, 5);
-    gbc_checkAgency.gridx = 5;
-    gbc_checkAgency.gridy = 22;
-    contentPane.add(checkAgency, gbc_checkAgency);
+    JRadioButton radioAdvertiserAgency = new JRadioButton("Agencja");
+    GridBagConstraints gbc_radioAdvertiserAgency = new GridBagConstraints();
+    gbc_radioAdvertiserAgency.gridwidth = 3;
+    gbc_radioAdvertiserAgency.insets = new Insets(0, 0, 5, 5);
+    gbc_radioAdvertiserAgency.gridx = 4;
+    gbc_radioAdvertiserAgency.gridy = 22;
+    contentPane.add(radioAdvertiserAgency, gbc_radioAdvertiserAgency);
     
-    JCheckBox checkTypeFlat = new JCheckBox("Mieszkanie");
-    GridBagConstraints gbc_checkTypeFlat = new GridBagConstraints();
-    gbc_checkTypeFlat.gridwidth = 4;
-    gbc_checkTypeFlat.anchor = GridBagConstraints.WEST;
-    gbc_checkTypeFlat.insets = new Insets(0, 0, 5, 5);
-    gbc_checkTypeFlat.gridx = 1;
-    gbc_checkTypeFlat.gridy = 4;
-    contentPane.add(checkTypeFlat, gbc_checkTypeFlat);
-    
-    JCheckBox checkTypeHouse = new JCheckBox("Dom");
-    GridBagConstraints gbc_checkTypeHouse = new GridBagConstraints();
-    gbc_checkTypeHouse.gridwidth = 2;
-    gbc_checkTypeHouse.anchor = GridBagConstraints.WEST;
-    gbc_checkTypeHouse.insets = new Insets(0, 0, 5, 5);
-    gbc_checkTypeHouse.gridx = 5;
-    gbc_checkTypeHouse.gridy = 4;
-    contentPane.add(checkTypeHouse, gbc_checkTypeHouse);
-    
-    JCheckBox checkTypeOther = new JCheckBox("Inne");
-    GridBagConstraints gbc_checkTypeOther = new GridBagConstraints();
-    gbc_checkTypeOther.insets = new Insets(0, 0, 5, 5);
-    gbc_checkTypeOther.fill = GridBagConstraints.HORIZONTAL;
-    gbc_checkTypeOther.gridwidth = 2;
-    gbc_checkTypeOther.gridx = 7;
-    gbc_checkTypeOther.gridy = 4;
-    contentPane.add(checkTypeOther, gbc_checkTypeOther);
+    advertiserGroup = new ButtonGroup();
+    advertiserGroup.add(radioAdvertiserOwner);
+    advertiserGroup.add(radioAdvertiserAgency);
     
     JButton searchButton = new JButton("Wyszukaj");
     GridBagConstraints gbc_searchButton = new GridBagConstraints();
     gbc_searchButton.fill = GridBagConstraints.HORIZONTAL;
     gbc_searchButton.anchor = GridBagConstraints.SOUTH;
-    gbc_searchButton.gridwidth = 7;
+    gbc_searchButton.gridwidth = 6;
     gbc_searchButton.insets = new Insets(0, 0, 0, 5);
     gbc_searchButton.gridx = 1;
     gbc_searchButton.gridy = 23;
@@ -479,15 +485,28 @@ public class SearchWindow extends JFrame {
     filter.setCity(txtCity.getText());
     filter.setDistrict(txtDistrict.getText());
     filter.setStreet(txtStreet.getText());
-//    filter.setType();
-    filter.setTransactionType(transactionGroup.getSelection().toString());
+    filter.setEstateType(getSelectedButtonText(typeGroup));
+    filter.setTransactionType(getSelectedButtonText(transactionGroup));
     filter.setPriceMin(txtPriceMin.getText());
     filter.setPriceMax(txtPriceMax.getText());
     filter.setPricePerMeterMin(txtPricePerMeterMin.getText());
     filter.setPricePerMeterMax(txtPricePerMeterMax.getText());
-//    filter.setroooms
+    filter.setRoomsNumMin(txtRoomsNumMin.getText());
+    filter.setRoomsNumMax(txtRoomsNumMax.getText());
     filter.setAreaMin(txtAreaMin.getText());
     filter.setAreaMax(txtAreaMax.getText());
-    
+    filter.setAdType(getSelectedButtonText(adGroup));
+    filter.setAdvertiser(getSelectedButtonText(advertiserGroup));
+  }
+  
+  public String getSelectedButtonText(ButtonGroup buttonGroup) {
+    for (Enumeration<AbstractButton> buttons = buttonGroup.getElements(); buttons.hasMoreElements();) {
+        AbstractButton button = buttons.nextElement();
+
+        if (button.isSelected()) {
+            return button.getText();
+        }
+    }
+    return null;
   }
 }

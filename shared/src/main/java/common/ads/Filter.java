@@ -38,13 +38,17 @@ public class Filter {
 
     private String numFloorsMax;
     
-    private String type;
+    private String estateType;
     
     private String transactionType;
     
     private String roomsNumMin;
     
     private String roomsNumMax;
+    
+    private String adType;
+    
+    private String advertiser;
     
     public Filter() {
     }
@@ -173,15 +177,15 @@ public class Filter {
     /**
      * @return the types
      */
-    public String getType() {
-      return type;
+    public String getEstateType() {
+      return estateType;
     }
 
     /**
      * @param types the types to set
      */
-    public void setType(String type) {
-      this.type = type;
+    public void setEstateType(String type) {
+      this.estateType = type;
     }
 
 
@@ -198,5 +202,69 @@ public class Filter {
      */
     public void setTransactionType(String transactionType) {
       this.transactionType = transactionType;
+    }
+
+
+    /**
+     * @return the roomsNumMin
+     */
+    public String getRoomsNumMin() {
+      return roomsNumMin;
+    }
+
+
+    /**
+     * @param roomsNumMin the roomsNumMin to set
+     */
+    public void setRoomsNumMin(String roomsNumMin) {
+      this.roomsNumMin = roomsNumMin;
+    }
+
+
+    /**
+     * @return the roomsNumMax
+     */
+    public String getRoomsNumMax() {
+      return roomsNumMax;
+    }
+
+
+    /**
+     * @param roomsNumMax the roomsNumMax to set
+     */
+    public void setRoomsNumMax(String roomsNumMax) {
+      this.roomsNumMax = roomsNumMax;
+    }
+
+
+    /**
+     * @return the adType
+     */
+    public String getAdType() {
+      return adType;
+    }
+
+
+    /**
+     * @param adType the adType to set
+     */
+    public void setAdType(String adType) {
+      this.adType = adType;
+    }
+
+
+    /**
+     * @return the advertiser
+     */
+    public String getAdvertiser() {
+      return advertiser;
+    }
+
+
+    /**
+     * @param advertiser the advertiser to set
+     */
+    public void setAdvertiser(String advertiser) {
+      this.advertiser = advertiser;
     }
 }
