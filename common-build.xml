@@ -33,6 +33,11 @@
   <property name="ivy.dir" value="${common.basedir}/ivy" />
   <property name="ivy.version" value="2.3.0" />
   
+  <!-- debugging -->
+  <condition property="debug.args" value="-Xrunjdwp:transport=dt_socket,server=y,suspend=y,address=8000" else="">
+    <isset property="debug" />
+  </condition>
+  
   <!-- paths -->
   
   <path id="common-libs">
@@ -121,6 +126,7 @@
       <arg line="-agents Search:search.SearchAgent"/>
       <arg line="-gui"/>
       <arg line="-host 127.0.0.1"/>
+      <jvmarg line="${debug.args}"/>
       <classpath refid="common-libs" />
       <classpath refid="SearchAgent-classes" />
     </java>
