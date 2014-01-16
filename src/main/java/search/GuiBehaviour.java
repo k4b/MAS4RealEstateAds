@@ -8,8 +8,12 @@ import java.awt.EventQueue;
 
 public class GuiBehaviour extends OneShotBehaviour {
   
+  private Agent agent;
+  private SearchWindow frame;
+  
   public GuiBehaviour(Agent a) {
     super(a);
+    this.agent = a;
   }
   
   @Override
@@ -17,7 +21,7 @@ public class GuiBehaviour extends OneShotBehaviour {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
-          SearchWindow frame = new SearchWindow();
+          frame = new SearchWindow();
           frame.setVisible(true);
         } catch (Exception e) {
           e.printStackTrace();

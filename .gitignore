@@ -1,4 +1,10 @@
+#Directories
 **/build
 /ivy/lib
 /lib
 /build
+
+#Files
+APDescription.txt
+MTPs-Main-Container.txt
+

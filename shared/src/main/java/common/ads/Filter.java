@@ -1,5 +1,8 @@
 package common.ads;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by Gelu on 16.01.14.
  */
@@ -11,29 +14,40 @@ public class Filter {
 
     private String street;
 
-    private int priceMin;
+    private String priceMin;
 
-    private int priceMax;
+    private String priceMax;
 
-    private int pricePerMeterMin;
+    private String pricePerMeterMin;
 
-    private int pricePerMeterMax;
+    private String pricePerMeterMax;
 
-    private double areaMin;
+    private String areaMin;
 
-    private double areaMax;
+    private String areaMax;
 
-    private int constructionYearMin;
+    private String constructionYearMin;
 
-    private int constructionYearMax;
+    private String constructionYearMax;
 
-    private int floorMin;
+    private String floorMin;
 
-    private int floorMax;
+    private String floorMax;
 
-    private int numFloorsMin;
+    private String numFloorsMin;
 
-    private int numFloorsMax;
+    private String numFloorsMax;
+    
+    private String type;
+    
+    private String transactionType;
+    
+    private String roomsNumMin;
+    
+    private String roomsNumMax;
+    
+    public Filter() {
+    }
 
 
     public String getCity() {
@@ -52,35 +66,35 @@ public class Filter {
         this.district = district;
     }
 
-    public int getPriceMin() {
+    public String getPriceMin() {
         return priceMin;
     }
 
-    public void setPriceMin(int priceMin) {
+    public void setPriceMin(String priceMin) {
         this.priceMin = priceMin;
     }
 
-    public int getPriceMax() {
+    public String getPriceMax() {
         return priceMax;
     }
 
-    public void setPriceMax(int priceMax) {
+    public void setPriceMax(String priceMax) {
         this.priceMax = priceMax;
     }
 
-    public int getPricePerMeterMin() {
+    public String getPricePerMeterMin() {
         return pricePerMeterMin;
     }
 
-    public void setPricePerMeterMin(int pricePerMeterMin) {
+    public void setPricePerMeterMin(String pricePerMeterMin) {
         this.pricePerMeterMin = pricePerMeterMin;
     }
 
-    public int getPricePerMeterMax() {
+    public String getPricePerMeterMax() {
         return pricePerMeterMax;
     }
 
-    public void setPricePerMeterMax(int pricePerMeterMax) {
+    public void setPricePerMeterMax(String pricePerMeterMax) {
         this.pricePerMeterMax = pricePerMeterMax;
     }
 
@@ -92,67 +106,97 @@ public class Filter {
         this.street = street;
     }
 
-    public int getNumFloorsMax() {
+    public String getNumFloorsMax() {
         return numFloorsMax;
     }
 
-    public void setNumFloorsMax(int numFloorsMax) {
+    public void setNumFloorsMax(String numFloorsMax) {
         this.numFloorsMax = numFloorsMax;
     }
 
-    public int getFloorMax() {
+    public String getFloorMax() {
         return floorMax;
     }
 
-    public void setFloorMax(int floorMax) {
+    public void setFloorMax(String floorMax) {
         this.floorMax = floorMax;
     }
 
-    public int getNumFloorsMin() {
+    public String getNumFloorsMin() {
         return numFloorsMin;
     }
 
-    public void setNumFloorsMin(int numFloorsMin) {
+    public void setNumFloorsMin(String numFloorsMin) {
         this.numFloorsMin = numFloorsMin;
     }
 
-    public int getFloorMin() {
+    public String getFloorMin() {
         return floorMin;
     }
 
-    public void setFloorMin(int floorMin) {
+    public void setFloorMin(String floorMin) {
         this.floorMin = floorMin;
     }
 
-    public int getConstructionYearMax() {
+    public String getConstructionYearMax() {
         return constructionYearMax;
     }
 
-    public void setConstructionYearMax(int constructionYearMax) {
+    public void setConstructionYearMax(String constructionYearMax) {
         this.constructionYearMax = constructionYearMax;
     }
 
-    public int getConstructionYearMin() {
+    public String getConstructionYearMin() {
         return constructionYearMin;
     }
 
-    public void setConstructionYearMin(int constructionYearMin) {
+    public void setConstructionYearMin(String constructionYearMin) {
         this.constructionYearMin = constructionYearMin;
     }
 
-    public double getAreaMax() {
+    public String getAreaMax() {
         return areaMax;
     }
 
-    public void setAreaMax(double areaMax) {
+    public void setAreaMax(String areaMax) {
         this.areaMax = areaMax;
     }
 
-    public double getAreaMin() {
+    public String getAreaMin() {
         return areaMin;
     }
 
-    public void setAreaMin(double areaMin) {
+    public void setAreaMin(String areaMin) {
         this.areaMin = areaMin;
+    }
+
+    /**
+     * @return the types
+     */
+    public String getType() {
+      return type;
+    }
+
+    /**
+     * @param types the types to set
+     */
+    public void setType(String type) {
+      this.type = type;
+    }
+
+
+    /**
+     * @return the transactionType
+     */
+    public String getTransactionType() {
+      return transactionType;
+    }
+
+
+    /**
+     * @param transactionType the transactionType to set
+     */
+    public void setTransactionType(String transactionType) {
+      this.transactionType = transactionType;
     }
 }
