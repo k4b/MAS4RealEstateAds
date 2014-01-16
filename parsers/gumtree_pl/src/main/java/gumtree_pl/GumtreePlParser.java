@@ -8,7 +8,9 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
+import java.util.NoSuchElementException;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
@@ -39,21 +41,30 @@ public class GumtreePlParser extends ParserAgent {
 
 	@Override
 	public void startParsing(URL url, int maxPages) {
-		int i = 1;
-		boolean hasNext = true;
-		while(hasNext) {			
-			Document doc  = downloadWebpage(url);
-			Elements elements = doc.getElementsByClass("adLinkSB");
-			for(Element element : elements) {
-				System.out.println(i + " " + element.attr("href"));
-				i++;
-			}
+		Document doc  = downloadWebpage(url);
+		Elements elements = doc.getElementsByClass("adLinkSB");
+		Iterator<Element> iterator = elements.iterator();
+		while(pagesCounter < this.maxPages) {
 			try {
-				url = getNextURL(doc);
+				Element element = iterator.next();
+				URL current = new URL(element.attr("href"));
+				parseSearchResults(current);
+			} catch(NoSuchElementException e) {
+				e.printStackTrace();
+				URL nextURL = getNextURL(doc);
+				if(nextURL != null) {
+					startParsing(nextURL, 1);	
+				} else {
+					break;
+				}
 			} catch(Exception e) {
 				e.printStackTrace();
-				hasNext = false;
+				break;
 			}
+		}
+		System.out.println("Iloœæ: " + ads.size());
+		for(Ad ad : ads) {
+			System.out.println(ad.toString());
 		}
 	}
 
@@ -111,7 +122,7 @@ public class GumtreePlParser extends ParserAgent {
 				}
 			} catch(Exception e) {
 				e.printStackTrace();
-				continue;
+				return;
 			}
 		}
 
@@ -125,7 +136,8 @@ public class GumtreePlParser extends ParserAgent {
 		String link = url.toString();
 		ad.setLink(link);
 		
-		System.out.println(ad.toString());
+		ads.add(ad);
+		pagesCounter++;
 	}
 
 	@Override
@@ -134,18 +146,16 @@ public class GumtreePlParser extends ParserAgent {
 	}
 
 	private Map<String, String> getAddress(String value) {
-		String withoutShowMap = value.replace("Poka¿ mapê", "");
-		String withoutCountry = withoutShowMap.replace("Polska", "");
-		String withoutCommas = withoutCountry.replaceAll(",", "").trim();
-		String[] parts = withoutCommas.split(" ");
+		String address = value.replaceAll("Polska|Poka¿ mapê|[0-9]{2}-[0-9]{3}|[0-9]+[a-zA-Z]*", "").trim();
+		String[] parts = address.split(",");
 		
 		String city = null, street = null;
 		Map<String, String> result = new HashMap<String, String>();
 		if(parts.length == 1) {
-			city = parts[0];
+			city = parts[0].trim();
 		} else if (parts.length == 2) {
-			city = parts[1];
-			street = parts[0];
+			city = parts[1].trim();
+			street = parts[0].trim();
 		}
 		// String district; BD
 		
@@ -198,12 +208,18 @@ public class GumtreePlParser extends ParserAgent {
 		return pricePerMeter;
 	}
 	
-	private URL getNextURL(Document doc) throws MalformedURLException, NotFoundException {
+	private URL getNextURL(Document doc) {
+		URL result = null;
 		Element element = doc.getElementsByClass("prevNextLink").last();
 		if(element.text().startsWith("Nastêpne")) {
 			String link = element.attr("href");
-			return new URL(link);	
+			try {
+				result = new URL(link);
+			} catch(MalformedURLException e) {
+				e.printStackTrace();
+				return null;
+			}
 		}
-		throw new NotFoundException();
+		return result;
 	}
 }
