@@ -116,8 +116,11 @@
   <target name="run" depends="compile" description="Run SearchAgent">
     <echo>${agents}</echo>
     <java classname="jade.Boot" fork="true">
-      <arg line="${agents.args}"/>
-      <arg line="${gui.arg}"/>
+      <!--<arg line="${agents.args}"/>
+      <arg line="${gui.arg}"/>-->
+      <arg line="-agents Search:search.SearchAgent"/>
+      <arg line="-gui"/>
+      <arg line="-host 127.0.0.1"/>
       <classpath refid="common-libs" />
       <classpath refid="SearchAgent-classes" />
     </java>
