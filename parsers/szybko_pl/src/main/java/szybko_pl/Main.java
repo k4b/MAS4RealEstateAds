@@ -12,7 +12,7 @@ public class Main {
         SzybkoFilterBuilder szybkoFilterBuilder = new SzybkoFilterBuilder();
         String builded = szybkoFilterBuilder.withCity("Warszawa").withPriceMax(500000).build();
         System.out.println(builded);
-        SzybkoPlParser parser = new SzybkoPlParser(30);
+        SzybkoPlParser parser = new SzybkoPlParser();
         URL url = null;
         try {
              url = new URL (builded);

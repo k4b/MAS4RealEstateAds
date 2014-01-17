@@ -26,7 +26,7 @@
             <!--<arg line="-port 1098"/>-->
             <arg line="-agents Szybko:szybko_pl.SzybkoPlParser"/>
             <arg line="-host 127.0.0.1"/>
-
+            <arg line="-container"/>
             <classpath refid="common-libs" />
           <classpath refid="shared-classes" />
             <classpath refid="SzybkoParser-classes" />
