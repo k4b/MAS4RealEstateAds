@@ -30,6 +30,11 @@ abstract public class ParserAgent extends Agent {
     ads = new ArrayList<Ad>();
   }
   
+  protected void setUp() {
+    System.out.println("Starting Parser " + this.getName());
+    //addBehaviour
+  }
+  
   public ArrayList<Ad> getAds() {
       return ads;
   }
