@@ -1,11 +1,13 @@
 package common;
 
+import jade.core.AID;
 import jade.core.Agent;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.SearchConstraints;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.lang.acl.ACLMessage;
 
 public class CommunicationModule {
   
@@ -46,4 +48,12 @@ public class CommunicationModule {
       System.out.println(results[0].getName());
     }
   }
+
+    public void sendMessage(AID agentName, String conversationId, String message ) {
+        ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
+        msg.setContent(message);
+        msg.setConversationId(conversationId);
+        msg.addReceiver(agentName);
+        agent.send(msg);
+    }
 }

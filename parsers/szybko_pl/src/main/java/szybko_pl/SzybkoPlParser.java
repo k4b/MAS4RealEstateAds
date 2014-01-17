@@ -8,6 +8,7 @@ import java.util.*;
 
 import common.ads.Ad;
 import common.parsers.ParserAgent;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
@@ -31,7 +32,18 @@ public class SzybkoPlParser extends ParserAgent {
     // TODO Auto-generated constructor stub
   }
 
-  @Override
+    protected void setup() {
+        ServiceDescription serviceDescription = new ServiceDescription();
+        serviceDescription.setName(getLocalName());
+        serviceDescription.setType("parser");
+        communicationModule.register(serviceDescription);
+        System.out.println("Starting Parser " + this.getName());
+        addBehaviour(new ReceiverBehaviourReceivePing(this));
+
+    }
+
+
+    @Override
   public URL constructRequestUrl() {
     // TODO Auto-generated method stub
     return null;
@@ -48,7 +60,6 @@ public class SzybkoPlParser extends ParserAgent {
             }
             parseSearchResults(urlsToParse.remove(0));
         }
-      System.out.println("Koniec");
   }
 
   private void obtainUrls(URL url, int maxPages) {

@@ -1,5 +1,6 @@
 package common.parsers;
 
+import common.CommunicationModule;
 import jade.core.Agent;
 
 import java.io.IOException;
@@ -23,14 +24,16 @@ abstract public class ParserAgent extends Agent {
   protected int pagesCounter = 0;
   protected ArrayList<Ad> ads;
   protected boolean isRunning = true;
+  protected CommunicationModule communicationModule;
   
   public ParserAgent() {
     ads = new ArrayList<Ad>();
+    communicationModule = new CommunicationModule(this);
   }
   
   protected void setup() {
     System.out.println("Starting Parser " + this.getName());
-    //addBehaviour
+
   }
   
   public ArrayList<Ad> getAds() {

@@ -3,19 +3,14 @@ package search;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 
-import java.awt.BorderLayout;
-import java.awt.EventQueue;
+import java.awt.*;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 
-import java.awt.GridBagLayout;
-
 import javax.swing.JLabel;
 
-import java.awt.GridBagConstraints;
-import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Enumeration;
@@ -48,8 +43,9 @@ public class SearchWindow extends JFrame {
   private ButtonGroup transactionGroup, typeGroup, adGroup, advertiserGroup;
   private JTextField txtRoomsNumMin;
   private JTextField txtRoomsNumMax;
-  
-  /**
+
+
+    /**
    * Create the frame.
    */
   public SearchWindow(SearchAgent agent) {
@@ -474,11 +470,12 @@ public class SearchWindow extends JFrame {
     GridBagConstraints gbc_searchButton = new GridBagConstraints();
     gbc_searchButton.fill = GridBagConstraints.HORIZONTAL;
     gbc_searchButton.anchor = GridBagConstraints.SOUTH;
-    gbc_searchButton.gridwidth = 6;
+    gbc_searchButton.gridwidth = 3;
     gbc_searchButton.insets = new Insets(0, 0, 0, 5);
     gbc_searchButton.gridx = 1;
     gbc_searchButton.gridy = 23;
     contentPane.add(searchButton, gbc_searchButton);
+
     
     searchButton.addActionListener(new ActionListener() {
       
@@ -487,6 +484,21 @@ public class SearchWindow extends JFrame {
         search();
       }
     });
+
+      JButton sendMessageButton = new JButton("Wiadomosc");
+      contentPane.add(sendMessageButton);
+      sendMessageButton.addActionListener(new ActionListener() {
+
+          @Override
+          public void actionPerformed(ActionEvent e) {
+
+              try {
+                  sendMessage();
+              } catch (FIPAException e1) {
+                  e1.printStackTrace();
+              }
+          }
+      });
   }  
   
   public void search() {
@@ -498,6 +510,14 @@ public class SearchWindow extends JFrame {
       e.printStackTrace();
     }
   }
+
+    public void sendMessage() throws FIPAException {
+        DFAgentDescription[] parsers = agent.getCommunication().searchAgents("parser");
+        for(DFAgentDescription dfAgent : parsers){
+            agent.getCommunication().sendMessage(dfAgent.getName(),"ParserConversation","wiadomosc");
+        }
+
+    }
   
   private Filter getSearchCriteria() {
     Filter filter = new Filter();
