@@ -522,6 +522,8 @@ public class SearchWindow extends JFrame {
     filter.setAreaMax(txtAreaMax.getText());
     filter.setAdType(getSelectedButtonText(adGroup));
     filter.setAdvertiser(getSelectedButtonText(advertiserGroup));
+    // 60 seconds time limit only for testing
+    filter.setTimeLimit(String.valueOf(60*1000));
     return filter;
   }
   

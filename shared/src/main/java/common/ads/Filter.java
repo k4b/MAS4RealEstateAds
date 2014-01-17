@@ -50,6 +50,11 @@ public class Filter {
     
     private String advertiser;
     
+    /**
+     * Number of milliseconds for parser to stop parsing results and save them to database when exceeded
+     */
+    private String timeLimit;
+    
     public Filter() {
     }
 
@@ -266,5 +271,21 @@ public class Filter {
      */
     public void setAdvertiser(String advertiser) {
       this.advertiser = advertiser;
+    }
+
+
+    /**
+     * @return the timeLimit
+     */
+    public String getTimeLimit() {
+      return timeLimit;
+    }
+
+
+    /**
+     * @param timeLimit the timeLimit to set
+     */
+    public void setTimeLimit(String timeLimit) {
+      this.timeLimit = timeLimit;
     }
 }
