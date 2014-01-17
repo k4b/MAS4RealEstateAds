@@ -3,32 +3,33 @@ package search;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 
-import java.awt.*;
-
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-
-import javax.swing.JLabel;
-
+import java.awt.GridBagConstraints;
+import java.awt.GridBagLayout;
+import java.awt.Insets;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.Enumeration;
 
 import javax.swing.AbstractButton;
 import javax.swing.ButtonGroup;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JRadioButton;
+import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.SwingConstants;
-import javax.swing.JRadioButton;
-import javax.swing.JCheckBox;
-import javax.swing.JButton;
-import javax.swing.JTable;
+import javax.swing.border.EmptyBorder;
+
+import com.google.gson.Gson;
 
 import common.ads.Filter;
 
 public class SearchWindow extends JFrame {
   
   private SearchAgent agent;
+  private Gson gson;
   private JPanel contentPane;
   private JTextField txtCity;
   private JTextField txtDistrict;
@@ -44,12 +45,12 @@ public class SearchWindow extends JFrame {
   private JTextField txtRoomsNumMin;
   private JTextField txtRoomsNumMax;
 
-
     /**
    * Create the frame.
    */
   public SearchWindow(SearchAgent agent) {
     this.agent = agent;
+    gson = new Gson();
     setTitle("Agregator ofert nieruchomości");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setBounds(100, 100, 600, 600);
@@ -470,7 +471,7 @@ public class SearchWindow extends JFrame {
     GridBagConstraints gbc_searchButton = new GridBagConstraints();
     gbc_searchButton.fill = GridBagConstraints.HORIZONTAL;
     gbc_searchButton.anchor = GridBagConstraints.SOUTH;
-    gbc_searchButton.gridwidth = 3;
+    gbc_searchButton.gridwidth = 6;
     gbc_searchButton.insets = new Insets(0, 0, 0, 5);
     gbc_searchButton.gridx = 1;
     gbc_searchButton.gridy = 23;
@@ -484,40 +485,25 @@ public class SearchWindow extends JFrame {
         search();
       }
     });
-
-      JButton sendMessageButton = new JButton("Wiadomosc");
-      contentPane.add(sendMessageButton);
-      sendMessageButton.addActionListener(new ActionListener() {
-
-          @Override
-          public void actionPerformed(ActionEvent e) {
-
-              try {
-                  sendMessage();
-              } catch (FIPAException e1) {
-                  e1.printStackTrace();
-              }
-          }
-      });
-  }  
+  }
   
   public void search() {
     Filter filter = getSearchCriteria();
     try {
-      agent.getCommunication().printResults(agent.getCommunication().searchAgents("parser"));
+      DFAgentDescription[] agents = agent.getCommunication().searchAgents("parser");
+      sendMessage(filter, agents);
     } catch (FIPAException e) {
       // TODO Auto-generated catch block
       e.printStackTrace();
     }
   }
 
-    public void sendMessage() throws FIPAException {
-        DFAgentDescription[] parsers = agent.getCommunication().searchAgents("parser");
-        for(DFAgentDescription dfAgent : parsers){
-            agent.getCommunication().sendMessage(dfAgent.getName(),"ParserConversation","wiadomosc");
-        }
-
+  public void sendMessage(Filter filter, DFAgentDescription[] parsers) throws FIPAException {
+    String message = gson.toJson(filter);
+    for(DFAgentDescription dfAgent : parsers){
+        agent.getCommunication().sendMessage(dfAgent.getName(),"ParserConversation", message);
     }
+  }
   
   private Filter getSearchCriteria() {
     Filter filter = new Filter();
