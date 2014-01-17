@@ -13,28 +13,17 @@ public class CommunicationModule {
   
   public CommunicationModule(Agent agent) {
     this.agent = agent;
-    run();
   }
-  
-  public void run() {
-    register(getSearcherServiceDescription());
-    try {
-      searchAgents();
-    } catch (FIPAException e) {
-      e.printStackTrace();
-    }
-  }
-  
-  public DFAgentDescription[] searchAgents() throws FIPAException {
+
+  public DFAgentDescription[] searchAgents(String type) throws FIPAException {
     DFAgentDescription dfd = new DFAgentDescription();
     ServiceDescription sd  = new ServiceDescription();
-    sd.setType("searcher");
+    sd.setType(type);
     dfd.addServices(sd);
     SearchConstraints constraints = new SearchConstraints();
     constraints.setMaxResults(-1L);
     
     DFAgentDescription[] result = DFService.search(agent, dfd, constraints);
-    System.out.println("results: " + result.length);
     return result;
   }
   
@@ -51,10 +40,10 @@ public class CommunicationModule {
     }
   }
   
-  ServiceDescription getSearcherServiceDescription() {
-    ServiceDescription sd  = new ServiceDescription();
-    sd.setType("searcher");
-    sd.setName(agent.getLocalName());
-    return sd;
+  public void printResults(DFAgentDescription[] results) {
+    System.out.println("results: " + results.length);
+    if(results.length > 0) {
+      System.out.println(results[0].getName());
+    }
   }
 }

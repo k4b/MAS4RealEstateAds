@@ -125,10 +125,11 @@
       <arg line="${gui.arg}"/>-->
       <arg line="-agents Search:search.SearchAgent"/>
       <arg line="-gui"/>
-      <arg line="-host 127.0.0.1"/>
+      <arg line="-local-host 127.0.0.1"/>
       <jvmarg line="${debug.args}"/>
       <classpath refid="common-libs" />
       <classpath refid="SearchAgent-classes" />
+      <classpath refid="shared-classes" />
     </java>
   </target>
   

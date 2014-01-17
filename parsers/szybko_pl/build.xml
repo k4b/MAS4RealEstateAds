@@ -24,9 +24,9 @@
     <target name="run" depends="compile" description="Run SearchAgent">
         <java classname="jade.Boot" fork="true">
             <!--<arg line="-port 1098"/>-->
+          <arg line="-container"/>
             <arg line="-agents Szybko:szybko_pl.SzybkoPlParser"/>
-            <arg line="-host 127.0.0.1"/>
-            <arg line="-container"/>
+            <arg line="-local-host 127.0.0.1"/>
             <classpath refid="common-libs" />
           <classpath refid="shared-classes" />
             <classpath refid="SzybkoParser-classes" />

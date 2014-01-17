@@ -1,5 +1,8 @@
 package search;
 
+import jade.domain.FIPAException;
+import jade.domain.FIPAAgentManagement.DFAgentDescription;
+
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -30,6 +33,7 @@ import common.ads.Filter;
 
 public class SearchWindow extends JFrame {
   
+  private SearchAgent agent;
   private JPanel contentPane;
   private JTextField txtCity;
   private JTextField txtDistrict;
@@ -48,7 +52,8 @@ public class SearchWindow extends JFrame {
   /**
    * Create the frame.
    */
-  public SearchWindow() {
+  public SearchWindow(SearchAgent agent) {
+    this.agent = agent;
     setTitle("Agregator ofert nieruchomości");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setBounds(100, 100, 600, 600);
@@ -485,6 +490,16 @@ public class SearchWindow extends JFrame {
   }  
   
   public void search() {
+    Filter filter = getSearchCriteria();
+    try {
+      agent.getCommunication().printResults(agent.getCommunication().searchAgents("parser"));
+    } catch (FIPAException e) {
+      // TODO Auto-generated catch block
+      e.printStackTrace();
+    }
+  }
+  
+  private Filter getSearchCriteria() {
     Filter filter = new Filter();
     filter.setCity(txtCity.getText());
     filter.setDistrict(txtDistrict.getText());
@@ -501,6 +516,7 @@ public class SearchWindow extends JFrame {
     filter.setAreaMax(txtAreaMax.getText());
     filter.setAdType(getSelectedButtonText(adGroup));
     filter.setAdvertiser(getSelectedButtonText(advertiserGroup));
+    return filter;
   }
   
   public String getSelectedButtonText(ButtonGroup buttonGroup) {
