@@ -7,4 +7,5 @@
 #Files
 APDescription.txt
 MTPs-Main-Container.txt
+shared/${shared.jar}
 

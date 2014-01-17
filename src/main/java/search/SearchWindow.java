@@ -90,6 +90,7 @@ public class SearchWindow extends JFrame {
     contentPane.add(table, gbc_table);
     
     JRadioButton radioSell = new JRadioButton("Kupno/Sprzedaż");
+    radioSell.setSelected(true);
     GridBagConstraints gbc_radioSell = new GridBagConstraints();
     gbc_radioSell.gridwidth = 3;
     gbc_radioSell.insets = new Insets(0, 0, 5, 5);
@@ -119,6 +120,7 @@ public class SearchWindow extends JFrame {
     contentPane.add(lblRodzaj, gbc_lblRodzaj);
     
     JRadioButton radioTypeFlat = new JRadioButton("Mieszkanie");
+    radioTypeFlat.setSelected(true);
     GridBagConstraints gbc_radioTypeFlat = new GridBagConstraints();
     gbc_radioTypeFlat.gridwidth = 2;
     gbc_radioTypeFlat.insets = new Insets(0, 0, 5, 5);
@@ -413,6 +415,7 @@ public class SearchWindow extends JFrame {
     contentPane.add(lblOgoszenie, gbc_lblOgoszenie);
     
     JRadioButton radioAdOffered = new JRadioButton("Oferowane");
+    radioAdOffered.setSelected(true);
     GridBagConstraints gbc_radioAdSell = new GridBagConstraints();
     gbc_radioAdSell.gridwidth = 3;
     gbc_radioAdSell.insets = new Insets(0, 0, 5, 5);
@@ -442,6 +445,7 @@ public class SearchWindow extends JFrame {
     contentPane.add(lblOgoszeniodawca, gbc_lblOgoszeniodawca);
     
     JRadioButton radioAdvertiserOwner = new JRadioButton("Właściciel");
+    radioAdvertiserOwner.setSelected(true);
     GridBagConstraints gbc_radioAdvertiserOwner = new GridBagConstraints();
     gbc_radioAdvertiserOwner.gridwidth = 3;
     gbc_radioAdvertiserOwner.insets = new Insets(0, 0, 5, 5);
