@@ -33,14 +33,7 @@ abstract public class ParserAgent extends Agent {
     communicationModule = new CommunicationModule(this);
   }
   
-  protected void setup() {
-    ServiceDescription serviceDescription = new ServiceDescription();
-    serviceDescription.setName(getLocalName());
-    serviceDescription.setType("parser");
-    communicationModule.register(serviceDescription);
-    System.out.println("Starting Parser " + this.getName());
 
-  }
 
 protected void takeDown()
 {

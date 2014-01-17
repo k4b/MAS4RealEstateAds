@@ -1,17 +1,20 @@
 package common;
 
+import jade.core.AID;
 import jade.core.Agent;
 import jade.domain.DFService;
 import jade.domain.FIPAException;
 import jade.domain.FIPAAgentManagement.DFAgentDescription;
 import jade.domain.FIPAAgentManagement.SearchConstraints;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
+import jade.lang.acl.ACLMessage;
 
 public class CommunicationModule {
   
   private Agent agent;
-  
-  public CommunicationModule(Agent agent) {
+  private DFAgentDescription[] result;
+
+    public CommunicationModule(Agent agent) {
     this.agent = agent;
 
   }
@@ -20,6 +23,11 @@ public class CommunicationModule {
   //  register(getSearcherServiceDescription());
     try {
       searchAgents();
+        ACLMessage msg = new ACLMessage(ACLMessage.INFORM);
+        msg.setContent("pajac");
+        msg.setConversationId("elo");
+        msg.addReceiver( result[0].getName());
+        agent.send(msg);
     } catch (FIPAException e) {
       e.printStackTrace();
     }
@@ -33,7 +41,7 @@ public class CommunicationModule {
     SearchConstraints constraints = new SearchConstraints();
     constraints.setMaxResults(-1L);
     
-    DFAgentDescription[] result = DFService.search(agent, dfd, constraints);
+    result = DFService.search(agent, dfd, constraints);
     System.out.println("parser: " + result[0].getName());
     return result;
   }

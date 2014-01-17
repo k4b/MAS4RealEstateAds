@@ -8,11 +8,12 @@ import java.util.*;
 
 import common.ads.Ad;
 import common.parsers.ParserAgent;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
-public class SzybkoPlParser extends ParserAgent {
+public class SzybkoPlParser extends ParserAgent  {
 
   private List<URL> urlsToParse = new LinkedList<URL>();
 
@@ -25,6 +26,16 @@ public class SzybkoPlParser extends ParserAgent {
   private final static String CONSTRUCTION_YEAR_KEY = "rok budowy";
   private final static String LAST_UPDATE_KEY = "data ostatniej aktualizacji";
 
+
+    protected void setup() {
+        ServiceDescription serviceDescription = new ServiceDescription();
+        serviceDescription.setName(getLocalName());
+        serviceDescription.setType("parser");
+        communicationModule.register(serviceDescription);
+        System.out.println("Starting Parser " + this.getName());
+        addBehaviour(new ReceiverBehaviourReceivePing(this));
+
+    }
 
     public SzybkoPlParser() {
 
