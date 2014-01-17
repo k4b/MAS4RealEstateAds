@@ -35,8 +35,8 @@ import common.parsers.ParserAgent;
  */
 public class OfertyNetParser extends ParserAgent {
     
-    public OfertyNetParser(int maxPages) {
-      super(maxPages);
+    public OfertyNetParser() {
+
     }
 
     private static final String TAG = "tbody";

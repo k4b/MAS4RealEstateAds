@@ -26,8 +26,8 @@ public class SzybkoPlParser extends ParserAgent {
   private final static String LAST_UPDATE_KEY = "data ostatniej aktualizacji";
 
 
-    public SzybkoPlParser(int maxPages) {
-    super(maxPages);
+    public SzybkoPlParser() {
+
     // TODO Auto-generated constructor stub
   }
 

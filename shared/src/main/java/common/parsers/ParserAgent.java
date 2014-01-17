@@ -20,17 +20,15 @@ abstract public class ParserAgent extends Agent {
   /**
    * Maximum number of parsed pages
    */
-  protected int maxPages = 0;
   protected int pagesCounter = 0;
   protected ArrayList<Ad> ads;
   protected boolean isRunning = true;
   
-  public ParserAgent(int maxPages) {
-    this.maxPages = maxPages;
+  public ParserAgent() {
     ads = new ArrayList<Ad>();
   }
   
-  protected void setUp() {
+  protected void setup() {
     System.out.println("Starting Parser " + this.getName());
     //addBehaviour
   }

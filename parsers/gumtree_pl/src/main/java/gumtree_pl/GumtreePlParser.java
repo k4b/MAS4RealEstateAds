@@ -24,13 +24,13 @@ public class GumtreePlParser extends ParserAgent {
 	private static final String ADDRESS_KEY = "Adres";
 	private static final String PRICE_KEY = "Cena";
 	private static final String NUM_BEDROOMS_KEY = "Liczba pokoi";
-	private static final String NUM_BATHROOMS_KEY = "Liczba ³azienek";
-	private static final String AREA_KEY = "Wielkoœæ (m2)";
+	private static final String NUM_BATHROOMS_KEY = "Liczba ï¿½azienek";
+	private static final String AREA_KEY = "Wielkoï¿½ï¿½ (m2)";
 	private static final String LAST_UPDATE_KEY = "Ostatnio zmieniony";
 	private static final String CREATION_DATE_KEY = "Data dodania";
 	
-	public GumtreePlParser(int maxPages) {
-		super(maxPages);
+	public GumtreePlParser() {
+
 	}
 
 	@Override
@@ -44,7 +44,7 @@ public class GumtreePlParser extends ParserAgent {
 		Document doc  = downloadWebpage(url);
 		Elements elements = doc.getElementsByClass("adLinkSB");
 		Iterator<Element> iterator = elements.iterator();
-		while(pagesCounter < this.maxPages) {
+		while(pagesCounter < maxPages) {
 			try {
 				Element element = iterator.next();
 				URL current = new URL(element.attr("href"));
@@ -62,7 +62,7 @@ public class GumtreePlParser extends ParserAgent {
 				break;
 			}
 		}
-		System.out.println("Iloœæ: " + ads.size());
+		System.out.println("Iloï¿½ï¿½: " + ads.size());
 		for(Ad ad : ads) {
 			System.out.println(ad.toString());
 		}
@@ -146,7 +146,7 @@ public class GumtreePlParser extends ParserAgent {
 	}
 
 	private Map<String, String> getAddress(String value) {
-		String address = value.replaceAll("Polska|Poka¿ mapê|[0-9]{2}-[0-9]{3}|[0-9]+[a-zA-Z]*", "").trim();
+		String address = value.replaceAll("Polska|Pokaï¿½ mapï¿½|[0-9]{2}-[0-9]{3}|[0-9]+[a-zA-Z]*", "").trim();
 		String[] parts = address.split(",");
 		
 		String city = null, street = null;
@@ -211,7 +211,7 @@ public class GumtreePlParser extends ParserAgent {
 	private URL getNextURL(Document doc) {
 		URL result = null;
 		Element element = doc.getElementsByClass("prevNextLink").last();
-		if(element.text().startsWith("Nastêpne")) {
+		if(element.text().startsWith("Nastï¿½pne")) {
 			String link = element.attr("href");
 			try {
 				result = new URL(link);
