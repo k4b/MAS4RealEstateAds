@@ -1,5 +1,6 @@
 package common.parsers;
 
+import common.CommunicationModule;
 import jade.core.Agent;
 
 import java.io.IOException;
@@ -8,6 +9,8 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import jade.domain.DFService;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -23,15 +26,31 @@ abstract public class ParserAgent extends Agent {
   protected int pagesCounter = 0;
   protected ArrayList<Ad> ads;
   protected boolean isRunning = true;
+  protected CommunicationModule communicationModule;
   
   public ParserAgent() {
     ads = new ArrayList<Ad>();
+    communicationModule = new CommunicationModule(this);
   }
   
   protected void setup() {
+    ServiceDescription serviceDescription = new ServiceDescription();
+    serviceDescription.setName(getLocalName());
+    serviceDescription.setType("parser");
+    communicationModule.register(serviceDescription);
     System.out.println("Starting Parser " + this.getName());
-    //addBehaviour
+
   }
+
+protected void takeDown()
+{
+    try {
+        DFService.deregister(this);
+    }
+    catch (Exception e) {
+        e.printStackTrace();
+    }
+}
   
   public ArrayList<Ad> getAds() {
       return ads;

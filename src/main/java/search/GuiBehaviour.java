@@ -1,5 +1,6 @@
 package search;
 
+import common.CommunicationModule;
 import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
@@ -10,9 +11,11 @@ public class GuiBehaviour extends OneShotBehaviour {
   
   private Agent agent;
   private SearchWindow frame;
+  private CommunicationModule communicationModule;
   
-  public GuiBehaviour(Agent a) {
+  public GuiBehaviour(Agent a, CommunicationModule communicationModule) {
     super(a);
+    this.communicationModule = communicationModule;
     this.agent = a;
   }
   
@@ -21,7 +24,7 @@ public class GuiBehaviour extends OneShotBehaviour {
     EventQueue.invokeLater(new Runnable() {
       public void run() {
         try {
-          frame = new SearchWindow();
+          frame = new SearchWindow(communicationModule);
           frame.setVisible(true);
         } catch (Exception e) {
           e.printStackTrace();

@@ -13,11 +13,11 @@ public class CommunicationModule {
   
   public CommunicationModule(Agent agent) {
     this.agent = agent;
-    run();
+
   }
   
   public void run() {
-    register(getSearcherServiceDescription());
+  //  register(getSearcherServiceDescription());
     try {
       searchAgents();
     } catch (FIPAException e) {
@@ -28,13 +28,13 @@ public class CommunicationModule {
   public DFAgentDescription[] searchAgents() throws FIPAException {
     DFAgentDescription dfd = new DFAgentDescription();
     ServiceDescription sd  = new ServiceDescription();
-    sd.setType("searcher");
+    sd.setType("parser");
     dfd.addServices(sd);
     SearchConstraints constraints = new SearchConstraints();
     constraints.setMaxResults(-1L);
     
     DFAgentDescription[] result = DFService.search(agent, dfd, constraints);
-    System.out.println("results: " + result.length);
+    System.out.println("parser: " + result[0].getName());
     return result;
   }
   

@@ -26,7 +26,9 @@ import javax.swing.JCheckBox;
 import javax.swing.JButton;
 import javax.swing.JTable;
 
+import common.CommunicationModule;
 import common.ads.Filter;
+import jade.core.Agent;
 
 public class SearchWindow extends JFrame {
   
@@ -44,11 +46,13 @@ public class SearchWindow extends JFrame {
   private ButtonGroup transactionGroup, typeGroup, adGroup, advertiserGroup;
   private JTextField txtRoomsNumMin;
   private JTextField txtRoomsNumMax;
+  private CommunicationModule communicationModule;
   
   /**
    * Create the frame.
    */
-  public SearchWindow() {
+  public SearchWindow(CommunicationModule communicationModule) {
+    this.communicationModule = communicationModule;
     setTitle("Agregator ofert nieruchomości");
     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
     setBounds(100, 100, 600, 600);
@@ -501,6 +505,7 @@ public class SearchWindow extends JFrame {
     filter.setAreaMax(txtAreaMax.getText());
     filter.setAdType(getSelectedButtonText(adGroup));
     filter.setAdvertiser(getSelectedButtonText(advertiserGroup));
+    communicationModule.run();
   }
   
   public String getSelectedButtonText(ButtonGroup buttonGroup) {
