@@ -5,6 +5,18 @@
   <path id="individual-libs">
   </path>
 
+
+    <path id="common-libs">
+        <fileset dir="${lib.dir}">
+            <include name="**/*.jar"/>
+        </fileset>
+    </path>
+
+    <path id="SzybkoParser-classes">
+        <pathelement path="${classes.dir}" />
+    </path>
+
+
   <target name="assemble" depends="compile">
     <assemble-parser-jar>
       <manifest-elements>
@@ -14,4 +26,15 @@
       </manifest-elements>
     </assemble-parser-jar>
   </target>
+
+    <target name="run" depends="compile" description="Run SearchAgent">
+        <java classname="jade.Boot" fork="true">
+            <arg line="-port 1098"/>
+            <arg line="-agents Szybko:szybko_pl.SzybkoPlParser"/>
+            <arg line="-host 127.0.0.1"/>
+
+            <classpath refid="common-libs" />
+            <classpath refid="SzybkoParser-classes" />
+        </java>
+    </target>
 </project>
