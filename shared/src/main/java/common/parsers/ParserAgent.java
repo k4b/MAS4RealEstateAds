@@ -10,12 +10,14 @@ import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import jade.domain.FIPAAgentManagement.ServiceDescription;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
 import common.ads.Ad;
 import common.ads.AdsConstants;
+
 
 abstract public class ParserAgent extends Agent {
 
@@ -29,11 +31,17 @@ abstract public class ParserAgent extends Agent {
     ads = new ArrayList<Ad>();
     communicationModule = new CommunicationModule(this);
   }
-  
-  protected void setup() {
-    System.out.println("Starting Parser " + this.getName());
 
-  }
+    @Override
+    protected void setup() {
+        ServiceDescription serviceDescription = new ServiceDescription();
+        serviceDescription.setName(getLocalName());
+        serviceDescription.setType("parser");
+        communicationModule.register(serviceDescription);
+        System.out.println("Starting Parser " + this.getName());
+        addBehaviour(new ReceiverBehaviourReceivePing(this));
+
+    }
   
   public ArrayList<Ad> getAds() {
       return ads;

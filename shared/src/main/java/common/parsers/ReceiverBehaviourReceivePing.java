@@ -1,4 +1,4 @@
-package szybko_pl;
+package common.parsers;
 
 import com.google.gson.Gson;
 import common.ads.Filter;
@@ -18,9 +18,9 @@ class ReceiverBehaviourReceivePing extends SimpleBehaviour {
     ParserAgent agent;
 
 
-	public ReceiverBehaviourReceivePing(Agent a) {
-		super(a);
-        this.agent = (ParserAgent)a;
+	public ReceiverBehaviourReceivePing(ParserAgent agent) {
+		super(agent);
+        this.agent = agent;
 	}
 
 
