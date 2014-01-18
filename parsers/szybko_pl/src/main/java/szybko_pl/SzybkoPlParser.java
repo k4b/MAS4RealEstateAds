@@ -2,22 +2,10 @@ package szybko_pl;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.*;
-import java.util.concurrent.Callable;
-import java.util.concurrent.TimeUnit;
 
-import com.google.common.util.concurrent.SimpleTimeLimiter;
-import com.google.common.util.concurrent.TimeLimiter;
-import com.google.common.util.concurrent.UncheckedTimeoutException;
-import common.ads.Ad;
 import common.ads.Filter;
 import common.parsers.ParserAgent;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
-import org.jsoup.nodes.Document;
-import org.jsoup.nodes.Element;
-import org.jsoup.select.Elements;
 
 public class SzybkoPlParser extends ParserAgent {
 
@@ -41,7 +29,7 @@ public class SzybkoPlParser extends ParserAgent {
         String builtUrlWithFilters = szybkoFilterBuilder.build();
         try {
             URL url = new URL(builtUrlWithFilters);
-            ParsingThread parsingThread = new ParsingThread(url, ads);
+            SzybkoPlParsingThread parsingThread = new SzybkoPlParsingThread(url, ads);
             parsingThread.start();
             Thread.sleep(15000);
             parsingThread.setStopExecution(true);
