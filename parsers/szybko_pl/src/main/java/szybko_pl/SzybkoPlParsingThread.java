@@ -47,13 +47,11 @@ public class SzybkoPlParsingThread extends  Thread {
     public void run()
     {
         boolean endOfResults = false;
-        int parsedResults = 0;
         while (!endOfResults && !stopExecution) {
             Document doc = ParserAgent.downloadWebpage(url);
             Elements elements = doc.getElementsByClass("search-classic");
             Iterator<Element> iterator = elements.iterator();
             while (iterator.hasNext() && !stopExecution) {
-                parsedResults++;
                 Elements selectedLink = iterator.next().select("a");
                 String relativePath = selectedLink.first().attr("href");
                 try {
@@ -74,7 +72,6 @@ public class SzybkoPlParsingThread extends  Thread {
                 Element nextPageElementAvaiable = paginationElements.first().select("li").select(":contains(Następna)").first();
                 if (nextPageElementAvaiable != null) {
                     Element nextPageElement = paginationElements.first().select("li").last();
-
                     try {
                         String relativePath = nextPageElement.select("a").attr("href");
                         url = new URL(BASE_URL + relativePath);
@@ -99,12 +96,10 @@ public class SzybkoPlParsingThread extends  Thread {
             System.out.println(" no site");
             return;
         }
+        ad.setLink(url.toString());
         fillAdWithTitleAndDescription(doc, ad);
-
         fillAdWithCityAndDistrict(doc, ad);
-
         fillAdWithPrices(doc, ad);
-
         fillAdWithDetails(doc, ad);
         ads.add(ad);
 

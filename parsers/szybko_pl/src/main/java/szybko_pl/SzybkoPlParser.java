@@ -10,16 +10,7 @@ import jade.domain.FIPAAgentManagement.ServiceDescription;
 public class SzybkoPlParser extends ParserAgent {
 
 
-    @Override
-    protected void setup() {
-        ServiceDescription serviceDescription = new ServiceDescription();
-        serviceDescription.setName(getLocalName());
-        serviceDescription.setType("parser");
-        communicationModule.register(serviceDescription);
-        System.out.println("Starting Parser " + this.getName());
-        addBehaviour(new ReceiverBehaviourReceivePing(this));
 
-    }
 
 
     @Override
