@@ -19,6 +19,7 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import common.ads.Filter;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
@@ -41,41 +42,36 @@ public class OfertyNetParser extends ParserAgent {
 
     private static final String TAG = "tbody";
     
-    /**
-     * Parses ad search results. Starts with first page of advertising website results and then continues to <i>counterMax</i>-th page of results. 
-     * @param url URL to first page of search results
-     * @param TAG Table element containing search results
-     * @param counterMax Maximum number of analyzed pages 
-     */
-    public void startParsing(URL url, int counterMax) {
-        while(isRunning) {
-            parseSearchResults(url);
-            URL nextUrl = getNextUrl(url);
-            isRunning(counterMax);
-            if((nextUrl.getPath()).isEmpty())
-                isRunning = false;
-        }
+
+    public void startParsing(Filter filter) {
+//        while(isRunning) {
+//            parseSearchResults(url);
+//            URL nextUrl = getNextUrl(url);
+//            isRunning(counterMax);
+//            if((nextUrl.getPath()).isEmpty())
+//                isRunning = false;
+//        }
     }
     
     /**
      * Parses one page of ad serching results
      * @param url URL of results webpage
-     * @param TAG Tag containing multiple ads
+
      */
     public void parseSearchResults(URL url) {
-        pagesCounter++;
-        Document doc = downloadWebpage(url);
-        if(doc == null) {
-            System.out.println(pagesCounter + " no site");
-            return;
-        }
-        Element e = getElementByTag(doc, TAG);
-        if(e == null) {
-            System.out.println(pagesCounter + " no <" + TAG + "> tags in source of URL " + url);
-            return;
-        }
-        createObjects(e, ads);
-        System.out.println(pagesCounter + " " + ads.size());
+//        pagesCounter++;
+//        Document doc = downloadWebpage(url);
+//        if(doc == null) {
+//            System.out.println(pagesCounter + " no site");
+//            return;
+//        }
+//        Element e = getElementByTag(doc, TAG);
+//        if(e == null) {
+//            System.out.println(pagesCounter + " no <" + TAG + "> tags in source of URL " + url);
+//            return;
+//        }
+//        createObjects(e, ads);
+//        System.out.println(pagesCounter + " " + ads.size());
     }
     
     /**
@@ -272,7 +268,7 @@ public class OfertyNetParser extends ParserAgent {
       return str.matches("-?\\d+(\\.\\d+)?");  //match a number with optional '-' and decimal.
     }
 
-    @Override
+
     public URL constructRequestUrl() {
       throw new UnsupportedOperationException();
     }
