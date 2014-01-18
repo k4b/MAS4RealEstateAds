@@ -6,19 +6,20 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
-import java.util.NoSuchElementException;
 
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import common.ads.Ad;
+import common.ads.Filter;
 import common.parsers.ParserAgent;
 
 public class GumtreePlParser extends ParserAgent {
 
+	private static final long serialVersionUID = 1L;
+	
 	private static final String ADDRESS_KEY = "Adres";
 	private static final String PRICE_KEY = "Cena";
 	private static final String NUM_BEDROOMS_KEY = "Liczba pokoi";
@@ -27,46 +28,6 @@ public class GumtreePlParser extends ParserAgent {
 	private static final String LAST_UPDATE_KEY = "Ostatnio zmieniony";
 	private static final String CREATION_DATE_KEY = "Data dodania";
 	
-	public GumtreePlParser() {
-
-	}
-
-	@Override
-	public URL constructRequestUrl() {
-		// TODO Auto-generated method stub
-		return null;
-	}
-
-	@Override
-	public void startParsing(URL url, int maxPages) {
-		Document doc  = downloadWebpage(url);
-		Elements elements = doc.getElementsByClass("adLinkSB");
-		Iterator<Element> iterator = elements.iterator();
-		while(pagesCounter < maxPages) {
-			try {
-				Element element = iterator.next();
-				URL current = new URL(element.attr("href"));
-				parseSearchResults(current);
-			} catch(NoSuchElementException e) {
-				e.printStackTrace();
-				URL nextURL = getNextURL(doc);
-				if(nextURL != null) {
-					startParsing(nextURL, 1);	
-				} else {
-					break;
-				}
-			} catch(Exception e) {
-				e.printStackTrace();
-				break;
-			}
-		}
-		System.out.println("Ilo��: " + ads.size());
-		for(Ad ad : ads) {
-			System.out.println(ad.toString());
-		}
-	}
-
-	@Override
 	public void parseSearchResults(URL url) {
 		Document doc = downloadWebpage(url);
 		Ad ad = new Ad();
@@ -132,12 +93,6 @@ public class GumtreePlParser extends ParserAgent {
 		ad.setLink(link);
 		
 		ads.add(ad);
-		pagesCounter++;
-	}
-
-	@Override
-	public void parseDetails(URL url, Ad a) {
-		throw new UnsupportedOperationException();
 	}
 
 	private Map<String, String> getAddress(String value) {
@@ -216,5 +171,34 @@ public class GumtreePlParser extends ParserAgent {
 			}
 		}
 		return result;
+	}
+
+	@Override
+	public void startParsing(Filter filter) {
+//		Document doc  = downloadWebpage(url);
+//		Elements elements = doc.getElementsByClass("adLinkSB");
+//		Iterator<Element> iterator = elements.iterator();
+//		while(pagesCounter < maxPages) {
+//			try {
+//				Element element = iterator.next();
+//				URL current = new URL(element.attr("href"));
+//				parseSearchResults(current);
+//			} catch(NoSuchElementException e) {
+//				e.printStackTrace();
+//				URL nextURL = getNextURL(doc);
+//				if(nextURL != null) {
+//					startParsing(nextURL, 1);	
+//				} else {
+//					break;
+//				}
+//			} catch(Exception e) {
+//				e.printStackTrace();
+//				break;
+//			}
+//		}
+//		System.out.println("Ilo��: " + ads.size());
+//		for(Ad ad : ads) {
+//			System.out.println(ad.toString());
+//		}
 	}
 }
