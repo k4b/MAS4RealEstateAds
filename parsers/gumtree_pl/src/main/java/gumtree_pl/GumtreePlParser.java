@@ -1,7 +1,5 @@
 package gumtree_pl;
 
-import jade.core.NotFoundException;
-
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
@@ -24,8 +22,8 @@ public class GumtreePlParser extends ParserAgent {
 	private static final String ADDRESS_KEY = "Adres";
 	private static final String PRICE_KEY = "Cena";
 	private static final String NUM_BEDROOMS_KEY = "Liczba pokoi";
-	private static final String NUM_BATHROOMS_KEY = "Liczba ï¿½azienek";
-	private static final String AREA_KEY = "Wielkoï¿½ï¿½ (m2)";
+	private static final String NUM_BATHROOMS_KEY = "Liczba ³azienek";
+	private static final String AREA_KEY = "Wielkoœæ (m2)";
 	private static final String LAST_UPDATE_KEY = "Ostatnio zmieniony";
 	private static final String CREATION_DATE_KEY = "Data dodania";
 	
@@ -93,6 +91,7 @@ public class GumtreePlParser extends ParserAgent {
 					case ADDRESS_KEY:
 						Map<String, String> parts = getAddress(value);
 						ad.setCity(parts.get("city"));
+						ad.setDistrict(parts.get("district"));
 						ad.setStreet(parts.get("street"));
 						break;
 					case PRICE_KEY:
@@ -128,11 +127,7 @@ public class GumtreePlParser extends ParserAgent {
 
 		int pricePerMeter = calculatePricePerMeter(ad.getPrice(), ad.getArea());
 		ad.setPricePerMeter(pricePerMeter);
-		
-		// int floor; BD
-		// int constructionYear; BD
-		// int numFloors; BD
-		
+				
 		String link = url.toString();
 		ad.setLink(link);
 		
@@ -146,10 +141,10 @@ public class GumtreePlParser extends ParserAgent {
 	}
 
 	private Map<String, String> getAddress(String value) {
-		String address = value.replaceAll("Polska|Pokaï¿½ mapï¿½|[0-9]{2}-[0-9]{3}|[0-9]+[a-zA-Z]*", "").trim();
+		String address = value.replaceAll("Polska|Poka¿ mapê|[0-9]{2}-[0-9]{3}|[0-9]+[a-zA-Z]*", "").trim();
 		String[] parts = address.split(",");
 		
-		String city = null, street = null;
+		String city = null, district = null, street = null;
 		Map<String, String> result = new HashMap<String, String>();
 		if(parts.length == 1) {
 			city = parts[0].trim();
@@ -157,9 +152,9 @@ public class GumtreePlParser extends ParserAgent {
 			city = parts[1].trim();
 			street = parts[0].trim();
 		}
-		// String district; BD
 		
 		result.put("city", city);
+		result.put("district", district);
 		result.put("street", street);
 		return result;
 	}
