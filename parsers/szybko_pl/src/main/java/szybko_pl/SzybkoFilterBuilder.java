@@ -7,7 +7,9 @@ import common.ads.Filter;
  */
 public class SzybkoFilterBuilder {
 
-    private static final String baseUrlForSearching = "http://szybko.pl/szukaj?only_content=1&prezentacja=lista&page=1&args[asset_category_text]=lokal+mieszkalny+%28mieszkanie%29&args[transaction_type_text]=sprzeda%C5%BC&args[province_text_facet]=-";
+    private static final String BASE_URL_FOR_SEARCHING = "http://szybko.pl/szukaj?only_content=1&prezentacja=lista&page=1";
+
+    private String baseUrlWithCategory = "";
 
     private String city = "";
 
@@ -50,6 +52,9 @@ public class SzybkoFilterBuilder {
     private String advertiser = "";
 
     public SzybkoFilterBuilder(Filter filter){
+        System.out.println(filter.getEstateType());
+        System.out.println(filter.getTransactionType());
+        buildBaseUrlWithCategory(filter);
         if(filter.getCity() != null && !filter.getCity().isEmpty())
             withCity(filter.getCity());
         if(filter.getDistrict() != null && !filter.getDistrict().isEmpty())
@@ -82,6 +87,24 @@ public class SzybkoFilterBuilder {
             withNumFloorsMin(filter.getNumFloorsMin());
         if(filter.getNumFloorsMax() != null && !filter.getNumFloorsMax().isEmpty())
             withNumFloorsMax(filter.getNumFloorsMax());
+
+    }
+
+    private void buildBaseUrlWithCategory(Filter filter) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append(BASE_URL_FOR_SEARCHING);
+        if("Dom".equals(filter.getEstateType())){
+            stringBuilder.append("&args[asset_category_text]=dom");
+        }else{
+            stringBuilder.append("&args[asset_category_text]=lokal+mieszkalny+%28mieszkanie%29");
+        }
+        if("Wynajem".equals(filter.getTransactionType())){
+            stringBuilder.append("&args[transaction_type_text]=wynajem");
+        } else{
+            stringBuilder.append("&args[transaction_type_text]=sprzeda%C5%BC");
+        }
+        stringBuilder.append("&args[province_text_facet]=-");
+        baseUrlWithCategory = stringBuilder.toString();
 
     }
 
@@ -169,7 +192,7 @@ public class SzybkoFilterBuilder {
 
     String build() {
         StringBuilder stringBuilder = new StringBuilder();
-        return stringBuilder.append(baseUrlForSearching)
+        return stringBuilder.append(baseUrlWithCategory)
                 .append(city)
                 .append(district)
                 .append(priceMin)
