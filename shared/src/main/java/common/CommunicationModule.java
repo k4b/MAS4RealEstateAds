@@ -56,4 +56,12 @@ public class CommunicationModule {
         msg.addReceiver(agentName);
         agent.send(msg);
     }
+
+    public void sendReply(ACLMessage msg,String content){
+        ACLMessage reply = msg.createReply();
+        reply.setPerformative(ACLMessage.INFORM);
+        reply.setContent(content);
+        agent.send(reply);
+
+    }
 }

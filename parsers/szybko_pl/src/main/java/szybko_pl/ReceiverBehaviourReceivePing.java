@@ -32,8 +32,8 @@ class ReceiverBehaviourReceivePing extends SimpleBehaviour {
             Gson gson = new Gson();
             Filter filter = gson.fromJson(message, Filter.class);
             agent.startParsing(filter);
-//			System.out.println("Receiver: I am  " + myAgent.getLocalName()
-//					+ " and I have received: " + msg.getContent() +" from "+msg.getSender().getLocalName());
+            agent.getCommunicationModule().sendReply(msg, "done");
+
 
 		}
 		else{

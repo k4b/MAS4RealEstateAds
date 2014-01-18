@@ -92,4 +92,12 @@ abstract public class ParserAgent extends Agent {
       }
       return s;
   }
+
+    public CommunicationModule getCommunicationModule() {
+        return communicationModule;
+    }
+
+    public void setCommunicationModule(CommunicationModule communicationModule) {
+        this.communicationModule = communicationModule;
+    }
 }
