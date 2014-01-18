@@ -3,9 +3,11 @@
 /ivy/lib
 /lib
 /build
+/.idea
 
 #Files
 APDescription.txt
 MTPs-Main-Container.txt
 shared/${shared.jar}
+MAS4RealEstateAds.iml
 
