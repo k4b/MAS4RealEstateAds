@@ -1,17 +1,34 @@
 <project name="gumtree.pl-parser" default="compile">
 
-  <import file="../../common-build.xml" as="common"/>
-  
-  <path id="individual-libs">
-  </path>
+	<import file="../../common-build.xml" as="common" />
 
-  <target name="assemble" depends="compile">
-    <assemble-parser-jar>
-      <manifest-elements>
-        <attribute name="Parser-Alias" value="gumtree.pl"/>
-        <attribute name="Parser-Class" value="gumtree.pl.GumtreePlParser"/>
-        <attribute name="Parser-Exclude" value="javax.xml.namespace"/>
-      </manifest-elements>
-    </assemble-parser-jar>
-  </target>
+	<path id="individual-libs">
+	</path>
+
+	<path id="GumtreeParser-classes">
+		<pathelement path="${parser.classes.dir}" />
+	</path>
+
+	<target name="assemble" depends="compile">
+		<assemble-parser-jar>
+			<manifest-elements>
+				<attribute name="Parser-Alias" value="gumtree.pl" />
+				<attribute name="Parser-Class" value="gumtree_pl.GumtreePlParser" />
+				<attribute name="Parser-Exclude" value="javax.xml.namespace" />
+			</manifest-elements>
+		</assemble-parser-jar>
+	</target>
+
+	<target name="run" depends="compile" description="Run SearchAgent">
+		<java classname="jade.Boot" fork="true">
+			<!--<arg line="-port 1098"/> -->
+			<arg line="-container" />
+			<arg line="-agents Gumtree:gumtree_pl.GumtreePlParser" />
+			<arg line="-local-host 127.0.0.1" />
+			<classpath refid="common-libs" />
+			<classpath refid="shared-classes" />
+			<classpath refid="GumtreeParser-classes" />
+		</java>
+	</target>
+	
 </project>
