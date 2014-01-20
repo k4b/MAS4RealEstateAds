@@ -1,8 +1,6 @@
 package search;
 
-import jade.core.Agent;
 import jade.core.behaviours.OneShotBehaviour;
-import jade.core.behaviours.SimpleBehaviour;
 
 import java.awt.EventQueue;
 

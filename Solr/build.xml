@@ -1,0 +1,13 @@
+<project name="solr-build"
+         xmlns:ivy="antlib:org.apache.ivy.ant">
+  <description>
+    File implementing targets for Solr
+  </description>
+  
+  <property name="solr.jar" location="start.jar"/>
+  
+  <target name="runSolr" description="Runs Solr instance">
+    <java jar="${solr.jar}" fork="true" >
+    </java>
+  </target>
+</project>

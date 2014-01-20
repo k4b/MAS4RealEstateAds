@@ -125,6 +125,7 @@
       <arg line="${gui.arg}"/>-->
       <arg line="-agents Search:search.SearchAgent"/>
       <arg line="-gui"/>
+      <arg line="-local-host 127.0.0.1"/>
       <jvmarg line="${debug.args}"/>
       <classpath refid="common-libs" />
       <classpath refid="SearchAgent-classes" />
@@ -165,5 +166,9 @@
       <copy file="${jarfile}" todir="${assembled.parsers.dir}"/>
     </sequential>
   </macrodef>
+  
+  <target name="runSolr" description="Runs Solr instance" >
+    <ant target="runSolr" dir="Solr" />
+  </target>
   
 </project>

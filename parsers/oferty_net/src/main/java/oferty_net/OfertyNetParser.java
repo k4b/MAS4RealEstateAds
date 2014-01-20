@@ -5,7 +5,6 @@ package oferty_net;
  */
 
 
-import java.io.IOException;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.DateFormat;
@@ -19,15 +18,12 @@ import java.util.StringTokenizer;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
-import common.ads.Filter;
-import org.jsoup.Connection;
-import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
 import common.ads.Ad;
-import common.ads.AdsConstants;
+import common.ads.Filter;
 import common.parsers.ParserAgent;
 
 /**

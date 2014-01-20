@@ -1,7 +1,5 @@
 package common.ads;
 
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by Gelu on 16.01.14.

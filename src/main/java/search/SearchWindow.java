@@ -23,7 +23,6 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import com.google.gson.Gson;
-
 import common.ads.Filter;
 
 public class SearchWindow extends JFrame {

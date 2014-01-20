@@ -5,7 +5,8 @@ package common;
  */
 
 
-import org.lightcouch.*;
+import org.lightcouch.CouchDbClient;
+import org.lightcouch.Response;
 
 import common.ads.Ad;
 

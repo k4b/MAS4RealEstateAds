@@ -1,22 +1,20 @@
 package common.parsers;
 
-import common.CommunicationModule;
-import common.ads.Filter;
 import jade.core.Agent;
+import jade.domain.FIPAAgentManagement.ServiceDescription;
 
 import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
-import jade.domain.FIPAAgentManagement.ServiceDescription;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import common.CommunicationModule;
 import common.ads.Ad;
 import common.ads.AdsConstants;
+import common.ads.Filter;
 
 
 abstract public class ParserAgent extends Agent {
