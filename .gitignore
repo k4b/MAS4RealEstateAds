@@ -5,6 +5,7 @@
 /build
 /.idea
 /.settings
+Solr/solr/collection1/data
 
 #Files
 APDescription.txt

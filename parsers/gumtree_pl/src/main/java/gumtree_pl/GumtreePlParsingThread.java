@@ -50,10 +50,10 @@ public class GumtreePlParsingThread extends Thread {
     public void run() {
     	startParsing();
     	
-		System.out.println("Ilość: " + ads.size());
-		for(Ad ad : ads) {
-			System.out.println(ad.toString());
-		}
+  		System.out.println("Ilość: " + ads.size());
+//  		for(Ad ad : ads) {
+//  			System.out.println(ad.toString());
+//  		}
     }
     
 	public void startParsing() {
@@ -142,6 +142,7 @@ public class GumtreePlParsingThread extends Thread {
 				
 		String link = url.toString();
 		ad.setLink(link);
+		ad.setWebsite("gumtree.pl");
 		
 		ads.add(ad);
 	}

@@ -233,6 +233,22 @@
         unknown fields indexed and/or stored by default --> 
    <!--dynamicField name="*" type="ignored" multiValued="true" /-->
    
+   <field name="city" type="string" indexed="true" stored="true"/>
+   <field name="district" type="string" indexed="true" stored="true"/>
+   <field name="street" type="string" indexed="true" stored="true"/>
+   <field name="price_per_meter" type="string" indexed="true" stored="true"/>
+   <field name="area" type="float" indexed="true" stored="true"/>
+   <field name="link" type="string" indexed="true" stored="true"/>
+   <field name="num_bedrooms" type="int" indexed="true" stored="true"/>
+   <field name="num_bathrooms" type="int" indexed="true" stored="true"/>
+   <field name="floor" type="int" indexed="true" stored="true"/>
+   <field name="num_floors" type="int" indexed="true" stored="true"/>
+   <field name="last_update" type="date" indexed="true" stored="true"/>
+   <field name="creation_date" type="date" indexed="true" stored="true"/>
+   <field name="construction_year" type="int" indexed="true" stored="true"/>
+   <field name="website" type="string" indexed="true" stored="true"/>
+
+
  </fields>
 
 

@@ -1,5 +1,6 @@
 package common.parsers;
 
+import jade.core.AID;
 import jade.core.Agent;
 import jade.domain.FIPAAgentManagement.ServiceDescription;
 
@@ -11,7 +12,12 @@ import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import com.google.gson.Gson;
+
+import solr.SolrModule;
+import common.CommonConstants;
 import common.CommunicationModule;
+import common.ResponseMessage;
 import common.ads.Ad;
 import common.ads.AdsConstants;
 import common.ads.Filter;
@@ -24,10 +30,15 @@ abstract public class ParserAgent extends Agent {
    */
   protected ArrayList<Ad> ads;
   protected CommunicationModule communicationModule;
+  private String solrURL;
+  private SolrModule solr;
+  private AID SearchAgentAID;
+  private Gson gson;
   
   public ParserAgent() {
     ads = new ArrayList<Ad>();
     communicationModule = new CommunicationModule(this);
+    gson = new Gson();
   }
 
     @Override
@@ -80,6 +91,21 @@ abstract public class ParserAgent extends Agent {
       return d;
   }
   
+  public void finishParsing() {
+    if(solrURL != null || !solrURL.equals("")) {
+      solr = new SolrModule(solrURL);      
+    }
+    solr.indexInSolr(ads, 30);
+    ResponseMessage rm = new ResponseMessage(CommonConstants.RESPONSE_OK);
+    sendResponse(rm);
+  }
+  
+  public void sendResponse(ResponseMessage rm) {
+    if(SearchAgentAID == null) {
+      return;
+    }
+    communicationModule.sendMessage(SearchAgentAID, CommonConstants.CONVERSATION_ID, gson.toJson(rm));
+  }
 
   public String arrayListToString(ArrayList ar) {
       String s = "";
@@ -105,5 +131,47 @@ abstract public class ParserAgent extends Agent {
 
     public void setCommunicationModule(CommunicationModule communicationModule) {
         this.communicationModule = communicationModule;
+    }
+
+    /**
+     * @return the solrURL
+     */
+    public String getSolrURL() {
+      return solrURL;
+    }
+
+    /**
+     * @param solrURL the solrURL to set
+     */
+    public void setSolrURL(String solrURL) {
+      this.solrURL = solrURL;
+    }
+
+    /**
+     * @return the solr
+     */
+    public SolrModule getSolr() {
+      return solr;
+    }
+
+    /**
+     * @param solr the solr to set
+     */
+    public void setSolr(SolrModule solr) {
+      this.solr = solr;
+    }
+
+    /**
+     * @return the searchAgentAID
+     */
+    public AID getSearchAgentAID() {
+      return SearchAgentAID;
+    }
+
+    /**
+     * @param searchAgentAID the searchAgentAID to set
+     */
+    public void setSearchAgentAID(AID searchAgentAID) {
+      SearchAgentAID = searchAgentAID;
     }
 }

@@ -23,6 +23,8 @@ import javax.swing.SwingConstants;
 import javax.swing.border.EmptyBorder;
 
 import com.google.gson.Gson;
+import common.CommonConstants;
+import common.RequestMessage;
 import common.ads.Filter;
 
 public class SearchWindow extends JFrame {
@@ -498,7 +500,8 @@ public class SearchWindow extends JFrame {
   }
 
   public void sendMessage(Filter filter, DFAgentDescription[] parsers) throws FIPAException {
-    String message = gson.toJson(filter);
+    RequestMessage m = new RequestMessage(CommonConstants.SOLR_BASE_URL, filter);
+    String message = gson.toJson(m);
     for(DFAgentDescription dfAgent : parsers){
         agent.getCommunication().sendMessage(dfAgent.getName(),"ParserConversation", message);
     }

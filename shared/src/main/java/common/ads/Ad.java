@@ -100,7 +100,12 @@ public class Ad {
     /**
      * Direct link to this advertisement
      */
-    private String link;    
+    private String link;
+    
+    /**
+     * name of the ads website
+     */
+    private String website;
 
     /**
      * Creates Ad, increments number of all ads, and assigns ID to this Ad
@@ -287,6 +292,20 @@ public class Ad {
 
     public void setLink(String link) {
         this.link = link;
+    }
+
+    /**
+     * @return the website
+     */
+    public String getWebsite() {
+      return website;
+    }
+
+    /**
+     * @param website the source to set
+     */
+    public void setWebsite(String website) {
+      this.website = website;
     }
     
 }

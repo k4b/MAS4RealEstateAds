@@ -1,8 +1,10 @@
-package common.parsers;
+package search;
 
 import com.google.gson.Gson;
 
+import common.CommonConstants;
 import common.RequestMessage;
+import common.ResponseMessage;
 import common.ads.Filter;
 import common.parsers.ParserAgent;
 import jade.core.Agent;
@@ -15,34 +17,33 @@ import javax.swing.text.html.parser.Parser;
 /**
  * this is a simple behavior and it will run until it is done
  */
-class ReceiverBehaviourReceivePing extends SimpleBehaviour {
+class ReceiverBehaviour extends SimpleBehaviour {
 	boolean finished = false;
-    ParserAgent agent;
+  SearchAgent agent;
 
 
-	public ReceiverBehaviourReceivePing(ParserAgent agent) {
+	public ReceiverBehaviour(SearchAgent agent) {
 		super(agent);
-        this.agent = agent;
+    this.agent = agent;
 	}
 
 
 	public void action() {
 		ACLMessage msg = myAgent.receive(MessageTemplate.MatchConversationId("ParserConversation"));
 		if (msg != null) {//sometimes the message queue might be empty for example the first time this behavior runs
-            System.out.println("Wiadomosc przyszla");
-            String message = msg.getContent();
-            Gson gson = new Gson();
-            RequestMessage rmessage = gson.fromJson(message, RequestMessage.class);
-            agent.setSearchAgentAID(msg.getSender());
-            agent.setSolrURL(rmessage.getSolrUrl());
-            Filter filter = rmessage.getFilter();
-            agent.startParsing(filter);
-            agent.finishParsing();
-
-
+		  String sender = msg.getSender().getName();
+      System.out.println("Message from " + sender);
+      String message = msg.getContent();
+      System.out.println(message);
+      agent.loadData(sender);
+      Gson gson = new Gson();
+      ResponseMessage rmessage = gson.fromJson(message, ResponseMessage.class);
+      if(rmessage.getResponse().equals(CommonConstants.RESPONSE_OK)) {
+        agent.loadData(sender);
+      }
 		}
 		else{
-            System.out.println("Zwolnij wątek");
+      System.out.println("Empty message");
 			block();//free the thread until a new message appears in the message queue
 		}
 	}
