@@ -92,12 +92,14 @@ abstract public class ParserAgent extends Agent {
   }
   
   public void finishParsing() {
+      System.out.println("finishing");
     if(solrURL != null || !solrURL.equals("")) {
       solr = new SolrModule(solrURL);      
     }
     solr.indexInSolr(ads, 30);
     ResponseMessage rm = new ResponseMessage(CommonConstants.RESPONSE_OK);
     sendResponse(rm);
+    ads.clear();
   }
   
   public void sendResponse(ResponseMessage rm) {
@@ -173,5 +175,11 @@ abstract public class ParserAgent extends Agent {
      */
     public void setSearchAgentAID(AID searchAgentAID) {
       SearchAgentAID = searchAgentAID;
+    }
+
+
+    @Override
+    public void takeDown() {
+        communicationModule.unregister(this);
     }
 }

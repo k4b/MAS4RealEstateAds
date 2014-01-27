@@ -97,6 +97,7 @@ public class SzybkoPlParsingThread extends  Thread {
             return;
         }
         ad.setLink(url.toString());
+        ad.setWebsite("http://szybko.pl");
         fillAdWithTitleAndDescription(doc, ad);
         fillAdWithCityAndDistrict(doc, ad);
         fillAdWithPrices(doc, ad);

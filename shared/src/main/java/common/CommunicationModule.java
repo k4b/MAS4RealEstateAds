@@ -1,5 +1,6 @@
 package common;
 
+import common.parsers.ParserAgent;
 import jade.core.AID;
 import jade.core.Agent;
 import jade.domain.DFService;
@@ -63,5 +64,13 @@ public class CommunicationModule {
         reply.setContent(content);
         agent.send(reply);
 
+    }
+
+    public void unregister(ParserAgent parserAgent) {
+        try {
+            DFService.deregister(parserAgent);
+        } catch (FIPAException e) {
+            e.printStackTrace();
+        }
     }
 }

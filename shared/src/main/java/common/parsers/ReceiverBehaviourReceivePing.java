@@ -31,6 +31,7 @@ class ReceiverBehaviourReceivePing extends SimpleBehaviour {
 		if (msg != null) {//sometimes the message queue might be empty for example the first time this behavior runs
             System.out.println("Wiadomosc przyszla");
             String message = msg.getContent();
+            System.out.println(message);
             Gson gson = new Gson();
             RequestMessage rmessage = gson.fromJson(message, RequestMessage.class);
             agent.setSearchAgentAID(msg.getSender());
