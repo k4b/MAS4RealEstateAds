@@ -71,7 +71,7 @@ abstract public class ParserAgent extends Agent {
       Document d = null;
       try {
           Connection conn = Jsoup.connect(url.toString());
-          conn.timeout(10000);
+          conn.timeout(60000);
           conn.userAgent("Mozilla/5.0 (Windows NT 6.1; WOW64; rv:5.0) Gecko/20100101 Firefox/5.0");
           d = conn.get();
       } catch (Exception ex) {
