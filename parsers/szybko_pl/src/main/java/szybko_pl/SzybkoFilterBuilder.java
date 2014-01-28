@@ -161,12 +161,12 @@ public class SzybkoFilterBuilder {
     }
 
     SzybkoFilterBuilder withCity(String city) {
-        this.city = "&args[place_text_facet]=" + city;
+        this.city = "&args[place_text_facet]=" + toCamelCase(city);
         return this;
     }
 
     SzybkoFilterBuilder withDistrict(String district) {
-        this.district = "&args[quarter_text_facet]=" + district;
+        this.district = "&args[quarter_text_facet]=" + toCamelCase(district);
         return this;
     }
 
@@ -212,5 +212,17 @@ public class SzybkoFilterBuilder {
                 .toString();
 
     }
+
+
+
+
+    String toCamelCase(String string) {
+        StringBuffer sb = new StringBuffer(string.toLowerCase());
+        sb.replace(0, 1, string.substring(0, 1).toUpperCase());
+        return sb.toString();
+
+    }
+
+
 
 }
