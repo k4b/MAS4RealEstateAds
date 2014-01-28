@@ -8,8 +8,8 @@ import common.ads.Filter;
 
 public class GumtreeFilterBuilder {
 
-	private static final String BASE_URL_SELL_BUY = "http://www.gumtree.pl/fp-domy-i-mieszkania-sprzedam-i-kupie/c9073";
-	private static final String BASE_URL_FOR_RENT = "http://www.gumtree.pl/fp-domy-i-mieszkania-do-wynajecia/c9008";
+	private String BASE_URL_SELL_BUY = "http://www.gumtree.pl/fp-domy-i-mieszkania-sprzedam-i-kupie/c9073";
+	private String BASE_URL_FOR_RENT = "http://www.gumtree.pl/fp-domy-i-mieszkania-do-wynajecia/c9008";
 	
 	private Filter filter;
 	private List<String> parameters = new ArrayList<String>();
@@ -27,7 +27,16 @@ public class GumtreeFilterBuilder {
 	}
 	
 	private void addAddress() {
-		//TODO dodac filtorwanie po adresies
+		String district = filter.getDistrict();
+		String city = filter.getCity();
+		
+		if(district != null && !district.isEmpty()) {
+			BASE_URL_SELL_BUY = GumtreeLocCodes.addCode(district, BASE_URL_SELL_BUY);
+			BASE_URL_FOR_RENT = GumtreeLocCodes.addCode(district, BASE_URL_FOR_RENT);
+		} else if(city != null && !city.isEmpty()) {
+			BASE_URL_SELL_BUY = GumtreeLocCodes.addCode(city, BASE_URL_SELL_BUY);
+			BASE_URL_FOR_RENT = GumtreeLocCodes.addCode(city, BASE_URL_FOR_RENT);
+		}
 	}
 	
 	private void addPrice() {
@@ -39,7 +48,7 @@ public class GumtreeFilterBuilder {
 		
 		String priceMax = filter.getPriceMax();
 		if(priceMax != null && !priceMax.isEmpty()) {
-			String value = "maxPrice=" + priceMin;
+			String value = "maxPrice=" + priceMax;
 			parameters.add(value);
 		}	
 	}
@@ -53,7 +62,7 @@ public class GumtreeFilterBuilder {
 		
 		String areaMax = filter.getAreaMax();
 		if(areaMax != null && !areaMax.isEmpty()) {
-			String value = "A_AreaInMeters_min=" + areaMax;
+			String value = "A_AreaInMeters_max=" + areaMax;
 			parameters.add(value);
 		}
 	}
@@ -81,27 +90,23 @@ public class GumtreeFilterBuilder {
 		String roomsNumMin = filter.getRoomsNumMin();
 		String roomsNumMax = filter.getRoomsNumMax();
 		
-		if((roomsNumMin == null || roomsNumMin.isEmpty()) && (roomsNumMax == null || roomsNumMax.isEmpty())) {
+		boolean minCond = roomsNumMin != null && !roomsNumMin.isEmpty();
+		boolean maxCond = roomsNumMax != null && !roomsNumMax.isEmpty();
+		if(!minCond && !maxCond) {
 			return;
 		}
 		
-		int min = 1, max = 6;
-		if(roomsNumMin != null && !roomsNumMin.isEmpty()) {
-			min = Integer.parseInt(roomsNumMin);
-		}
-		if(roomsNumMax != null && !roomsNumMax.isEmpty()) {
-			max = Integer.parseInt(roomsNumMax);
-		}
+		int min = minCond ? Integer.parseInt(roomsNumMin) : 1;
+		int max = maxCond ? Integer.parseInt(roomsNumMax) : 6;
 		
 		String value = "A_NumberRooms=";
 		for(int i = min; i <= max; ++i) {
-			value += i;
+			value += i == 1 ? i + "0" : i;
 			if(i != max) {
 				value += "%2C";
 			}
 		}
 		
-		value.replace("1", "10");
 		parameters.add(value);
 	}
 	
@@ -124,7 +129,7 @@ public class GumtreeFilterBuilder {
 	private void addAdvertiser() {
 		String advertiser = filter.getAdvertiser();
 		if(advertiser != null && !advertiser.isEmpty()) {
-			String value = "A_DwellingForSaleBy=";
+			String value = filter.getTransactionType() == "Kupno/Sprzedaż" ? "A_DwellingForSaleBy=" : "A_ForRentBy=";
 			switch(advertiser) {
 				case "Właściciel":
 					value += "ownr";

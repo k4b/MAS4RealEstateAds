@@ -1,6 +1,5 @@
 package gumtree_pl;
 
-import java.net.MalformedURLException;
 import java.net.URL;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -66,10 +65,10 @@ public class GumtreePlParsingThread extends Thread {
 				URL current = new URL(element.attr("href"));
 				parseSearchResults(current);
 			} catch(NoSuchElementException e) {
-				e.printStackTrace();
 				url = getNextURL(doc);
 				if(url != null) {
-					startParsing();	
+					startParsing();
+					break;
 				} else {
 					break;
 				}
@@ -213,14 +212,14 @@ public class GumtreePlParsingThread extends Thread {
 	private URL getNextURL(Document doc) {
 		URL result = null;
 		Element element = doc.getElementsByClass("prevNextLink").last();
-		if(element.text().startsWith("Następne")) {
-			String link = element.attr("href");
-			try {
+		try {
+			if(element.text().startsWith("Następne")) {
+				String link = element.attr("href");
 				result = new URL(link);
-			} catch(MalformedURLException e) {
-				e.printStackTrace();
-				return null;
+				System.out.println(link);
 			}
+		} catch(Exception e) {
+			return null;
 		}
 		return result;
 	}
