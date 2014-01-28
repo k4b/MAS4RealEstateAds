@@ -52,6 +52,7 @@ public class SearchAgent extends Agent{
       return;
     }
     SolrDocumentList results = response.getResults();
+    System.out.println(">>> " + results.size() + " results");
     for (int i = 0; i < results.size(); ++i) {
       System.out.println(results.get(i));
     }

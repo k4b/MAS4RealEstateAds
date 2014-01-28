@@ -4977,3 +4977,1005 @@ INFO  - 2014-01-21 00:33:46.402; org.apache.solr.handler.component.SpellCheckCom
 INFO  - 2014-01-21 00:33:46.402; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
 INFO  - 2014-01-21 00:33:46.402; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@30477e21 main{StandardDirectoryReader(segments_2:3:nrt _0(4.5.1):C1)}
 INFO  - 2014-01-21 00:35:09.785; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=*&wt=javabin&fq=cat:book&version=2&defType=edismax} hits=1 status=0 QTime=19 
+INFO  - 2014-01-22 22:46:52.240; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-22 22:46:52.277; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-22 22:46:52.282; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-22 22:46:53.475; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-22 22:46:53.506; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-22 22:46:53.542; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-22 22:46:53.543; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-22 22:46:53.543; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-22 22:46:53.656; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-22 22:46:53.849; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-22 22:46:53.855; org.apache.solr.core.CoreContainer; New CoreContainer 268946952
+INFO  - 2014-01-22 22:46:53.855; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-22 22:46:53.868; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-22 22:46:53.869; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-22 22:46:53.869; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-22 22:46:53.869; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-22 22:46:53.871; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-22 22:46:53.872; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-22 22:46:53.872; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-22 22:46:53.872; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-22 22:46:53.872; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-22 22:46:53.878; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-22 22:46:54.053; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-22 22:46:54.054; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-22 22:46:54.078; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-22 22:46:54.107; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-22 22:46:54.108; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-22 22:46:54.109; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-22 22:46:54.110; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+INFO  - 2014-01-22 22:46:54.203; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-22 22:46:54.204; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-22 22:46:54.204; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:46:54.204; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-22 22:46:54.205; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:46:54.205; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-22 22:46:54.205; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:46:54.205; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-22 22:46:54.205; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-22 22:46:54.318; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-22 22:46:54.323; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-22 22:46:54.436; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-22 22:46:54.441; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-22 22:46:54.570; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-22 22:46:55.154; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-22 22:46:55.335; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:46:55.348; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:46:55.506; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-22 22:46:55.512; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-22 22:46:55.512; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-22 22:46:55.516; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-22 22:46:55.516; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-22 22:46:55.526; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:46:55.527; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-22 22:46:55.527; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:46:55.536; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-22 22:46:55.536; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:46:55.537; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:46:55.540; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-22 22:46:55.540; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-22 22:46:55.607; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-22 22:46:55.614; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.615; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.616; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-22 22:46:55.616; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.619; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-22 22:46:55.620; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-22 22:46:55.622; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-22 22:46:55.622; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:46:55.622; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:46:55.622; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:46:55.622; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:46:55.623; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:46:55.623; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:46:55.624; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-22 22:46:55.626; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-22 22:46:55.628; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-22 22:46:55.636; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-22 22:46:55.636; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.636; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.636; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.637; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-22 22:46:55.652; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:46:55.655; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:46:55.655; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:46:55.707; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-22 22:46:55.707; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-22 22:46:55.799; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30722c6a; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_d,generation=13}
+INFO  - 2014-01-22 22:46:55.800; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 13
+INFO  - 2014-01-22 22:46:55.975; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@361b589d main
+INFO  - 2014-01-22 22:46:55.979; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-22 22:46:55.984; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-22 22:46:55.989; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-22 22:46:55.990; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-22 22:46:56.013; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-22 22:46:56.013; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@361b589d main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:46:56.014; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-22 22:46:56.018; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-22 22:46:56.018; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-22 22:46:56.058; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=43 
+INFO  - 2014-01-22 22:46:56.059; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-22 22:46:56.059; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-22 22:46:56.059; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-22 22:46:56.060; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@361b589d main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:46:56.081; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:47:10.718; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390427230707&wt=json} status=0 QTime=1 
+INFO  - 2014-01-22 22:47:10.784; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390427230745&wt=json} status=0 QTime=31 
+INFO  - 2014-01-22 22:47:26.265; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427246256&wt=json} status=0 QTime=4 
+INFO  - 2014-01-22 22:47:26.532; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427246409&wt=json} status=0 QTime=20 
+INFO  - 2014-01-22 22:47:40.640; org.apache.solr.core.CoreContainer; Creating SolrCore 'new_core' using instanceDir: solr/new_core
+INFO  - 2014-01-22 22:47:40.640; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/new_core/'
+ERROR - 2014-01-22 22:47:40.648; org.apache.solr.core.CoreContainer; Failed to load file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+ERROR - 2014-01-22 22:47:40.649; org.apache.solr.core.CoreContainer; Unable to create core: new_core
+org.apache.solr.common.SolrException: Could not load config file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:490)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:557)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleCreateAction(CoreAdminHandler.java:470)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:148)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+	at org.apache.solr.servlet.SolrDispatchFilter.handleAdminRequest(SolrDispatchFilter.java:655)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:246)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: Can't find resource 'solrconfig.xml' in classpath or 'solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:322)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:287)
+	at org.apache.solr.core.Config.<init>(Config.java:116)
+	at org.apache.solr.core.Config.<init>(Config.java:86)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:129)
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:487)
+	... 32 more
+ERROR - 2014-01-22 22:47:40.652; org.apache.solr.common.SolrException; org.apache.solr.common.SolrException: Error CREATEing SolrCore 'new_core': Unable to create core: new_core Caused by: Can't find resource 'solrconfig.xml' in classpath or 'solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleCreateAction(CoreAdminHandler.java:507)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleRequestBody(CoreAdminHandler.java:148)
+	at org.apache.solr.handler.RequestHandlerBase.handleRequest(RequestHandlerBase.java:135)
+	at org.apache.solr.servlet.SolrDispatchFilter.handleAdminRequest(SolrDispatchFilter.java:655)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:246)
+	at org.apache.solr.servlet.SolrDispatchFilter.doFilter(SolrDispatchFilter.java:195)
+	at org.eclipse.jetty.servlet.ServletHandler$CachedChain.doFilter(ServletHandler.java:1419)
+	at org.eclipse.jetty.servlet.ServletHandler.doHandle(ServletHandler.java:455)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:137)
+	at org.eclipse.jetty.security.SecurityHandler.handle(SecurityHandler.java:557)
+	at org.eclipse.jetty.server.session.SessionHandler.doHandle(SessionHandler.java:231)
+	at org.eclipse.jetty.server.handler.ContextHandler.doHandle(ContextHandler.java:1075)
+	at org.eclipse.jetty.servlet.ServletHandler.doScope(ServletHandler.java:384)
+	at org.eclipse.jetty.server.session.SessionHandler.doScope(SessionHandler.java:193)
+	at org.eclipse.jetty.server.handler.ContextHandler.doScope(ContextHandler.java:1009)
+	at org.eclipse.jetty.server.handler.ScopedHandler.handle(ScopedHandler.java:135)
+	at org.eclipse.jetty.server.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:255)
+	at org.eclipse.jetty.server.handler.HandlerCollection.handle(HandlerCollection.java:154)
+	at org.eclipse.jetty.server.handler.HandlerWrapper.handle(HandlerWrapper.java:116)
+	at org.eclipse.jetty.server.Server.handle(Server.java:368)
+	at org.eclipse.jetty.server.AbstractHttpConnection.handleRequest(AbstractHttpConnection.java:489)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handleRequest(BlockingHttpConnection.java:53)
+	at org.eclipse.jetty.server.AbstractHttpConnection.headerComplete(AbstractHttpConnection.java:942)
+	at org.eclipse.jetty.server.AbstractHttpConnection$RequestHandler.headerComplete(AbstractHttpConnection.java:1004)
+	at org.eclipse.jetty.http.HttpParser.parseNext(HttpParser.java:640)
+	at org.eclipse.jetty.http.HttpParser.parseAvailable(HttpParser.java:235)
+	at org.eclipse.jetty.server.BlockingHttpConnection.handle(BlockingHttpConnection.java:72)
+	at org.eclipse.jetty.server.bio.SocketConnector$ConnectorEndPoint.run(SocketConnector.java:264)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:608)
+	at org.eclipse.jetty.util.thread.QueuedThreadPool$3.run(QueuedThreadPool.java:543)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.apache.solr.common.SolrException: Unable to create core: new_core
+	at org.apache.solr.core.CoreContainer.recordAndThrow(CoreContainer.java:934)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:566)
+	at org.apache.solr.handler.admin.CoreAdminHandler.handleCreateAction(CoreAdminHandler.java:470)
+	... 30 more
+Caused by: org.apache.solr.common.SolrException: Could not load config file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:490)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:557)
+	... 31 more
+Caused by: java.io.IOException: Can't find resource 'solrconfig.xml' in classpath or 'solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:322)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:287)
+	at org.apache.solr.core.Config.<init>(Config.java:116)
+	at org.apache.solr.core.Config.<init>(Config.java:86)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:129)
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:487)
+	... 32 more
+
+INFO  - 2014-01-22 22:47:40.652; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={schema=schema.xml&shard=&instanceDir=new_core&indexInfo=false&name=new_core&action=CREATE&config=solrconfig.xml&_=1390427260626&collection=&dataDir=data&wt=json} status=400 QTime=20 
+INFO  - 2014-01-22 22:48:27.191; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:48:27.193; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:48:28.195; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=268946952
+INFO  - 2014-01-22 22:48:28.196; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@5511fae9
+INFO  - 2014-01-22 22:48:28.197; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-22 22:48:28.198; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-22 22:48:28.199; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-22 22:48:28.199; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-22 22:48:28.205; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-22 22:48:28.209; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-22 22:48:28.210; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data;done=false>>]
+INFO  - 2014-01-22 22:48:28.211; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:48:28.212; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-22 22:48:28.212; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:48:28.216; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:48:48.705; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-22 22:48:48.723; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-22 22:48:48.728; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-22 22:48:49.665; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-22 22:48:49.695; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-22 22:48:49.707; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-22 22:48:49.707; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-22 22:48:49.707; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-22 22:48:49.813; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-22 22:48:49.913; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-22 22:48:49.919; org.apache.solr.core.CoreContainer; New CoreContainer 785238630
+INFO  - 2014-01-22 22:48:49.920; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-22 22:48:49.931; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-22 22:48:49.931; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-22 22:48:49.932; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-22 22:48:49.932; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-22 22:48:49.934; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-22 22:48:49.934; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-22 22:48:49.934; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-22 22:48:49.934; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-22 22:48:49.935; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-22 22:48:49.940; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-22 22:48:50.057; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-22 22:48:50.057; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-22 22:48:50.082; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-22 22:48:50.097; org.apache.solr.core.CorePropertiesLocator; Found core new_core in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/
+INFO  - 2014-01-22 22:48:50.097; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-22 22:48:50.098; org.apache.solr.core.CorePropertiesLocator; Found 2 core definitions
+INFO  - 2014-01-22 22:48:50.099; org.apache.solr.core.CoreContainer; Creating SolrCore 'new_core' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core
+INFO  - 2014-01-22 22:48:50.100; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/'
+INFO  - 2014-01-22 22:48:50.101; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-22 22:48:50.101; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+ERROR - 2014-01-22 22:48:50.113; org.apache.solr.core.CoreContainer; Failed to load file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+ERROR - 2014-01-22 22:48:50.114; org.apache.solr.core.CoreContainer; Unable to create core: new_core
+org.apache.solr.common.SolrException: Could not load config file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:490)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:557)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:247)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:239)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: Can't find resource 'solrconfig.xml' in classpath or '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:322)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:287)
+	at org.apache.solr.core.Config.<init>(Config.java:116)
+	at org.apache.solr.core.Config.<init>(Config.java:86)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:129)
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:487)
+	... 9 more
+ERROR - 2014-01-22 22:48:50.117; org.apache.solr.common.SolrException; null:org.apache.solr.common.SolrException: Unable to create core: new_core
+	at org.apache.solr.core.CoreContainer.recordAndThrow(CoreContainer.java:934)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:566)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:247)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:239)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.apache.solr.common.SolrException: Could not load config file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:490)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:557)
+	... 8 more
+Caused by: java.io.IOException: Can't find resource 'solrconfig.xml' in classpath or '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:322)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:287)
+	at org.apache.solr.core.Config.<init>(Config.java:116)
+	at org.apache.solr.core.Config.<init>(Config.java:86)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:129)
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:487)
+	... 9 more
+
+INFO  - 2014-01-22 22:48:50.185; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-22 22:48:50.185; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-22 22:48:50.186; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:48:50.186; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-22 22:48:50.186; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:48:50.186; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-22 22:48:50.186; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:48:50.187; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-22 22:48:50.187; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-22 22:48:50.298; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-22 22:48:50.313; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-22 22:48:50.408; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-22 22:48:50.412; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-22 22:48:50.491; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-22 22:48:50.996; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-22 22:48:51.059; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:48:51.066; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:48:51.183; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-22 22:48:51.188; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-22 22:48:51.189; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-22 22:48:51.192; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-22 22:48:51.192; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-22 22:48:51.202; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:48:51.203; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-22 22:48:51.203; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:48:51.211; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-22 22:48:51.211; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:48:51.212; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:48:51.214; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-22 22:48:51.214; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-22 22:48:51.278; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-22 22:48:51.286; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.286; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.288; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-22 22:48:51.288; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.291; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-22 22:48:51.292; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-22 22:48:51.294; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-22 22:48:51.294; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:48:51.294; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:48:51.294; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:48:51.295; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:48:51.295; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:48:51.295; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:48:51.296; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-22 22:48:51.298; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-22 22:48:51.300; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-22 22:48:51.309; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-22 22:48:51.309; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.309; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.310; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.311; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-22 22:48:51.324; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:48:51.326; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:48:51.327; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:48:51.348; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-22 22:48:51.348; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-22 22:48:51.385; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@752ccf35; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_d,generation=13}
+INFO  - 2014-01-22 22:48:51.385; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 13
+INFO  - 2014-01-22 22:48:51.416; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@6ab3b320 main
+INFO  - 2014-01-22 22:48:51.420; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-22 22:48:51.425; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-22 22:48:51.431; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-22 22:48:51.433; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-22 22:48:51.455; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-22 22:48:51.455; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@6ab3b320 main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:48:51.456; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-22 22:48:51.460; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-22 22:48:51.460; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-22 22:48:51.509; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:48:51.526; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=68 
+INFO  - 2014-01-22 22:48:51.526; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-22 22:48:51.527; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-22 22:48:51.527; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-22 22:48:51.527; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@6ab3b320 main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:49:02.936; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390427342930&wt=json} status=0 QTime=1 
+INFO  - 2014-01-22 22:49:02.977; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390427342965&wt=json} status=0 QTime=7 
+INFO  - 2014-01-22 22:49:02.997; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427342988&wt=json} status=0 QTime=2 
+INFO  - 2014-01-22 22:49:18.951; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390427358946&wt=json} status=0 QTime=1 
+INFO  - 2014-01-22 22:49:18.984; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390427358972&wt=json} status=0 QTime=5 
+INFO  - 2014-01-22 22:49:19.032; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427358994&wt=json} status=0 QTime=3 
+INFO  - 2014-01-22 22:49:25.903; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427365900&wt=json} status=0 QTime=2 
+INFO  - 2014-01-22 22:49:26.034; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427366023&wt=json} status=0 QTime=3 
+INFO  - 2014-01-22 22:50:08.468; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:50:08.469; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:50:09.472; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=785238630
+INFO  - 2014-01-22 22:50:09.473; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@32560
+INFO  - 2014-01-22 22:50:09.474; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-22 22:50:09.474; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-22 22:50:09.475; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-22 22:50:09.475; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-22 22:50:09.477; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-22 22:50:09.479; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-22 22:50:09.480; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-22 22:50:09.481; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:50:09.481; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data;done=false>>]
+INFO  - 2014-01-22 22:50:09.481; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:50:09.484; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:50:12.814; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-22 22:50:12.833; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-22 22:50:12.837; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-22 22:50:13.779; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-22 22:50:13.810; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-22 22:50:13.821; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-22 22:50:13.822; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-22 22:50:13.822; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-22 22:50:13.928; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-22 22:50:14.025; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-22 22:50:14.031; org.apache.solr.core.CoreContainer; New CoreContainer 48240519
+INFO  - 2014-01-22 22:50:14.031; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-22 22:50:14.043; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-22 22:50:14.043; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-22 22:50:14.043; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-22 22:50:14.043; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-22 22:50:14.045; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-22 22:50:14.046; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-22 22:50:14.046; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-22 22:50:14.046; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-22 22:50:14.046; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-22 22:50:14.051; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-22 22:50:14.159; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-22 22:50:14.160; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-22 22:50:14.184; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-22 22:50:14.196; org.apache.solr.core.CorePropertiesLocator; Found core new_core in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/
+INFO  - 2014-01-22 22:50:14.197; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-22 22:50:14.197; org.apache.solr.core.CorePropertiesLocator; Found 2 core definitions
+INFO  - 2014-01-22 22:50:14.198; org.apache.solr.core.CoreContainer; Creating SolrCore 'new_core' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core
+INFO  - 2014-01-22 22:50:14.198; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-22 22:50:14.199; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/'
+INFO  - 2014-01-22 22:50:14.199; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+ERROR - 2014-01-22 22:50:14.218; org.apache.solr.core.CoreContainer; Failed to load file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+ERROR - 2014-01-22 22:50:14.219; org.apache.solr.core.CoreContainer; Unable to create core: new_core
+org.apache.solr.common.SolrException: Could not load config file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:490)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:557)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:247)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:239)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: java.io.IOException: Can't find resource 'solrconfig.xml' in classpath or '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:322)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:287)
+	at org.apache.solr.core.Config.<init>(Config.java:116)
+	at org.apache.solr.core.Config.<init>(Config.java:86)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:129)
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:487)
+	... 9 more
+ERROR - 2014-01-22 22:50:14.222; org.apache.solr.common.SolrException; null:org.apache.solr.common.SolrException: Unable to create core: new_core
+	at org.apache.solr.core.CoreContainer.recordAndThrow(CoreContainer.java:934)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:566)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:247)
+	at org.apache.solr.core.CoreContainer$1.call(CoreContainer.java:239)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:471)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:262)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:744)
+Caused by: org.apache.solr.common.SolrException: Could not load config file /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/solrconfig.xml
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:490)
+	at org.apache.solr.core.CoreContainer.create(CoreContainer.java:557)
+	... 8 more
+Caused by: java.io.IOException: Can't find resource 'solrconfig.xml' in classpath or '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/new_core/conf/', cwd=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+	at org.apache.solr.core.SolrResourceLoader.openResource(SolrResourceLoader.java:322)
+	at org.apache.solr.core.SolrResourceLoader.openConfig(SolrResourceLoader.java:287)
+	at org.apache.solr.core.Config.<init>(Config.java:116)
+	at org.apache.solr.core.Config.<init>(Config.java:86)
+	at org.apache.solr.core.SolrConfig.<init>(SolrConfig.java:129)
+	at org.apache.solr.core.CoreContainer.createFromLocal(CoreContainer.java:487)
+	... 9 more
+
+INFO  - 2014-01-22 22:50:14.293; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-22 22:50:14.294; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-22 22:50:14.294; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:50:14.294; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-22 22:50:14.294; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:50:14.295; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-22 22:50:14.295; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:50:14.295; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-22 22:50:14.295; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-22 22:50:14.414; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-22 22:50:14.420; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-22 22:50:14.514; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-22 22:50:14.519; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-22 22:50:14.599; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-22 22:50:15.107; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-22 22:50:15.170; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:50:15.178; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:50:15.293; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-22 22:50:15.299; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-22 22:50:15.300; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-22 22:50:15.304; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-22 22:50:15.304; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-22 22:50:15.315; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:50:15.315; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-22 22:50:15.316; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:50:15.324; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-22 22:50:15.325; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:50:15.325; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:50:15.327; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-22 22:50:15.328; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-22 22:50:15.394; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-22 22:50:15.402; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.402; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.404; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-22 22:50:15.404; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.407; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-22 22:50:15.408; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-22 22:50:15.410; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-22 22:50:15.410; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:50:15.411; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:50:15.411; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:50:15.411; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:50:15.411; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:50:15.411; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:50:15.413; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-22 22:50:15.415; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-22 22:50:15.416; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-22 22:50:15.425; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-22 22:50:15.425; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.425; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.425; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.425; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.426; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:50:15.426; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:50:15.426; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.426; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.426; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.426; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-22 22:50:15.439; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:50:15.441; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:50:15.442; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:50:15.463; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-22 22:50:15.463; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-22 22:50:15.501; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@4b6e907a; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_d,generation=13}
+INFO  - 2014-01-22 22:50:15.501; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 13
+INFO  - 2014-01-22 22:50:15.531; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@7a689bb1 main
+INFO  - 2014-01-22 22:50:15.535; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-22 22:50:15.540; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-22 22:50:15.545; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-22 22:50:15.547; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-22 22:50:15.569; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-22 22:50:15.570; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@7a689bb1 main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:50:15.570; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-22 22:50:15.574; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-22 22:50:15.575; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-22 22:50:15.613; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:50:15.625; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=54 
+INFO  - 2014-01-22 22:50:15.626; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-22 22:50:15.626; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-22 22:50:15.626; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-22 22:50:15.626; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@7a689bb1 main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:50:49.255; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:50:49.256; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:50:50.258; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=48240519
+INFO  - 2014-01-22 22:50:50.259; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@23e9ee3f
+INFO  - 2014-01-22 22:50:50.260; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-22 22:50:50.261; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-22 22:50:50.261; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-22 22:50:50.262; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-22 22:50:50.265; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-22 22:50:50.266; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-22 22:50:50.267; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data;done=false>>]
+INFO  - 2014-01-22 22:50:50.267; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:50:50.267; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-22 22:50:50.268; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:50:50.269; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:51:17.496; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-22 22:51:17.514; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-22 22:51:17.519; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-22 22:51:18.453; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-22 22:51:18.484; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-22 22:51:18.496; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-22 22:51:18.496; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-22 22:51:18.496; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-22 22:51:18.604; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-22 22:51:18.698; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-22 22:51:18.704; org.apache.solr.core.CoreContainer; New CoreContainer 1508269304
+INFO  - 2014-01-22 22:51:18.705; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-22 22:51:18.716; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-22 22:51:18.717; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-22 22:51:18.717; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-22 22:51:18.717; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-22 22:51:18.719; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-22 22:51:18.719; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-22 22:51:18.719; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-22 22:51:18.720; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-22 22:51:18.720; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-22 22:51:18.725; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-22 22:51:18.834; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-22 22:51:18.835; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-22 22:51:18.859; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-22 22:51:18.873; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-22 22:51:18.873; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-22 22:51:18.874; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-22 22:51:18.875; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+INFO  - 2014-01-22 22:51:18.954; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-22 22:51:18.955; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-22 22:51:18.955; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:51:18.955; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-22 22:51:18.955; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:51:18.956; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-22 22:51:18.956; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:51:18.956; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-22 22:51:18.956; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-22 22:51:19.079; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-22 22:51:19.085; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-22 22:51:19.193; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-22 22:51:19.199; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-22 22:51:19.279; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-22 22:51:19.797; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-22 22:51:19.861; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:51:19.869; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:51:19.986; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-22 22:51:19.992; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-22 22:51:19.993; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-22 22:51:19.996; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-22 22:51:19.996; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-22 22:51:20.008; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:51:20.009; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-22 22:51:20.009; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:51:20.017; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-22 22:51:20.017; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:51:20.018; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:51:20.020; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-22 22:51:20.020; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-22 22:51:20.088; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-22 22:51:20.096; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.096; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.098; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-22 22:51:20.098; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.100; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-22 22:51:20.102; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-22 22:51:20.104; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-22 22:51:20.104; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:51:20.105; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:51:20.105; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:51:20.105; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:51:20.105; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:51:20.105; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:51:20.107; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-22 22:51:20.109; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-22 22:51:20.110; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-22 22:51:20.118; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-22 22:51:20.118; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.118; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.118; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.119; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-22 22:51:20.132; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:51:20.134; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:51:20.135; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:51:20.156; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-22 22:51:20.157; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-22 22:51:20.195; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7409afd9; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_d,generation=13}
+INFO  - 2014-01-22 22:51:20.195; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 13
+INFO  - 2014-01-22 22:51:20.225; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@302f2a9 main
+INFO  - 2014-01-22 22:51:20.229; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-22 22:51:20.234; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-22 22:51:20.239; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-22 22:51:20.240; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-22 22:51:20.264; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-22 22:51:20.265; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@302f2a9 main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:51:20.265; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-22 22:51:20.267; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-22 22:51:20.267; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-22 22:51:20.295; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:51:20.307; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=40 
+INFO  - 2014-01-22 22:51:20.307; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-22 22:51:20.307; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-22 22:51:20.308; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-22 22:51:20.308; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@302f2a9 main{StandardDirectoryReader(segments_d:41:nrt _0(4.5.1):C1 _6(4.5.1):C80/79:delGen=2 _b(4.5.1):C79)}
+INFO  - 2014-01-22 22:52:01.645; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:52:01.646; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:52:02.648; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=1508269304
+INFO  - 2014-01-22 22:52:02.649; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@47ae01af
+INFO  - 2014-01-22 22:52:02.650; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-22 22:52:02.651; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-22 22:52:02.651; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-22 22:52:02.652; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-22 22:52:02.655; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-22 22:52:02.658; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-22 22:52:02.659; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-22 22:52:02.660; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:52:02.660; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data;done=false>>]
+INFO  - 2014-01-22 22:52:02.661; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:52:02.662; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:53:05.757; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-22 22:53:05.775; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-22 22:53:05.780; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-22 22:53:06.704; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-22 22:53:06.736; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-22 22:53:06.749; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-22 22:53:06.749; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-22 22:53:06.750; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-22 22:53:06.857; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-22 22:53:06.953; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-22 22:53:06.959; org.apache.solr.core.CoreContainer; New CoreContainer 45390254
+INFO  - 2014-01-22 22:53:06.960; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-22 22:53:06.972; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-22 22:53:06.972; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-22 22:53:06.972; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-22 22:53:06.972; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-22 22:53:06.974; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-22 22:53:06.974; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-22 22:53:06.975; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-22 22:53:06.975; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-22 22:53:06.975; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-22 22:53:06.980; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-22 22:53:07.088; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-22 22:53:07.089; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-22 22:53:07.113; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-22 22:53:07.113; org.apache.solr.core.CorePropertiesLocator; Found 0 core definitions
+INFO  - 2014-01-22 22:53:07.114; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-22 22:53:07.115; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-22 22:53:07.140; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:53:14.870; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390427594839&wt=json} status=0 QTime=20 
+INFO  - 2014-01-22 22:53:14.908; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390427594893&wt=json} status=0 QTime=12 
+INFO  - 2014-01-22 22:53:14.935; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427594928&wt=json} status=0 QTime=1 
+INFO  - 2014-01-22 22:53:14.944; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427594942&wt=json} status=0 QTime=0 
+INFO  - 2014-01-22 22:54:05.166; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:54:05.167; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:54:06.168; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=45390254
+INFO  - 2014-01-22 22:54:06.173; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:54:07.440; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-22 22:54:07.458; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-22 22:54:07.463; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-22 22:54:08.415; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-22 22:54:08.445; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-22 22:54:08.457; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-22 22:54:08.457; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-22 22:54:08.457; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-22 22:54:08.565; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-22 22:54:08.659; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-22 22:54:08.665; org.apache.solr.core.CoreContainer; New CoreContainer 268946952
+INFO  - 2014-01-22 22:54:08.665; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-22 22:54:08.677; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-22 22:54:08.678; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-22 22:54:08.678; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-22 22:54:08.678; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-22 22:54:08.680; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-22 22:54:08.680; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-22 22:54:08.680; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-22 22:54:08.681; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-22 22:54:08.681; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-22 22:54:08.686; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-22 22:54:08.795; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-22 22:54:08.796; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-22 22:54:08.820; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-22 22:54:08.832; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-22 22:54:08.833; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-22 22:54:08.834; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-22 22:54:08.834; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+INFO  - 2014-01-22 22:54:08.910; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-22 22:54:08.911; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-22 22:54:08.911; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:54:08.912; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-22 22:54:08.912; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:54:08.912; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-22 22:54:08.912; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-22 22:54:08.913; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-22 22:54:08.913; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-22 22:54:09.042; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-22 22:54:09.047; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-22 22:54:09.152; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-22 22:54:09.156; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-22 22:54:09.238; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-22 22:54:09.743; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-22 22:54:09.808; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:54:09.815; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-22 22:54:09.933; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-22 22:54:09.940; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-22 22:54:09.941; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-22 22:54:09.944; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-22 22:54:09.944; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-22 22:54:09.954; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:54:09.955; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+WARN  - 2014-01-22 22:54:09.955; org.apache.solr.core.SolrCore; [collection1] Solr index directory '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index' doesn't exist. Creating new index...
+INFO  - 2014-01-22 22:54:09.960; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:54:10.114; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@3431fe4f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2014-01-22 22:54:10.115; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2014-01-22 22:54:10.122; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-22 22:54:10.122; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:54:10.123; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-22 22:54:10.126; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-22 22:54:10.127; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-22 22:54:10.194; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-22 22:54:10.202; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.202; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.204; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-22 22:54:10.204; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.207; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-22 22:54:10.208; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-22 22:54:10.210; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-22 22:54:10.210; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:54:10.210; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-22 22:54:10.210; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:54:10.211; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-22 22:54:10.211; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:54:10.211; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-22 22:54:10.213; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-22 22:54:10.215; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-22 22:54:10.217; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-22 22:54:10.224; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.225; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.226; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.226; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-22 22:54:10.241; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:54:10.243; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:54:10.244; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-22 22:54:10.256; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-22 22:54:10.256; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-22 22:54:10.260; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@3431fe4f; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2014-01-22 22:54:10.260; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2014-01-22 22:54:10.265; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@ad9be15 main
+INFO  - 2014-01-22 22:54:10.269; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-22 22:54:10.274; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-22 22:54:10.279; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-22 22:54:10.281; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-22 22:54:10.304; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-22 22:54:10.304; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@ad9be15 main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2014-01-22 22:54:10.304; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-22 22:54:10.307; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-22 22:54:10.307; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-22 22:54:10.348; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=42 
+INFO  - 2014-01-22 22:54:10.349; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:54:10.349; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-22 22:54:10.349; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-22 22:54:10.349; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-22 22:54:10.350; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@ad9be15 main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2014-01-22 22:54:16.314; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390427656308&wt=json} status=0 QTime=1 
+INFO  - 2014-01-22 22:54:16.350; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390427656336&wt=json} status=0 QTime=7 
+INFO  - 2014-01-22 22:54:16.370; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427656365&wt=json} status=0 QTime=2 
+INFO  - 2014-01-22 22:54:16.406; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={_=1390427656402&wt=json} status=0 QTime=1 
+INFO  - 2014-01-22 22:54:28.113; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=*:*&wt=json} hits=0 status=0 QTime=4 
+INFO  - 2014-01-22 22:54:54.774; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-22 22:54:54.777; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-22 22:54:55.779; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=268946952
+INFO  - 2014-01-22 22:54:55.781; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@2da8ca45
+INFO  - 2014-01-22 22:54:55.781; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=0,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=0,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-22 22:54:55.782; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-22 22:54:55.783; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-22 22:54:55.783; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-22 22:54:55.785; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-22 22:54:55.785; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-22 22:54:55.786; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-22 22:54:55.786; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-22 22:54:55.786; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data;done=false>>]
+INFO  - 2014-01-22 22:54:55.786; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-22 22:54:55.788; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-28 23:23:33.156; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-28 23:23:33.294; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-28 23:23:33.406; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-28 23:23:34.826; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-28 23:23:34.860; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-28 23:23:34.894; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-28 23:23:34.895; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-28 23:23:34.895; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-28 23:23:35.016; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-28 23:23:35.354; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-28 23:23:35.360; org.apache.solr.core.CoreContainer; New CoreContainer 1939694472
+INFO  - 2014-01-28 23:23:35.360; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-28 23:23:35.372; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-28 23:23:35.372; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-28 23:23:35.372; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-28 23:23:35.373; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-28 23:23:35.375; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-28 23:23:35.375; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-28 23:23:35.375; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-28 23:23:35.375; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-28 23:23:35.376; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-28 23:23:35.629; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-28 23:23:37.122; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-28 23:23:37.123; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-28 23:23:37.160; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-28 23:23:37.206; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-28 23:23:37.207; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-28 23:23:37.208; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-28 23:23:37.210; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+INFO  - 2014-01-28 23:23:37.354; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-28 23:23:37.354; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-28 23:23:37.355; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-28 23:23:37.355; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-28 23:23:37.355; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-28 23:23:37.355; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-28 23:23:37.355; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-28 23:23:37.356; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-28 23:23:37.356; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-28 23:23:37.476; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-28 23:23:37.482; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-28 23:23:37.597; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-28 23:23:37.603; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-28 23:23:37.705; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-28 23:23:38.308; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-28 23:23:38.497; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-28 23:23:38.512; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-28 23:23:38.682; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-28 23:23:38.688; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-28 23:23:38.689; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-28 23:23:38.692; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-28 23:23:38.692; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-28 23:23:38.724; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-28 23:23:38.744; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-28 23:23:38.745; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-28 23:23:38.753; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-28 23:23:38.753; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-28 23:23:38.754; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-28 23:23:38.756; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-28 23:23:38.756; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-28 23:23:38.821; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-28 23:23:38.828; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.828; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.829; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-28 23:23:38.830; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.832; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-28 23:23:38.833; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-28 23:23:38.835; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-28 23:23:38.835; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-28 23:23:38.835; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-28 23:23:38.835; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-28 23:23:38.836; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-28 23:23:38.836; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-28 23:23:38.836; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-28 23:23:38.837; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-28 23:23:38.839; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-28 23:23:38.840; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-28 23:23:38.847; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-28 23:23:38.847; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.847; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.848; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.849; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-28 23:23:38.895; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-28 23:23:38.897; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-28 23:23:38.898; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-28 23:23:38.910; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-28 23:23:38.910; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-28 23:23:38.976; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@7bc436fe; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_1,generation=1}
+INFO  - 2014-01-28 23:23:38.977; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 1
+INFO  - 2014-01-28 23:23:38.983; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@36939972 main
+INFO  - 2014-01-28 23:23:38.987; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-28 23:23:38.993; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-28 23:23:38.998; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-28 23:23:39.000; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-28 23:23:39.026; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-28 23:23:39.026; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@36939972 main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2014-01-28 23:23:39.027; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-28 23:23:39.029; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-28 23:23:39.029; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-28 23:23:39.065; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=37 
+INFO  - 2014-01-28 23:23:39.066; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-28 23:23:39.066; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-28 23:23:39.066; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-28 23:23:39.066; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@36939972 main{StandardDirectoryReader(segments_1:1:nrt)}
+INFO  - 2014-01-28 23:23:39.069; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-28 23:23:51.999; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=*:*&wt=json} hits=0 status=0 QTime=2 
+INFO  - 2014-01-28 23:24:01.184; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390947841163&wt=json} status=0 QTime=2 
+INFO  - 2014-01-28 23:24:01.273; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390947841206&wt=json} status=0 QTime=61 
+INFO  - 2014-01-28 23:24:31.213; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&_=1390947871161&contentType=text/html;charset%3Dutf-8} status=0 QTime=1 
+INFO  - 2014-01-28 23:24:31.214; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&_=1390947871160&contentType=text/html;charset%3Dutf-8} status=0 QTime=2 
+INFO  - 2014-01-28 23:24:31.656; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390947871547&show=index&wt=json} status=0 QTime=2 
+INFO  - 2014-01-28 23:24:31.657; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390947871559} status=0 QTime=1 
+INFO  - 2014-01-28 23:24:31.660; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390947871558&wt=json} status=0 QTime=4 
+INFO  - 2014-01-28 23:24:31.660; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390947871556&wt=json} status=0 QTime=4 
+INFO  - 2014-01-28 23:24:31.660; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390947871560&wt=json} status=503 QTime=2 
