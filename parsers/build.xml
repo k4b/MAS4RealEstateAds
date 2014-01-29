@@ -46,5 +46,9 @@
     <mkdir dir="../build/parsers" />
     <crawl target="assemble"/>
   </target>
+  
+  <target name="run" description="Compiles all parsers">
+    <crawl target="run"/>
+  </target>
 
 </project>

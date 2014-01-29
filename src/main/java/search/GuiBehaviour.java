@@ -27,5 +27,12 @@ public class GuiBehaviour extends OneShotBehaviour {
       }
     });
   }
+
+  /**
+   * @return the frame
+   */
+  public SearchWindow getFrame() {
+    return frame;
+  }
   
 }

@@ -124,7 +124,7 @@
       <!--<arg line="${agents.args}"/>
       <arg line="${gui.arg}"/>-->
       <arg line="-agents Search:search.SearchAgent"/>
-      <arg line="-host 127.0.0.1"/>
+      <arg line="-local-host 127.0.0.1"/>
       <arg line="-container"/>
       <jvmarg line="${debug.args}"/>
       <classpath refid="common-libs" />
@@ -132,9 +132,14 @@
       <classpath refid="shared-classes" />
     </java>
   </target>
+  
+  <target name="run-parsers" depends="compile-shared" description="Compile parsers sources">
+    <!-- we build the whole jar now to keep the dependencies simple -->
+    <ant dir="${common.basedir}/parsers" inheritAll="false" target="run" />
+  </target>
 
 
-    <target name="run container" depends="compile" description="Run Container">
+    <target name="runJade" depends="compile" description="Run Jade platform">
         <java classname="jade.Boot" fork="true">
             <arg line="-gui"/>
             <arg line="-local-host 127.0.0.1"/>

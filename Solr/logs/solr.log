@@ -5979,3 +5979,443 @@ INFO  - 2014-01-28 23:24:31.657; org.apache.solr.core.SolrCore; [collection1] we
 INFO  - 2014-01-28 23:24:31.660; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390947871558&wt=json} status=0 QTime=4 
 INFO  - 2014-01-28 23:24:31.660; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390947871556&wt=json} status=0 QTime=4 
 INFO  - 2014-01-28 23:24:31.660; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390947871560&wt=json} status=503 QTime=2 
+INFO  - 2014-01-28 23:54:06.122; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-28 23:54:06.140; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-28 23:54:06.145; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-28 23:54:07.082; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-28 23:54:07.112; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-28 23:54:07.124; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-28 23:54:07.124; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-28 23:54:07.124; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-28 23:54:07.233; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-28 23:54:07.331; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-28 23:54:07.336; org.apache.solr.core.CoreContainer; New CoreContainer 45390254
+INFO  - 2014-01-28 23:54:07.337; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-28 23:54:07.348; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-28 23:54:07.349; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-28 23:54:07.349; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-28 23:54:07.349; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-28 23:54:07.351; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-28 23:54:07.351; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-28 23:54:07.351; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-28 23:54:07.352; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-28 23:54:07.352; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-28 23:54:07.357; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-28 23:54:07.467; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-28 23:54:07.468; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-28 23:54:07.493; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-28 23:54:07.507; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-28 23:54:07.507; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-28 23:54:07.509; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-28 23:54:07.509; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+INFO  - 2014-01-28 23:54:07.593; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-28 23:54:07.593; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-28 23:54:07.594; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-28 23:54:07.594; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-28 23:54:07.594; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-28 23:54:07.595; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-28 23:54:07.595; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-28 23:54:07.595; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-28 23:54:07.595; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-28 23:54:07.718; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-28 23:54:07.725; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-28 23:54:07.828; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-28 23:54:07.833; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-28 23:54:07.913; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-28 23:54:08.423; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-28 23:54:08.487; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-28 23:54:08.496; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-28 23:54:08.613; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-28 23:54:08.619; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-28 23:54:08.621; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-28 23:54:08.625; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-28 23:54:08.625; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-28 23:54:08.636; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-28 23:54:08.636; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-28 23:54:08.637; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-28 23:54:08.645; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-28 23:54:08.645; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-28 23:54:08.645; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-28 23:54:08.648; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-28 23:54:08.648; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-28 23:54:08.714; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-28 23:54:08.723; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.723; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.725; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-28 23:54:08.726; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.729; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-28 23:54:08.731; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-28 23:54:08.732; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-28 23:54:08.732; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-28 23:54:08.733; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-28 23:54:08.733; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-28 23:54:08.733; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-28 23:54:08.733; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-28 23:54:08.733; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-28 23:54:08.735; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-28 23:54:08.736; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-28 23:54:08.738; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-28 23:54:08.746; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-28 23:54:08.746; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.746; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.746; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.746; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.747; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-28 23:54:08.747; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-28 23:54:08.747; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.747; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.747; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.747; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-28 23:54:08.761; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-28 23:54:08.763; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-28 23:54:08.763; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-28 23:54:08.776; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-28 23:54:08.776; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-28 23:54:08.810; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2}
+INFO  - 2014-01-28 23:54:08.810; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 2
+INFO  - 2014-01-28 23:54:08.834; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@6a239d58 main
+INFO  - 2014-01-28 23:54:08.837; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-28 23:54:08.842; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-28 23:54:08.848; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-28 23:54:08.849; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-28 23:54:08.872; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-28 23:54:08.873; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@6a239d58 main{StandardDirectoryReader(segments_2:3:nrt _0(4.5.1):C1)}
+INFO  - 2014-01-28 23:54:08.873; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-28 23:54:08.881; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-28 23:54:08.881; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-28 23:54:08.941; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-28 23:54:08.949; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=75 
+INFO  - 2014-01-28 23:54:08.950; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-28 23:54:08.950; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-28 23:54:08.951; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-28 23:54:08.951; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@6a239d58 main{StandardDirectoryReader(segments_2:3:nrt _0(4.5.1):C1)}
+INFO  - 2014-01-28 23:54:17.166; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390949657156&wt=json} status=0 QTime=1 
+INFO  - 2014-01-28 23:54:17.203; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390949657188&wt=json} status=0 QTime=7 
+INFO  - 2014-01-28 23:54:17.231; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&_=1390949657215&contentType=text/html;charset%3Dutf-8} status=0 QTime=2 
+INFO  - 2014-01-28 23:54:17.232; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&_=1390949657216&contentType=text/html;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-28 23:54:17.259; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390949657235&show=index&wt=json} status=0 QTime=1 
+INFO  - 2014-01-28 23:54:17.260; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390949657247} status=0 QTime=1 
+INFO  - 2014-01-28 23:54:17.262; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390949657243&wt=json} status=0 QTime=4 
+INFO  - 2014-01-28 23:54:17.262; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390949657248&wt=json} status=503 QTime=2 
+INFO  - 2014-01-28 23:54:17.263; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390949657245&wt=json} status=0 QTime=5 
+INFO  - 2014-01-28 23:54:27.688; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={indent=true&q=*:*&_=1390949667638&wt=json} hits=1 status=0 QTime=2 
+INFO  - 2014-01-28 23:56:55.774; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={indent=true&q=*:*&_=1390949815770&wt=json} hits=1 status=0 QTime=1 
+INFO  - 2014-01-28 23:56:57.892; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={indent=true&q=*:*&_=1390949817888&wt=json} hits=1 status=0 QTime=1 
+INFO  - 2014-01-28 23:57:04.310; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390949824276&show=index&wt=json} status=0 QTime=14 
+INFO  - 2014-01-28 23:57:04.315; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390949824285} status=0 QTime=0 
+INFO  - 2014-01-28 23:57:04.315; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390949824286&wt=json} status=503 QTime=0 
+INFO  - 2014-01-28 23:57:04.317; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390949824283&wt=json} status=0 QTime=2 
+INFO  - 2014-01-28 23:57:04.319; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390949824284&wt=json} status=0 QTime=4 
+INFO  - 2014-01-28 23:57:07.218; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390949827210&wt=json} status=0 QTime=0 
+INFO  - 2014-01-28 23:57:07.257; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390949827238&wt=json} status=0 QTime=4 
+INFO  - 2014-01-28 23:57:07.303; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&_=1390949827268&contentType=text/html;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-28 23:57:07.303; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&_=1390949827267&contentType=text/html;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-28 23:57:07.336; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390949827306&show=index&wt=json} status=0 QTime=0 
+INFO  - 2014-01-28 23:57:07.338; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390949827318&wt=json} status=503 QTime=1 
+INFO  - 2014-01-28 23:57:07.338; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390949827317} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:07.338; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390949827313&wt=json} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:07.340; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390949827315&wt=json} status=0 QTime=3 
+INFO  - 2014-01-28 23:57:14.387; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={wt=javabin&version=2} {add=[1 (1458516612992729088), 2 (1458516613024186368), 3 (1458516613029429248), 4 (1458516613034672128), 5 (1458516613038866432), 6 (1458516613043060736), 7 (1458516613048303616), 8 (1458516613054595072), 9 (1458516613059837952), 10 (1458516613066129408), ... (174 adds)]} 0 557
+INFO  - 2014-01-28 23:57:14.403; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2014-01-28 23:57:15.240; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_2,generation=2}
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3}
+INFO  - 2014-01-28 23:57:15.241; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 3
+INFO  - 2014-01-28 23:57:15.251; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@21cf775d main
+INFO  - 2014-01-28 23:57:15.252; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2014-01-28 23:57:15.252; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@21cf775d main{StandardDirectoryReader(segments_3:7:nrt _1(4.5.1):C174)}
+INFO  - 2014-01-28 23:57:15.253; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-28 23:57:15.253; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@21cf775d main{StandardDirectoryReader(segments_3:7:nrt _1(4.5.1):C174)}
+INFO  - 2014-01-28 23:57:15.255; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={waitSearcher=true&commit=true&wt=javabin&version=2&softCommit=false} {commit=} 0 852
+INFO  - 2014-01-28 23:57:15.391; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=website:*&wt=javabin&version=2&defType=edismax} hits=174 status=0 QTime=10 
+INFO  - 2014-01-28 23:57:15.434; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=website:*&wt=javabin&version=2&defType=edismax} hits=174 status=0 QTime=0 
+INFO  - 2014-01-28 23:57:26.666; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390949846661&wt=json} status=0 QTime=0 
+INFO  - 2014-01-28 23:57:26.696; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390949846687&wt=json} status=0 QTime=3 
+INFO  - 2014-01-28 23:57:26.728; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&_=1390949846715&contentType=text/html;charset%3Dutf-8} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:26.728; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&_=1390949846716&contentType=text/html;charset%3Dutf-8} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:26.761; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390949846734&show=index&wt=json} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:26.761; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390949846741&wt=json} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:26.762; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390949846745} status=0 QTime=1 
+INFO  - 2014-01-28 23:57:26.762; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390949846747&wt=json} status=503 QTime=0 
+INFO  - 2014-01-28 23:57:26.765; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390949846743&wt=json} status=0 QTime=5 
+INFO  - 2014-01-29 00:00:52.100; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={wt=javabin&version=2} {add=[175 (1458516841574957056), 176 (1458516841578102784), 177 (1458516841580199936), 178 (1458516841583345664), 179 (1458516841585442816), 180 (1458516841587539968), 181 (1458516841589637120), 182 (1458516841591734272), 183 (1458516841593831424), 184 (1458516841595928576), ... (168 adds)]} 0 245
+INFO  - 2014-01-29 00:00:52.103; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2014-01-29 00:00:52.727; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_3,generation=3}
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_4,generation=4}
+INFO  - 2014-01-29 00:00:52.727; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 4
+INFO  - 2014-01-29 00:00:52.737; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@727d2897 main
+INFO  - 2014-01-29 00:00:52.738; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@727d2897 main{StandardDirectoryReader(segments_4:9:nrt _1(4.5.1):C174 _2(4.5.1):C168)}
+INFO  - 2014-01-29 00:00:52.739; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-29 00:00:52.738; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2014-01-29 00:00:52.739; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@727d2897 main{StandardDirectoryReader(segments_4:9:nrt _1(4.5.1):C174 _2(4.5.1):C168)}
+INFO  - 2014-01-29 00:00:52.740; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={waitSearcher=true&commit=true&wt=javabin&version=2&softCommit=false} {commit=} 0 636
+INFO  - 2014-01-29 00:00:52.749; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=website:*&wt=javabin&version=2&defType=edismax} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 00:00:52.766; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=website:*&wt=javabin&version=2&defType=edismax} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 00:02:17.246; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390950137240&wt=json} status=0 QTime=0 
+INFO  - 2014-01-29 00:02:17.275; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390950137266&wt=json} status=0 QTime=3 
+INFO  - 2014-01-29 00:02:17.295; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&_=1390950137287&contentType=text/html;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-29 00:02:17.295; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&_=1390950137286&contentType=text/html;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-29 00:02:17.330; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390950137319} status=0 QTime=0 
+INFO  - 2014-01-29 00:02:17.330; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390950137320&wt=json} status=503 QTime=0 
+INFO  - 2014-01-29 00:02:17.330; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390950137312&show=index&wt=json} status=0 QTime=0 
+INFO  - 2014-01-29 00:02:17.331; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390950137317&wt=json} status=0 QTime=1 
+INFO  - 2014-01-29 00:02:17.334; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390950137318&wt=json} status=0 QTime=3 
+INFO  - 2014-01-29 00:07:11.418; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file params={file=schema.xml&_=1390950431409&contentType=text/xml;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-29 00:08:11.815; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390950491742&show=index&wt=json} status=0 QTime=3 
+INFO  - 2014-01-29 00:08:11.816; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390950491750} status=0 QTime=1 
+INFO  - 2014-01-29 00:08:11.816; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390950491752&wt=json} status=503 QTime=0 
+INFO  - 2014-01-29 00:08:11.817; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390950491747&wt=json} status=0 QTime=2 
+INFO  - 2014-01-29 00:08:11.821; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390950491749&wt=json} status=0 QTime=6 
+INFO  - 2014-01-29 00:08:20.023; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={_=1390950500004&show=schema&wt=json} status=0 QTime=5 
+INFO  - 2014-01-29 00:08:22.444; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file params={file=solrconfig.xml&_=1390950502407&contentType=text/xml;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-29 00:08:23.310; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/mbeans params={cat=QUERYHANDLER&_=1390950503296&wt=json} status=0 QTime=2 
+INFO  - 2014-01-29 00:08:26.160; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={ts=1390950506155&_=1390950506155&wt=json} hits=0 status=0 QTime=3 
+INFO  - 2014-01-29 00:08:26.161; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={ts=1390950506155&_=1390950506155&wt=json} status=0 QTime=4 
+INFO  - 2014-01-29 00:09:04.279; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={wt=javabin&version=2} {add=[1 (1458517357749075968), 2 (1458517357751173120), 3 (1458517357752221696), 4 (1458517357752221697), 5 (1458517357753270272), 6 (1458517357754318848), 7 (1458517357755367424), 8 (1458517357756416000), 9 (1458517357756416001), 10 (1458517357757464576), ... (174 adds)]} 0 162
+INFO  - 2014-01-29 00:09:04.302; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2014-01-29 00:09:04.813; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_4,generation=4}
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_5,generation=5}
+INFO  - 2014-01-29 00:09:04.814; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 5
+INFO  - 2014-01-29 00:09:04.822; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@6e6a85be main
+INFO  - 2014-01-29 00:09:04.823; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@6e6a85be main{StandardDirectoryReader(segments_5:13:nrt _2(4.5.1):C168 _3(4.5.1):C174)}
+INFO  - 2014-01-29 00:09:04.824; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-29 00:09:04.823; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2014-01-29 00:09:04.824; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@6e6a85be main{StandardDirectoryReader(segments_5:13:nrt _2(4.5.1):C168 _3(4.5.1):C174)}
+INFO  - 2014-01-29 00:09:04.825; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={waitSearcher=true&commit=true&wt=javabin&version=2&softCommit=false} {commit=} 0 523
+INFO  - 2014-01-29 00:09:04.938; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax} hits=342 status=0 QTime=0 
+INFO  - 2014-01-29 00:09:04.976; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax} hits=342 status=0 QTime=0 
+INFO  - 2014-01-29 00:12:28.486; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={wt=javabin&version=2} {add=[1 (1458517571896606720), 2 (1458517571898703872), 3 (1458517571899752448), 4 (1458517571900801024), 5 (1458517571901849600), 6 (1458517571901849601), 7 (1458517571902898176), 8 (1458517571903946752), 9 (1458517571903946753), 10 (1458517571904995328), ... (173 adds)]} 0 141
+INFO  - 2014-01-29 00:12:28.505; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2014-01-29 00:12:29.188; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_5,generation=5}
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_6,generation=6}
+INFO  - 2014-01-29 00:12:29.189; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 6
+INFO  - 2014-01-29 00:12:29.195; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@19c9e8e8 main
+INFO  - 2014-01-29 00:12:29.196; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2014-01-29 00:12:29.196; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@19c9e8e8 main{StandardDirectoryReader(segments_6:16:nrt _2(4.5.1):C168 _3(4.5.1):C174/173:delGen=1 _4(4.5.1):C173)}
+INFO  - 2014-01-29 00:12:29.197; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-29 00:12:29.198; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@19c9e8e8 main{StandardDirectoryReader(segments_6:16:nrt _2(4.5.1):C168 _3(4.5.1):C174/173:delGen=1 _4(4.5.1):C173)}
+INFO  - 2014-01-29 00:12:29.199; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={waitSearcher=true&commit=true&wt=javabin&version=2&softCommit=false} {commit=} 0 694
+INFO  - 2014-01-29 00:12:29.317; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 00:12:29.350; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 00:13:48.335; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={indent=true&q=*:*&_=1390950828328&wt=json} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 00:22:43.613; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={wt=javabin&version=2} {add=[1 (1458518216929181696), 2 (1458518216931278848), 3 (1458518216932327424), 4 (1458518216932327425), 5 (1458518216933376000), 6 (1458518216934424576), 7 (1458518216934424577), 8 (1458518216935473152), 9 (1458518216935473153), 10 (1458518216936521728), ... (161 adds)]} 0 117
+INFO  - 2014-01-29 00:22:43.627; org.apache.solr.update.DirectUpdateHandler2; start commit{,optimize=false,openSearcher=true,waitSearcher=true,expungeDeletes=false,softCommit=false,prepareCommit=false}
+INFO  - 2014-01-29 00:22:44.265; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onCommit: commits: num=2
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_6,generation=6}
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@30a24357; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_7,generation=7}
+INFO  - 2014-01-29 00:22:44.265; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 7
+INFO  - 2014-01-29 00:22:44.269; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@3a139fdf main
+INFO  - 2014-01-29 00:22:44.270; org.apache.solr.update.DirectUpdateHandler2; end_commit_flush
+INFO  - 2014-01-29 00:22:44.270; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@3a139fdf main{StandardDirectoryReader(segments_7:19:nrt _2(4.5.1):C168 _3(4.5.1):C174/173:delGen=1 _4(4.5.1):C173/161:delGen=1 _5(4.5.1):C161)}
+INFO  - 2014-01-29 00:22:44.271; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-29 00:22:44.271; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@3a139fdf main{StandardDirectoryReader(segments_7:19:nrt _2(4.5.1):C168 _3(4.5.1):C174/173:delGen=1 _4(4.5.1):C173/161:delGen=1 _5(4.5.1):C161)}
+INFO  - 2014-01-29 00:22:44.272; org.apache.solr.update.processor.LogUpdateProcessor; [collection1] webapp=/solr path=/update params={waitSearcher=true&commit=true&wt=javabin&version=2&softCommit=false} {commit=} 0 645
+INFO  - 2014-01-29 00:22:44.398; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=4 
+INFO  - 2014-01-29 00:22:45.675; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=4 
+INFO  - 2014-01-29 01:42:05.431; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 01:43:15.979; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 01:47:34.125; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 01:47:36.089; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 01:50:37.185; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 01:52:00.817; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 01:52:26.079; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 01:52:48.394; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 01:56:43.437; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 01:58:40.560; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:00:32.330; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 02:00:33.901; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 02:01:21.174; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:01:22.564; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 02:02:41.576; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:02:43.363; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 02:02:43.906; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:02:44.994; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:05:20.432; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 02:05:21.850; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:08:38.192; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:18:34.254; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 02:18:36.022; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 02:19:02.974; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:24:09.140; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,district,street,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 02:24:47.754; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,district,street,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:27:34.144; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,district,street,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 02:30:08.298; org.eclipse.jetty.server.Server; Graceful shutdown SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-29 02:30:08.299; org.eclipse.jetty.server.Server; Graceful shutdown o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-29 02:30:09.300; org.apache.solr.core.CoreContainer; Shutting down CoreContainer instance=45390254
+INFO  - 2014-01-29 02:30:09.300; org.apache.solr.core.SolrCore; [collection1]  CLOSING SolrCore org.apache.solr.core.SolrCore@1fd82be9
+INFO  - 2014-01-29 02:30:09.301; org.apache.solr.update.DirectUpdateHandler2; closing DirectUpdateHandler2{commits=5,autocommit maxTime=15000ms,autocommits=0,soft autocommits=0,optimizes=0,rollbacks=0,expungeDeletes=0,docsPending=0,adds=0,deletesById=0,deletesByQuery=0,errors=0,cumulative_adds=850,cumulative_deletesById=0,cumulative_deletesByQuery=0,cumulative_errors=0}
+INFO  - 2014-01-29 02:30:09.301; org.apache.solr.update.SolrCoreState; Closing SolrCoreState
+INFO  - 2014-01-29 02:30:09.301; org.apache.solr.update.DefaultSolrCoreState; SolrCoreState ref count has reached 0 - closing IndexWriter
+INFO  - 2014-01-29 02:30:09.302; org.apache.solr.update.DefaultSolrCoreState; closing IndexWriter with IndexWriterCloser
+INFO  - 2014-01-29 02:30:09.303; org.apache.solr.core.SolrCore; [collection1] Closing main searcher on request.
+INFO  - 2014-01-29 02:30:09.305; org.apache.solr.core.CachingDirectoryFactory; Closing NRTCachingDirectoryFactory - 2 directories currently being tracked
+INFO  - 2014-01-29 02:30:09.305; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data;done=false>>]
+INFO  - 2014-01-29 02:30:09.305; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-29 02:30:09.306; org.apache.solr.core.CachingDirectoryFactory; looking to close /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index [CachedDir<<refCount=0;path=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index;done=false>>]
+INFO  - 2014-01-29 02:30:09.306; org.apache.solr.core.CachingDirectoryFactory; Closing directory: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-29 02:30:09.307; org.eclipse.jetty.server.handler.ContextHandler; stopped o.e.j.w.WebAppContext{/solr,file:/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr-webapp/webapp/},/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/webapps/solr.war
+INFO  - 2014-01-29 08:38:42.525; org.eclipse.jetty.server.Server; jetty-8.1.10.v20130312
+INFO  - 2014-01-29 08:38:42.561; org.eclipse.jetty.deploy.providers.ScanningAppProvider; Deployment monitor /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts at interval 0
+INFO  - 2014-01-29 08:38:42.566; org.eclipse.jetty.deploy.DeploymentManager; Deployable added: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/contexts/solr-jetty-context.xml
+INFO  - 2014-01-29 08:38:43.761; org.eclipse.jetty.webapp.StandardDescriptorProcessor; NO JSP Support for /solr, did not find org.apache.jasper.servlet.JspServlet
+INFO  - 2014-01-29 08:38:43.792; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init()
+INFO  - 2014-01-29 08:38:43.827; org.apache.solr.core.SolrResourceLoader; JNDI not configured for solr (NoInitialContextEx)
+INFO  - 2014-01-29 08:38:43.827; org.apache.solr.core.SolrResourceLoader; solr home defaulted to 'solr/' (could not find system property or JNDI)
+INFO  - 2014-01-29 08:38:43.827; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: 'solr/'
+INFO  - 2014-01-29 08:38:43.940; org.apache.solr.core.ConfigSolr; Loading container configuration from /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/solr.xml
+INFO  - 2014-01-29 08:38:44.141; org.apache.solr.core.ConfigSolrXml; Config-defined core root directory: 
+INFO  - 2014-01-29 08:38:44.146; org.apache.solr.core.CoreContainer; New CoreContainer 1665029909
+INFO  - 2014-01-29 08:38:44.147; org.apache.solr.core.CoreContainer; Loading cores into CoreContainer [instanceDir=solr/]
+INFO  - 2014-01-29 08:38:44.158; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting socketTimeout to: 0
+INFO  - 2014-01-29 08:38:44.159; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting urlScheme to: http://
+INFO  - 2014-01-29 08:38:44.159; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting connTimeout to: 0
+INFO  - 2014-01-29 08:38:44.159; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxConnectionsPerHost to: 20
+INFO  - 2014-01-29 08:38:44.161; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting corePoolSize to: 0
+INFO  - 2014-01-29 08:38:44.161; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maximumPoolSize to: 2147483647
+INFO  - 2014-01-29 08:38:44.162; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting maxThreadIdleTime to: 5
+INFO  - 2014-01-29 08:38:44.162; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting sizeOfQueue to: -1
+INFO  - 2014-01-29 08:38:44.162; org.apache.solr.handler.component.HttpShardHandlerFactory; Setting fairnessPolicy to: false
+INFO  - 2014-01-29 08:38:44.167; org.apache.solr.client.solrj.impl.HttpClientUtil; Creating new http client, config:maxConnectionsPerHost=20&maxConnections=10000&socketTimeout=0&connTimeout=0&retry=false
+INFO  - 2014-01-29 08:38:44.347; org.apache.solr.logging.LogWatcher; SLF4J impl is org.slf4j.impl.Log4jLoggerFactory
+INFO  - 2014-01-29 08:38:44.347; org.apache.solr.logging.LogWatcher; Registering Log Listener [Log4j (org.slf4j.impl.Log4jLoggerFactory)]
+INFO  - 2014-01-29 08:38:44.371; org.apache.solr.core.CorePropertiesLocator; Looking for core definitions underneath /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr
+INFO  - 2014-01-29 08:38:44.412; org.apache.solr.core.CorePropertiesLocator; Found core collection1 in /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/
+INFO  - 2014-01-29 08:38:44.413; org.apache.solr.core.CorePropertiesLocator; Found 1 core definitions
+INFO  - 2014-01-29 08:38:44.414; org.apache.solr.core.CoreContainer; Creating SolrCore 'collection1' using instanceDir: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1
+INFO  - 2014-01-29 08:38:44.415; org.apache.solr.core.SolrResourceLoader; new SolrResourceLoader for directory: '/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/'
+INFO  - 2014-01-29 08:38:44.515; org.apache.solr.core.SolrConfig; Adding specified lib dirs to ClassLoader
+WARN  - 2014-01-29 08:38:44.515; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/extraction/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/extraction/lib).
+WARN  - 2014-01-29 08:38:44.516; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-29 08:38:44.516; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/clustering/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/clustering/lib).
+WARN  - 2014-01-29 08:38:44.516; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-29 08:38:44.516; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/langid/lib/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/langid/lib).
+WARN  - 2014-01-29 08:38:44.516; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+WARN  - 2014-01-29 08:38:44.517; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../contrib/velocity/lib (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../contrib/velocity/lib).
+WARN  - 2014-01-29 08:38:44.517; org.apache.solr.core.SolrResourceLoader; Can't find (or read) directory to add to classloader: ../../../dist/ (resolved as: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/../../../dist).
+INFO  - 2014-01-29 08:38:44.642; org.apache.solr.update.SolrIndexConfig; IndexWriter infoStream solr logging is enabled
+INFO  - 2014-01-29 08:38:44.647; org.apache.solr.core.SolrConfig; Using Lucene MatchVersion: LUCENE_45
+INFO  - 2014-01-29 08:38:44.745; org.apache.solr.core.SolrConfig; Loaded SolrConfig: solrconfig.xml
+INFO  - 2014-01-29 08:38:44.751; org.apache.solr.schema.IndexSchema; Reading Solr Schema from schema.xml
+INFO  - 2014-01-29 08:38:44.838; org.apache.solr.schema.IndexSchema; [collection1] Schema name=example
+INFO  - 2014-01-29 08:38:45.414; org.apache.solr.schema.IndexSchema; unique key field: id
+INFO  - 2014-01-29 08:38:45.577; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-29 08:38:45.584; org.apache.solr.schema.FileExchangeRateProvider; Reloading exchange rates from file currency.xml
+INFO  - 2014-01-29 08:38:45.744; org.apache.solr.core.SolrCore; solr.NRTCachingDirectoryFactory
+INFO  - 2014-01-29 08:38:45.750; org.apache.solr.core.SolrCore; [collection1] Opening new SolrCore at /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/, dataDir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/
+INFO  - 2014-01-29 08:38:45.751; org.apache.solr.core.JmxMonitoredMap; No JMX servers found, not exposing Solr information with JMX.
+INFO  - 2014-01-29 08:38:45.754; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for newSearcher: org.apache.solr.core.QuerySenderListener{queries=[]}
+INFO  - 2014-01-29 08:38:45.754; org.apache.solr.core.SolrCore; [collection1] Added SolrEventListener for firstSearcher: org.apache.solr.core.QuerySenderListener{queries=[{q=static firstSearcher warming in solrconfig.xml}]}
+INFO  - 2014-01-29 08:38:45.793; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data
+INFO  - 2014-01-29 08:38:45.794; org.apache.solr.core.SolrCore; New index directory detected: old=null new=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index/
+INFO  - 2014-01-29 08:38:45.794; org.apache.solr.core.CachingDirectoryFactory; return new directory for /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index
+INFO  - 2014-01-29 08:38:45.804; org.apache.solr.core.SolrCore; created json: solr.JSONResponseWriter
+INFO  - 2014-01-29 08:38:45.804; org.apache.solr.core.SolrCore; adding lazy queryResponseWriter: solr.VelocityResponseWriter
+INFO  - 2014-01-29 08:38:45.805; org.apache.solr.core.SolrCore; created velocity: solr.VelocityResponseWriter
+INFO  - 2014-01-29 08:38:45.807; org.apache.solr.core.SolrCore; created xslt: solr.XSLTResponseWriter
+INFO  - 2014-01-29 08:38:45.807; org.apache.solr.response.XSLTResponseWriter; xsltCacheLifetimeSeconds=5
+INFO  - 2014-01-29 08:38:45.874; org.apache.solr.core.SolrCore; no updateRequestProcessorChain defined as default, creating implicit default
+INFO  - 2014-01-29 08:38:45.882; org.apache.solr.core.RequestHandlers; created /select: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.882; org.apache.solr.core.RequestHandlers; created /query: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.884; org.apache.solr.core.RequestHandlers; created /get: solr.RealTimeGetHandler
+INFO  - 2014-01-29 08:38:45.884; org.apache.solr.core.RequestHandlers; created /browse: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.887; org.apache.solr.core.RequestHandlers; created /update: solr.UpdateRequestHandler
+INFO  - 2014-01-29 08:38:45.888; org.apache.solr.core.RequestHandlers; created /update/json: solr.JsonUpdateRequestHandler
+INFO  - 2014-01-29 08:38:45.890; org.apache.solr.core.RequestHandlers; created /update/csv: solr.CSVRequestHandler
+INFO  - 2014-01-29 08:38:45.890; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-29 08:38:45.890; org.apache.solr.core.RequestHandlers; created /update/extract: solr.extraction.ExtractingRequestHandler
+INFO  - 2014-01-29 08:38:45.890; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-29 08:38:45.891; org.apache.solr.core.RequestHandlers; created /analysis/field: solr.FieldAnalysisRequestHandler
+INFO  - 2014-01-29 08:38:45.891; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-29 08:38:45.891; org.apache.solr.core.RequestHandlers; created /analysis/document: solr.DocumentAnalysisRequestHandler
+INFO  - 2014-01-29 08:38:45.892; org.apache.solr.core.RequestHandlers; created /admin/: solr.admin.AdminHandlers
+INFO  - 2014-01-29 08:38:45.895; org.apache.solr.core.RequestHandlers; created /admin/ping: solr.PingRequestHandler
+INFO  - 2014-01-29 08:38:45.897; org.apache.solr.core.RequestHandlers; created /debug/dump: solr.DumpRequestHandler
+INFO  - 2014-01-29 08:38:45.905; org.apache.solr.core.RequestHandlers; created /replication: solr.ReplicationHandler
+INFO  - 2014-01-29 08:38:45.905; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; created /spell: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; created /tvrh: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; created /js: org.apache.solr.handler.js.JavaScriptRequestHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; created /terms: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.906; org.apache.solr.core.RequestHandlers; adding lazy requestHandler: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.907; org.apache.solr.core.RequestHandlers; created /elevate: solr.SearchHandler
+INFO  - 2014-01-29 08:38:45.922; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-29 08:38:45.924; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-29 08:38:45.925; org.apache.solr.handler.loader.XMLLoader; xsltCacheLifetimeSeconds=60
+INFO  - 2014-01-29 08:38:45.966; org.apache.solr.update.CommitTracker; Hard AutoCommit: if uncommited for 15000ms; 
+INFO  - 2014-01-29 08:38:45.966; org.apache.solr.update.CommitTracker; Soft AutoCommit: disabled
+INFO  - 2014-01-29 08:38:46.093; org.apache.solr.core.SolrDeletionPolicy; SolrDeletionPolicy.onInit: commits: num=1
+	commit{dir=NRTCachingDirectory(org.apache.lucene.store.MMapDirectory@/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/data/index lockFactory=org.apache.lucene.store.NativeFSLockFactory@42393d16; maxCacheMB=48.0 maxMergeSizeMB=4.0),segFN=segments_7,generation=7}
+INFO  - 2014-01-29 08:38:46.094; org.apache.solr.core.SolrDeletionPolicy; newest commit generation = 7
+INFO  - 2014-01-29 08:38:46.303; org.apache.solr.search.SolrIndexSearcher; Opening Searcher@73a783ec main
+INFO  - 2014-01-29 08:38:46.307; org.apache.solr.handler.component.SpellCheckComponent; Initializing spell checkers
+INFO  - 2014-01-29 08:38:46.312; org.apache.solr.spelling.DirectSolrSpellChecker; init: {name=default,field=text,classname=solr.DirectSolrSpellChecker,distanceMeasure=internal,accuracy=0.5,maxEdits=2,minPrefix=1,maxInspections=5,minQueryLength=4,maxQueryFrequency=0.01}
+INFO  - 2014-01-29 08:38:46.317; org.apache.solr.handler.component.SpellCheckComponent; No queryConverter defined, using default converter
+INFO  - 2014-01-29 08:38:46.319; org.apache.solr.handler.component.QueryElevationComponent; Loading QueryElevation from: /home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr/solr/collection1/conf/elevate.xml
+INFO  - 2014-01-29 08:38:46.342; org.apache.solr.handler.ReplicationHandler; Commits will be reserved for  10000
+INFO  - 2014-01-29 08:38:46.342; org.apache.solr.core.QuerySenderListener; QuerySenderListener sending requests to Searcher@73a783ec main{StandardDirectoryReader(segments_7:19:nrt _2(4.5.1):C168 _3(4.5.1):C174/173:delGen=1 _4(4.5.1):C173/161:delGen=1 _5(4.5.1):C161)}
+INFO  - 2014-01-29 08:38:46.343; org.apache.solr.core.CoreContainer; registering core: collection1
+INFO  - 2014-01-29 08:38:46.347; org.apache.solr.servlet.SolrDispatchFilter; user.dir=/home/karol/dev/projects/MAS4RealEstateAds/MAS4RealEstateAds/Solr
+INFO  - 2014-01-29 08:38:46.347; org.apache.solr.servlet.SolrDispatchFilter; SolrDispatchFilter.init() done
+INFO  - 2014-01-29 08:38:46.394; org.apache.solr.core.SolrCore; [collection1] webapp=null path=null params={event=firstSearcher&q=static+firstSearcher+warming+in+solrconfig.xml&distrib=false} hits=0 status=0 QTime=50 
+INFO  - 2014-01-29 08:38:46.395; org.apache.solr.core.QuerySenderListener; QuerySenderListener done.
+INFO  - 2014-01-29 08:38:46.395; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: default
+INFO  - 2014-01-29 08:38:46.395; org.apache.solr.handler.component.SpellCheckComponent$SpellCheckerListener; Loading spell index for spellchecker: wordbreak
+INFO  - 2014-01-29 08:38:46.395; org.apache.solr.core.SolrCore; [collection1] Registered new searcher Searcher@73a783ec main{StandardDirectoryReader(segments_7:19:nrt _2(4.5.1):C168 _3(4.5.1):C174/173:delGen=1 _4(4.5.1):C173/161:delGen=1 _5(4.5.1):C161)}
+INFO  - 2014-01-29 08:38:46.396; org.eclipse.jetty.server.AbstractConnector; Started SocketConnector@0.0.0.0:8983
+INFO  - 2014-01-29 08:39:57.032; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=10 
+INFO  - 2014-01-29 08:41:46.744; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 08:42:11.317; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 08:42:52.771; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 08:50:23.476; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 08:53:38.792; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 08:55:04.561; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 08:59:03.188; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 08:59:37.315; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area,link&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 09:01:38.841; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:13:21.142; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:28:32.432; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=3 
+INFO  - 2014-01-29 09:28:32.508; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:34:42.022; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:34:42.070; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:34:44.680; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:41:29.999; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:41:30.044; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:41:31.709; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:47:09.061; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:47:09.113; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:47:10.027; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:54:39.084; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:54:39.127; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:54:40.121; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:55:54.287; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:55:54.331; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:55:55.080; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:58:37.093; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:58:38.160; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=2 
+INFO  - 2014-01-29 09:58:47.447; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:58:58.071; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 09:59:03.639; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 10:00:14.303; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 10:00:15.151; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 10:00:32.006; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 10:00:41.550; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 10:01:36.385; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390986096376&wt=json} status=0 QTime=3 
+INFO  - 2014-01-29 10:01:36.821; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390986096451&wt=json} status=0 QTime=319 
+INFO  - 2014-01-29 10:02:03.721; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={q=*:*&wt=json} hits=342 status=0 QTime=1 
+INFO  - 2014-01-29 10:02:38.472; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/cores params={indexInfo=false&_=1390986158468&wt=json} status=0 QTime=0 
+INFO  - 2014-01-29 10:02:38.500; org.apache.solr.servlet.SolrDispatchFilter; [admin] webapp=null path=/admin/info/system params={_=1390986158489&wt=json} status=0 QTime=4 
+INFO  - 2014-01-29 10:02:42.950; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-bottom.html&_=1390986162893&contentType=text/html;charset%3Dutf-8} status=0 QTime=0 
+INFO  - 2014-01-29 10:02:42.950; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.menu-top.html&_=1390986162891&contentType=text/html;charset%3Dutf-8} status=0 QTime=1 
+INFO  - 2014-01-29 10:02:43.139; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/file/ params={file=admin-extra.html&_=1390986163122} status=0 QTime=1 
+INFO  - 2014-01-29 10:02:43.140; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/luke params={numTerms=0&_=1390986163115&show=index&wt=json} status=0 QTime=2 
+INFO  - 2014-01-29 10:02:43.143; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/system params={_=1390986163121&wt=json} status=0 QTime=5 
+INFO  - 2014-01-29 10:02:43.144; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/replication params={command=details&_=1390986163119&wt=json} status=0 QTime=5 
+INFO  - 2014-01-29 10:02:43.144; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/admin/ping params={action=status&_=1390986163123&wt=json} status=503 QTime=2 
+INFO  - 2014-01-29 10:04:14.431; org.apache.solr.core.SolrCore; [collection1] webapp=/solr path=/select params={fl=id,city,price,price_per_meter,num_bedrooms,area,floor,website&start=0&q=*:*&wt=javabin&version=2&defType=edismax&rows=1000000} hits=342 status=0 QTime=0 
